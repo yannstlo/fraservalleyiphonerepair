@@ -38,20 +38,20 @@ const description = post.data.description;
             class="rounded-md border border-white/15 px-3 py-2 font-semibold text-white hover:bg-white/5"
             href={`/blog/${prev.slug}/#top`}
           >
-            ← Newer
+            ← Older
           </a>
         ) : (
-          <span class="rounded-md border border-white/10 px-3 py-2 text-zinc-500">← Newer</span>
+          <span class="rounded-md border border-white/10 px-3 py-2 text-zinc-500">← Older</span>
         )}
         {next ? (
           <a
             class="rounded-md border border-white/15 px-3 py-2 font-semibold text-white hover:bg-white/5"
             href={`/blog/${next.slug}/#top`}
           >
-            Older →
+            Newer →
           </a>
         ) : (
-          <span class="rounded-md border border-white/10 px-3 py-2 text-zinc-500">Older →</span>
+          <span class="rounded-md border border-white/10 px-3 py-2 text-zinc-500">Newer →</span>
         )}
       </div>
     </div>
