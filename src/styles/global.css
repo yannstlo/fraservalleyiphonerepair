@@ -13,3 +13,48 @@ html {
 a {
   text-underline-offset: 3px;
 }
+
+/* Basic markdown typography (no Tailwind Typography plugin needed). */
+.markdown {
+  line-height: 1.75;
+}
+
+.markdown h2,
+.markdown h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.markdown h2 {
+  font-size: 1.25rem;
+}
+
+.markdown h3 {
+  font-size: 1.125rem;
+}
+
+.markdown p {
+  margin: 1rem 0;
+}
+
+.markdown ul {
+  margin: 1rem 0;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.markdown li {
+  margin: 0.35rem 0;
+}
+
+.markdown a {
+  color: rgb(110 231 183); /* emerald-300-ish */
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.25);
+}
+
+.markdown a:hover {
+  text-decoration-color: rgba(255, 255, 255, 0.6);
+}
