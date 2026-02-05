@@ -17,7 +17,6 @@ const { Content } = await post.render();
 
 const title = post.data.title;
 const description = post.data.description;
-const originalUrl = post.data.originalUrl;
 ---
 
 <Layout title={title} description={description}>
@@ -32,11 +31,6 @@ const originalUrl = post.data.originalUrl;
         {post.data.pubDate.toLocaleDateString("en-CA", { year: "numeric", month: "long", day: "numeric" })}
       </div>
       {description && <p class="mt-4 text-zinc-300">{description}</p>}
-      {originalUrl && (
-        <div class="mt-4 text-sm text-zinc-400">
-          Originally posted: <a class="underline decoration-white/30 hover:decoration-white" href={originalUrl} target="_blank" rel="noreferrer">{originalUrl}</a>
-        </div>
-      )}
     </header>
 
     <article class="markdown mt-10 text-zinc-200">
