@@ -3,7 +3,7 @@ title: "Welcome"
 description: "What Fraser Valley iPhone Repair is all about, and what we’ll post here."
 pubDate: 2026-02-05
 tags: ["updates"]
-draft : true
+draft: true
 ---
 
 This is where we’ll post:
