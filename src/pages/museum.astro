@@ -1,0 +1,58 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+
+// Curate this list manually (keeps the build simple and predictable).
+// Put files in: public/images/museum/
+const images = [
+  // Example:
+  // { src: "/images/museum/example.jpg", alt: "Shattered iPhone screen" },
+];
+---
+
+<Layout
+  title="Museum"
+  description="A few of the more spectacular iPhone disasters (and saves) we've seen in the Fraser Valley."
+>
+  <SiteHeader />
+
+  <main class="mx-auto max-w-5xl px-4 py-12">
+    <h1 class="text-3xl font-semibold tracking-tight">Museum</h1>
+    <p class="mt-3 text-zinc-300">
+      Some of the more spectacular iPhone disasters (and saves) over the years.
+    </p>
+
+    {images.length === 0 ? (
+      <div class="mt-8 rounded-2xl border border-white/10 bg-white/5 p-6 text-zinc-300">
+        No museum images yet.
+        <div class="mt-2 text-sm text-zinc-400">
+          Add files to <code class="rounded bg-white/10 px-1 py-0.5">public/images/museum/</code> and then
+          list them in <code class="rounded bg-white/10 px-1 py-0.5">src/pages/museum.astro</code>.
+        </div>
+      </div>
+    ) : (
+      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {images.map((img) => (
+          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+            <img src={img.src} alt={img.alt} loading="lazy" class="aspect-square w-full object-cover" />
+            {img.alt && <figcaption class="p-3 text-sm text-zinc-300">{img.alt}</figcaption>}
+          </figure>
+        ))}
+      </div>
+    )}
+
+    <div class="mt-10 rounded-2xl border border-white/10 bg-white/5 p-6">
+      <div class="text-sm text-zinc-300">
+        Have a broken phone? Text is best — include your model + what happened.
+      </div>
+      <div class="mt-4">
+        <a class="rounded-md bg-emerald-500 px-4 py-3 font-semibold text-zinc-950 hover:bg-emerald-400" href="sms:+16048095169">
+          Text (604) 809-5169
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <SiteFooter />
+</Layout>
