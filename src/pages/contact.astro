@@ -39,7 +39,8 @@ const address = "7709 Alpine Pl, Mission, BC V2V 4T3";
           <div><span class="text-zinc-400">Address:</span> {address}</div>
           <div class="mt-2"><span class="text-zinc-400">Hours:</span> Daily 10:00 AM – 10:00 PM</div>
         </div>
-        <div class="mt-5">
+
+        <div class="mt-5 flex flex-wrap gap-3">
           <a
             class="rounded-md border border-white/15 px-4 py-3 font-semibold text-white hover:bg-white/5"
             href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`}
@@ -48,6 +49,16 @@ const address = "7709 Alpine Pl, Mission, BC V2V 4T3";
           >
             Open in Google Maps
           </a>
+        </div>
+
+        <div class="mt-5 overflow-hidden rounded-xl border border-white/10">
+          <iframe
+            class="h-72 w-full"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src={`https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`}
+            title="Map"
+          />
         </div>
       </section>
     </div>
