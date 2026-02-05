@@ -6,68 +6,7 @@ import SiteFooter from "../components/SiteFooter.astro";
 const phoneDisplay = "(604) 809-5169";
 const phoneE164 = "+16048095169";
 
-const models = [
-  {
-    name: "iPhone 15, 15 Plus, 15 Pro & 15 Pro Max",
-    year: 2023,
-    modelNumbers: ["A2846", "A2847", "A2848", "A2849"],
-  },
-  {
-    name: "iPhone 14, 14 Plus, 14 Pro & 14 Pro Max",
-    year: 2022,
-    modelNumbers: ["A2881", "A2885", "A2889", "A2893"],
-  },
-  {
-    name: "iPhone 13 mini, 13, 13 Pro & 13 Pro Max",
-    year: 2021,
-    modelNumbers: ["A2626", "A2631", "A2636", "A2641"],
-  },
-  {
-    name: "iPhone 12 mini, 12, 12 Pro & 12 Pro Max",
-    year: 2020,
-    modelNumbers: ["A2398", "A2402", "A2406", "A2410"],
-  },
-  {
-    name: "iPhone SE (3rd generation)",
-    year: 2022,
-    modelNumbers: ["A2595"],
-  },
-  {
-    name: "iPhone SE (2nd generation)",
-    year: 2020,
-    modelNumbers: ["A2275"],
-  },
-  {
-    name: "iPhone 11, 11 Pro & 11 Pro Max",
-    year: 2019,
-    modelNumbers: ["A2111", "A2160", "A2161"],
-  },
-  {
-    name: "iPhone XS & XS Max",
-    year: 2018,
-    modelNumbers: ["A1920", "A2097", "A1921", "A2101"],
-  },
-  {
-    name: "iPhone XR",
-    year: 2018,
-    modelNumbers: ["A1984", "A2105"],
-  },
-  {
-    name: "iPhone X",
-    year: 2017,
-    modelNumbers: ["A1865", "A1901"],
-  },
-  {
-    name: "iPhone 8 & 8 Plus",
-    year: 2017,
-    modelNumbers: ["A1863", "A1905"],
-  },
-  {
-    name: "iPhone 7 & 7 Plus",
-    year: 2016,
-    modelNumbers: ["A1660", "A1778"],
-  },
-];
+const appleIdentifyUrl = "https://support.apple.com/en-ca/108044";
 ---
 
 <Layout
@@ -106,26 +45,27 @@ const models = [
     </section>
 
     <section class="mt-8 rounded-2xl border border-white/10 bg-white/5 p-6">
-      <h2 class="text-lg font-semibold">Common iPhone model numbers (A####)</h2>
-      <p class="mt-2 text-sm text-zinc-400">If your A-number isn’t listed, text me anyway — I’ll tell you what it is.</p>
-
-      <div class="mt-5 grid gap-4">
-        {models.map((m) => (
-          <div class="rounded-xl border border-white/10 bg-white/5 p-5">
-            <div class="flex flex-wrap items-baseline justify-between gap-2">
-              <div class="font-semibold">{m.name}</div>
-              <div class="text-sm text-zinc-400">Year: {m.year}</div>
-            </div>
-            <div class="mt-2 text-sm text-zinc-300">Model # {m.modelNumbers.join(", ")}</div>
-          </div>
-        ))}
-      </div>
-
-      <div class="mt-6">
+      <h2 class="text-lg font-semibold">Not sure which iPhone you have?</h2>
+      <p class="mt-2 text-zinc-300">
+        Apple maintains an up-to-date list of iPhone model numbers by region (Canada vs U.S. variants, etc.).
+      </p>
+      <div class="mt-5 flex flex-wrap gap-3">
+        <a
+          class="rounded-md border border-white/15 px-4 py-3 font-semibold text-white hover:bg-white/5"
+          href={appleIdentifyUrl}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Identify your iPhone model (Apple Support)
+        </a>
         <a class="rounded-md bg-emerald-500 px-4 py-3 font-semibold text-zinc-950 hover:bg-emerald-400" href={`sms:${phoneE164}`}>
-          Text your A-number for a quote
+          Text me your A-number
         </a>
       </div>
+      <p class="mt-4 text-sm text-zinc-400">
+        Once you have the <span class="font-semibold text-zinc-200">A####</span> model number, text it to {phoneDisplay}
+        along with the problem (screen/battery/charging) and I’ll reply with options and pricing.
+      </p>
     </section>
   </main>
 
