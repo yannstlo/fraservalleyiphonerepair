@@ -1,5 +1,5 @@
 ---
-title: "Untitled"
+title: "iPhone 4 digitizer lcd pricing reduced"
 originalUrl: "https://www.fraservalleyiphonerepair.com/2010/12/iphone-4-digitizer-lcd-pricing-reduced.html"
 pubDate: 2010-12-29
 updatedDate: 2011-03-18
