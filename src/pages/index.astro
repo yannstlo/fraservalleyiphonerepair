@@ -20,18 +20,19 @@ import SiteFooter from "../components/SiteFooter.astro";
           </p>
 
           <div class="mt-6 flex flex-wrap gap-3">
-            <a class="rounded-md bg-emerald-500 px-4 py-3 font-semibold text-zinc-950 hover:bg-emerald-400" href="sms:+16048095169">
-              Text for a quote
-            </a>
-            <a class="rounded-md border border-white/15 px-4 py-3 font-semibold text-white hover:bg-white/5" href="tel:+16048095169">
-              Call (604) 809-5169
-            </a>
-            <a class="rounded-md border border-white/15 px-4 py-3 font-semibold text-white hover:bg-white/5" href="/contact/">
-              Contact info
-            </a>
+            <a class="btn-primary" href="sms:+16048095169">Text for a quote</a>
+            <a class="btn-secondary" href="tel:+16048095169">Call (604) 809-5169</a>
+            <a class="btn-secondary" href="/contact/">Contact info</a>
           </div>
 
-          <dl class="mt-8 grid grid-cols-2 gap-4 text-sm">
+          <ul class="mt-6 flex flex-wrap gap-2 text-sm text-zinc-300">
+            <li class="chip">Mission, BC</li>
+            <li class="chip">Most repairs 30–45 min</li>
+            <li class="chip">Text-first quotes</li>
+            <li class="chip">Daily 10am–10pm</li>
+          </ul>
+
+          <dl class="mt-6 grid grid-cols-2 gap-4 text-sm">
             <div class="rounded-lg border border-white/10 bg-white/5 p-4">
               <dt class="text-zinc-300">Hours</dt>
               <dd class="mt-1 font-semibold">Daily 10am–10pm</dd>
@@ -64,9 +65,7 @@ import SiteFooter from "../components/SiteFooter.astro";
             </li>
           </ul>
           <div class="mt-5">
-            <a class="text-sm font-semibold text-emerald-400 hover:text-emerald-300" href="/services/">
-              See services & pricing →
-            </a>
+            <a class="link text-sm" href="/services/">See services & pricing →</a>
           </div>
         </div>
       </div>
@@ -89,9 +88,7 @@ import SiteFooter from "../components/SiteFooter.astro";
         and a quote.
       </p>
       <div class="mt-5">
-        <a class="rounded-md bg-emerald-500 px-4 py-3 font-semibold text-zinc-950 hover:bg-emerald-400" href="sms:+16048095169">
-          Text (604) 809-5169
-        </a>
+        <a class="btn-primary" href="sms:+16048095169">Text (604) 809-5169</a>
       </div>
     </section>
   </main>

@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import MobileCtaBar from "../components/MobileCtaBar.astro";
 
 export interface Props {
   title: string;
@@ -68,7 +69,8 @@ const canonicalUrl = canonical ?? "https://fraservalleyiphonerepair.com" + Astro
       ]
     })} />
   </head>
-  <body class="min-h-dvh bg-zinc-950 text-zinc-100">
+  <body class="min-h-dvh bg-zinc-950 pb-20 text-zinc-100 sm:pb-0">
     <slot />
+    <MobileCtaBar />
   </body>
 </html>

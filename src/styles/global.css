@@ -14,6 +14,25 @@ a {
   text-underline-offset: 3px;
 }
 
+/* UI primitives */
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-md bg-emerald-500 px-4 py-3 font-semibold text-zinc-950 hover:bg-emerald-400;
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-md border border-white/15 bg-transparent px-4 py-3 font-semibold text-white hover:bg-white/5;
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950;
+}
+
+.link {
+  @apply font-semibold text-emerald-400 underline decoration-white/20 hover:text-emerald-300 hover:decoration-white/40;
+}
+
+.chip {
+  @apply rounded-full border border-white/10 bg-white/5 px-3 py-1;
+}
+
 /* Basic markdown typography (no Tailwind Typography plugin needed). */
 .markdown {
   line-height: 1.75;

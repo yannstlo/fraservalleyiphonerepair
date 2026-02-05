@@ -1,0 +1,10 @@
+---
+const phoneE164 = "+16048095169";
+---
+
+<div class="fixed inset-x-0 bottom-0 z-50 border-t border-white/10 bg-zinc-950/90 backdrop-blur sm:hidden">
+  <div class="mx-auto flex max-w-5xl gap-3 px-4 py-3">
+    <a class="btn-primary flex-1" href={`sms:${phoneE164}`}>Text</a>
+    <a class="btn-secondary flex-1" href={`tel:${phoneE164}`}>Call</a>
+  </div>
+</div>
