@@ -1,0 +1,8 @@
+---
+title: "Langley iPhone 4 repair in under an hour"
+originalUrl: "https://www.fraservalleyiphonerepair.com/2013/03/langley-iphone-4-repair-in-under-hour.html"
+pubDate: 2013-03-08
+updatedDate: 2013-03-08
+tags: ["Apex Communications", "Langley iPhone 4 repair"]
+---
+I just repaired 2 iphone 4 in Langley for 2 local customers. The first one thanks to a referral from Apex Communications here in Langley and the from another Telus store in Willowbrook Shopping Center in Langley.  <br/><br/><div class="separator"style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjwVUHKmTnjgSvX699DgJsIyh6OMepsC0gv_K2oux36_Wi_pOTENtLacfCr2lIDpLU9Ap5tgpKe5H2LHtoPQF2-lrGhJXpRmVYXIqI1n-s25Bk2NlOwIM5X_su4i-ZNwdoBHfl_Iw/s640/blogger-image-1962997743.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjwVUHKmTnjgSvX699DgJsIyh6OMepsC0gv_K2oux36_Wi_pOTENtLacfCr2lIDpLU9Ap5tgpKe5H2LHtoPQF2-lrGhJXpRmVYXIqI1n-s25Bk2NlOwIM5X_su4i-ZNwdoBHfl_Iw/s640/blogger-image-1962997743.jpg" /></a></div> <br/><br/><div class="separator"style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhN5k2u9I0jYOsKBb646zpUZqsr3xHlWIJVzVHH22bWoK3ThVxkQbDF8b8pxapEjv4TcI0jJfxFrLxi8Of634J9DXuaKvQJV-2Q1n61yq3GDhCFJh71uwFLmuVxNidntbtpiReRdA/s640/blogger-image--1327969444.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhN5k2u9I0jYOsKBb646zpUZqsr3xHlWIJVzVHH22bWoK3ThVxkQbDF8b8pxapEjv4TcI0jJfxFrLxi8Of634J9DXuaKvQJV-2Q1n61yq3GDhCFJh71uwFLmuVxNidntbtpiReRdA/s640/blogger-image--1327969444.jpg" /></a></div>

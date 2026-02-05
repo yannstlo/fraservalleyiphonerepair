@@ -1,0 +1,8 @@
+---
+title: "Maple Ridge iPad Repair"
+originalUrl: "https://www.fraservalleyiphonerepair.com/2013/07/maple-ridge-ipad-repair.html"
+pubDate: 2013-07-12
+updatedDate: 2013-07-12
+tags: ["Fraser valley iPad repair", "IPad screen Repair"]
+---
+Just finished repairing an iPad 2 for a Maple Ridge Customer. The had sustained a couple of drops which resulted in 2 of the corners being damaged as well as the screen being broken. The owner used it for a while after the first drop but after the second drop, pieces of the screen started falling out.&nbsp;<div><br></div><div>I don't find to fix iPads on front of customers even though they are time consuming but when the corners have dents in them, I'm better equipped to do it at home.&nbsp;</div><div><br></div><div>I could not get a clear shot of the before but here is the after shot!</div><div><br></div><div><div class="separator" style="clear: both;"><div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDj7cfeMohOdtTU6FzRRJAgXmm81QcuNWLEW8Lzs5zWxdd0hI7OP8KdEoMSlcvpLZEw5aCMdXxUP6jhBGVGo70nxN2My893ebq2ozMKtgc208OjVVfMHyF-w145rT3AfvIf-BO7w/s640/blogger-image-678208249.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDj7cfeMohOdtTU6FzRRJAgXmm81QcuNWLEW8Lzs5zWxdd0hI7OP8KdEoMSlcvpLZEw5aCMdXxUP6jhBGVGo70nxN2My893ebq2ozMKtgc208OjVVfMHyF-w145rT3AfvIf-BO7w/s640/blogger-image-678208249.jpg"></a></div><br></div><br></div>

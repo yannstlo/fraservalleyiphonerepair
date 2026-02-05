@@ -1,0 +1,8 @@
+---
+title: "IPhone 4 with broken LCD"
+originalUrl: "https://www.fraservalleyiphonerepair.com/2013/05/iphone-4-with-broken-lcd.html"
+pubDate: 2013-05-16
+updatedDate: 2013-05-16
+tags: ["Abbotsford iPhone Repair", "iphone 4 repair", "Iphone LCD repair", "iPhone screen repair", "Mission iPhone Repair"]
+---
+I repair a lot of iPhones but it is rare that the glass and also the LCD is broken. Most fall will break the Glass but you will still be able to continue using the phone. Even the digitizer rarely goes.&nbsp;<div><br></div><div>On a few occasions I have seen iPhones where the glass was not broken but the LCD itself was either all white (White Screen of Death as some call it) or the LCD has lines in it.</div><div><br></div><div>This one in the picture was repaired tonight. When replacing the screen I always replace the LCD as the part comes pre-assembled. There are ways to disassemble the LCD from the screen but I personally leave that trick for those with lots of extra time on their hands. It's just not worth it it seams.&nbsp;</div><div><br></div><div><div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmud_1bRPy_ofl5aZSV4Gic9IVzSjOBoOaON37NrZgTiY2qrSG6yN6VC8thTDLPU2KYyeB8pFP8roNmpV3bs9Bq4Vdn8csK1IjxrVFsM7bCwfxVg1aUTU3uU-sGYRGtqen_A010A/s640/blogger-image--1782618342.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmud_1bRPy_ofl5aZSV4Gic9IVzSjOBoOaON37NrZgTiY2qrSG6yN6VC8thTDLPU2KYyeB8pFP8roNmpV3bs9Bq4Vdn8csK1IjxrVFsM7bCwfxVg1aUTU3uU-sGYRGtqen_A010A/s640/blogger-image--1782618342.jpg"></a></div><br></div>

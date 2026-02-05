@@ -1,0 +1,8 @@
+---
+title: "IPhone 4S screen repair Mission"
+originalUrl: "https://www.fraservalleyiphonerepair.com/2013/03/iphone-4s-screen-repair-mission.html"
+pubDate: 2013-03-19
+updatedDate: 2013-03-19
+tags: ["IPhone 4S screen repair", "iphone repair abbotsford", "iStation Abbosford"]
+---
+I have yet another happy iPhone 4S owner in Mission. BIG Thanks to iStation in Seven Oaks Shopping Centre in Abbotsford for the referral.   <br/><br/><div class="separator"style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEglKI8gnXiUR3TeZtLXrlMnhJD0WLZUz7o-MLhRF5Vj_LK-3tN-jLYoeMHiRXVUgILxco8mdbqom3DuX4fP4NylZiswi6kvVusTWTksU8GjEY1TNbyWannJQ9RcqnthKSXzsMMT7A/s640/blogger-image--2111913110.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEglKI8gnXiUR3TeZtLXrlMnhJD0WLZUz7o-MLhRF5Vj_LK-3tN-jLYoeMHiRXVUgILxco8mdbqom3DuX4fP4NylZiswi6kvVusTWTksU8GjEY1TNbyWannJQ9RcqnthKSXzsMMT7A/s640/blogger-image--2111913110.jpg" /></a></div> <br/><br/><div class="separator"style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEim1W-eB7jyN3F9hdbnev8PNVJZap83koS8_A2fRVVy8IgERot98QRrwkNOqHjR4ttQUJ6D-4h-FlYh77VGEaf2I85tb1y7HtN6Y_mY8aixfjIqQ-ICG76iWbwGhhgpVxoziQLCug/s640/blogger-image-784753426.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEim1W-eB7jyN3F9hdbnev8PNVJZap83koS8_A2fRVVy8IgERot98QRrwkNOqHjR4ttQUJ6D-4h-FlYh77VGEaf2I85tb1y7HtN6Y_mY8aixfjIqQ-ICG76iWbwGhhgpVxoziQLCug/s640/blogger-image-784753426.jpg" /></a></div>

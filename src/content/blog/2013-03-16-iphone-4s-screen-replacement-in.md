@@ -1,0 +1,8 @@
+---
+title: "IPhone 4S screen replacement in Abbotsford"
+originalUrl: "https://www.fraservalleyiphonerepair.com/2013/03/iphone-4s-screen-replacement-in.html"
+pubDate: 2013-03-16
+updatedDate: 2013-03-16
+tags: ["iPhone 4S repair", "Screen replacement Abbotsford"]
+---
+Just finished another iPhone 4S screen replacement in Abbotsford. The owner had one of his tool fall on to the phone as he was working away.  <br/><br/><div class="separator"style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjlrV_UaHzKF9g6lI0oBnfYjUK-amUsrWB0c6Fg7CcLI3O1O3_9tKiGNX7g5rj8jtuuhX9yoEQkhYZNi7ZUUJeZgpi1Y_OYX0p_44n9NTDKrkAMRaEGQUVX3ngBL1SpJzUf7bKZdQ/s640/blogger-image-1728389364.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjlrV_UaHzKF9g6lI0oBnfYjUK-amUsrWB0c6Fg7CcLI3O1O3_9tKiGNX7g5rj8jtuuhX9yoEQkhYZNi7ZUUJeZgpi1Y_OYX0p_44n9NTDKrkAMRaEGQUVX3ngBL1SpJzUf7bKZdQ/s640/blogger-image-1728389364.jpg" /></a></div> <br/><br/><div class="separator"style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjwtMLtzJYQTk3RM-BCys6CVyDHGTFqSbu43E-4P1xhzQlawPphwsqjvdsXQ-Iy7ymxseG57hsltkL6nSBScRGFgGPYfIL5TzTz5Nt6SJE8R_r9zEbP99XKNcEnEnP6RgrE7ukrFA/s640/blogger-image-1911956167.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjwtMLtzJYQTk3RM-BCys6CVyDHGTFqSbu43E-4P1xhzQlawPphwsqjvdsXQ-Iy7ymxseG57hsltkL6nSBScRGFgGPYfIL5TzTz5Nt6SJE8R_r9zEbP99XKNcEnEnP6RgrE7ukrFA/s640/blogger-image-1911956167.jpg" /></a></div>

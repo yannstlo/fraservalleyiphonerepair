@@ -1,0 +1,10 @@
+---
+title: "Water damaged iPhone 4 Repair Abbotsford"
+originalUrl: "https://www.fraservalleyiphonerepair.com/2013/03/water-damaged-iphone-4-repair-abbotsford.html"
+pubDate: 2013-03-26
+updatedDate: 2013-03-26
+tags: ["dead LCD", "iphone repair abbotsford", "no image iphone 4", "Water Damage phone repair"]
+---
+Just completed the repair of a water damaged iPhone 4S for an Abbotsford customer. The LCD would no longer light up. I replaced the screen, tested everything else and luckily, that's all there was to it. I also replaced the back screen as the existing one was cracked. <br />
+<br />
+Here are 2 images taken while testing,  during the repair and after the repair.  <br/><br/><div class="separator"style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghc5x5G75l4lqTgghyphenhyphen19lw4kPepqgAMI9Ysh4jT9qF_U-7oN1yX68qwW2GozbHgey2GZC6zObWfPKYlbLyaAJLy4b-xNWxSZgiL384DTtGbZ1Y0tAYY1RBfcYe0RXNjCAJ7BdhSw/s640/blogger-image--764628304.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghc5x5G75l4lqTgghyphenhyphen19lw4kPepqgAMI9Ysh4jT9qF_U-7oN1yX68qwW2GozbHgey2GZC6zObWfPKYlbLyaAJLy4b-xNWxSZgiL384DTtGbZ1Y0tAYY1RBfcYe0RXNjCAJ7BdhSw/s640/blogger-image--764628304.jpg" /></a></div> <br/><br/><div class="separator"style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvmeKUeAuOI7y3ptn-PyM3TD5xCAtfJoARHEsD2YGaoqJ_fO8nAWm4irvVzPbbs2Wgejdbj1aAfAPsyNX5aTVF_G8i5tQufyZvJTWeqxnHbY-r10VENP1FiBpKwm6LhK9Kn2R10w/s640/blogger-image-2076716362.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvmeKUeAuOI7y3ptn-PyM3TD5xCAtfJoARHEsD2YGaoqJ_fO8nAWm4irvVzPbbs2Wgejdbj1aAfAPsyNX5aTVF_G8i5tQufyZvJTWeqxnHbY-r10VENP1FiBpKwm6LhK9Kn2R10w/s640/blogger-image-2076716362.jpg" /></a></div>

@@ -1,0 +1,8 @@
+---
+title: "iPhone 4S Screen repair Maple Ridge"
+originalUrl: "https://www.fraservalleyiphonerepair.com/2013/10/iphone-4s-screen-repair-maple-ridge.html"
+pubDate: 2013-10-17
+updatedDate: 2013-10-17
+tags: ["4S screen repair", "Maple Ridge iPhone Repair", "mobile phone repair"]
+---
+I had a young customer call me in a panic tonight after her phone landed face first on the concrete. The phone was a week old, she just had her previous one replaced by Apple last week over a warranty issue.&nbsp;<div><br></div><div>I tried to push the appointment back to tomorrow or Friday but she needed it done tonight. She agreed to come to Mission from Maple Ridge to get it done.&nbsp;</div><div><br></div><div>We met at Tim Hortons and within an hour of her phone call, the phone was fixed!</div><div><br></div><div><div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjciM72kbBXFA5ORgb5RbpIYAYL9JvA2u2u9NzA-X22Y8NMtpq9Ozzf0W2qMZtWoXSU8MZRGF9YadrXhpxrMdhHvTFRDS_RypSbPnuEtemjJ2Vsn0lm1c8rIt3Qlxt-s0egxj6Z0g/s640/blogger-image--28776975.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjciM72kbBXFA5ORgb5RbpIYAYL9JvA2u2u9NzA-X22Y8NMtpq9Ozzf0W2qMZtWoXSU8MZRGF9YadrXhpxrMdhHvTFRDS_RypSbPnuEtemjJ2Vsn0lm1c8rIt3Qlxt-s0egxj6Z0g/s640/blogger-image--28776975.jpg"></a></div><div class="separator" style="clear: both;"><br></div><br></div>

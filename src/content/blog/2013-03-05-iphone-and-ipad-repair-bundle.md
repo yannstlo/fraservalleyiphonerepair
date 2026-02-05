@@ -1,0 +1,8 @@
+---
+title: "iPhone and iPad repair bundle"
+originalUrl: "https://www.fraservalleyiphonerepair.com/2013/03/iphone-and-ipad-repair-bundle.html"
+pubDate: 2013-03-05
+updatedDate: 2013-03-05
+tags: ["Fraser valley iPad repair", "IPad screen Repair", "Langley iPad repair", "Mission iPhone Repair"]
+---
+Just finished the repair of an iPad 2 and iPhone 4 for a great Langley customer. The iPad 2 was my second repair on it as the owner had broken it previously.  <br/><br/><div class="separator"style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwTSPRW9p5U_Vf1we1SmCa_EKIDMlytw74MYrK8jXpxXagiXscEy86MR-Hv_GYq_-KBbQ8JbDwnUfw98ggHomkae1CmxFIkMSLuAPzlnLybUO9oVnTnpOUrxblEV1y0z5aOOr6ZQ/s640/blogger-image-1135800495.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwTSPRW9p5U_Vf1we1SmCa_EKIDMlytw74MYrK8jXpxXagiXscEy86MR-Hv_GYq_-KBbQ8JbDwnUfw98ggHomkae1CmxFIkMSLuAPzlnLybUO9oVnTnpOUrxblEV1y0z5aOOr6ZQ/s640/blogger-image-1135800495.jpg" /></a></div> <br/><br/><div class="separator"style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjJavgBZxvJXnMWeZMaROcid2vTcz-VmawbjscF32ojQ5j68fjICIqagZCFu5HuMhbS4v-0o8jbxTYm4RLQGVukg1F1b35ZG1z3-e_9XMDr89J9dgUN1Lw1_ew_d3uLm4X-ibuHQA/s640/blogger-image-1796012708.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjJavgBZxvJXnMWeZMaROcid2vTcz-VmawbjscF32ojQ5j68fjICIqagZCFu5HuMhbS4v-0o8jbxTYm4RLQGVukg1F1b35ZG1z3-e_9XMDr89J9dgUN1Lw1_ew_d3uLm4X-ibuHQA/s640/blogger-image-1796012708.jpg" /></a></div>

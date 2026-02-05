@@ -1,0 +1,8 @@
+---
+title: "IPhone 3GS broken screen replacement"
+originalUrl: "https://www.fraservalleyiphonerepair.com/2013/02/iphone-3gs-broken-screen-replacement.html"
+pubDate: 2013-03-01
+updatedDate: 2013-03-01
+tags: ["broken 3GS", "Digitizer", "home button replacement", "I phone 3GS screen"]
+---
+As you can see, even a 4 year old can look like new with a quick screen replacement. This 3GS sure had better days but will live to see another day.  <br/><br/><div class="separator"style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9b3T5dEqaePKCwqyIJwJ5F5Z7rofTnxP586juR7AGKzPohL3OShPSfD7befPAPJvVYarUvHy7uWp_HUH6PVP6W873y8FkVkL2xqsVB4ZH4Z4M8DD1W-VWxhxd4bNwkC8yU_FLyA/s640/blogger-image-79599729.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9b3T5dEqaePKCwqyIJwJ5F5Z7rofTnxP586juR7AGKzPohL3OShPSfD7befPAPJvVYarUvHy7uWp_HUH6PVP6W873y8FkVkL2xqsVB4ZH4Z4M8DD1W-VWxhxd4bNwkC8yU_FLyA/s640/blogger-image-79599729.jpg" /></a></div> <br/><br/><div class="separator"style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhBdHNsDV9tfhy5O9PdprmtIK4Hhy1uugpLBDapFuSabPqh9Okoj3UdP6jO5Dy080_3cRYipFJ8JMqwxdiru3gz8dJYQmGQdt-BLgWBru5B7Ba5JCjZdMQGJxg087jvJRZrLzeJsw/s640/blogger-image-1426789647.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhBdHNsDV9tfhy5O9PdprmtIK4Hhy1uugpLBDapFuSabPqh9Okoj3UdP6jO5Dy080_3cRYipFJ8JMqwxdiru3gz8dJYQmGQdt-BLgWBru5B7Ba5JCjZdMQGJxg087jvJRZrLzeJsw/s640/blogger-image-1426789647.jpg" /></a></div>

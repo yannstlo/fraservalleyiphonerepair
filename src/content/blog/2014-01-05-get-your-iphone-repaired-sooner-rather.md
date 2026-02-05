@@ -1,0 +1,8 @@
+---
+title: "Get your iPhone repaired sooner rather than later"
+originalUrl: "https://www.fraservalleyiphonerepair.com/2014/01/get-your-iphone-repaired-sooner-rather.html"
+pubDate: 2014-01-05
+updatedDate: 2014-01-05
+tags: ["Abbotsford iPhone Repair", "Aldergrove iphone repair", "iphone 5 screen repair", "power button repair", "sleep button repair", "Water damage iphone"]
+---
+The onwer of an iPhone 5 called to repair the screen of his phone yesterday. I met him last night to do the repair but I was unfortunately unable to repair the phone.&nbsp;<div><br></div><div>The phone was left with a broken screen for too long and was showing signs that it might have been in contact with water in the upper right corner.&nbsp;</div><div><br></div><div>I installed a brand new screen but the LCD never turned on. It looks like the water damage might have broken something on the motherboard as I could not get the LCD to turn on even after trying different screens. The phone was ON but no image.&nbsp;</div><div><br></div><div>This is where I strongly suggest you get your phone fixed ASAP when you break it.&nbsp;</div><div><br></div><div><div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg0yCliGoxIlZXGjdZS4OSkzphLXzhuHIGz6iIJ1yBl51a2EjMbcUefOWaguIPW1qxTClcmCstoq7cwnSponG1SEFGlrdOJw6cWcrCnP6JPRcpdXFiY2tpL8jd6Dmkj_3tAXkjxqw/s640/blogger-image--1758627340.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg0yCliGoxIlZXGjdZS4OSkzphLXzhuHIGz6iIJ1yBl51a2EjMbcUefOWaguIPW1qxTClcmCstoq7cwnSponG1SEFGlrdOJw6cWcrCnP6JPRcpdXFiY2tpL8jd6Dmkj_3tAXkjxqw/s640/blogger-image--1758627340.jpg"></a></div><br></div>

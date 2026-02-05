@@ -1,0 +1,8 @@
+---
+title: "Abbotsford iPhone 5 Repair"
+originalUrl: "https://www.fraservalleyiphonerepair.com/2013/10/abbotsford-iphone-5-repair.html"
+pubDate: 2013-10-08
+updatedDate: 2013-10-08
+tags: ["iPhone 5 repair", "lower mainland iphone repair", "mobile phone repair", "Screen replacement Abbotsford"]
+---
+I had a young customer contact me last week looking to get his iPhone 5 screen replaced. I quoted him my current pricing and he thank me for my time and suggested that he would shop around. I heard back from him a couple of days later saying that after looking around and talking to a few other iPhone repairman, he would get me to do it.&nbsp;<div><br></div><div>I visited his home tonight in Abbotsford to perform the repair. The phone was as expected in need of some TLC.&nbsp;</div><div><br></div><div>The young iPhone 5 owner and him mom seamed very happy with the in home service and the quick turnaround.&nbsp;</div><div><br></div><div>Here is a before and after shot of his phone...</div><div><br></div><div><div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEikIFQmsLrmRLNcUpZnPLzqYtjw32uwmkqDmmqGXlaHAgFZOOjwSL1KnE5HcPafO-I5xlJCDLevCKSnJfBkZZKCDm75y8p8LttWMsCZiiANQEgmIfSumoqxHcKh_YxwoJejZqnqFQ/s640/blogger-image-1607043561.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEikIFQmsLrmRLNcUpZnPLzqYtjw32uwmkqDmmqGXlaHAgFZOOjwSL1KnE5HcPafO-I5xlJCDLevCKSnJfBkZZKCDm75y8p8LttWMsCZiiANQEgmIfSumoqxHcKh_YxwoJejZqnqFQ/s640/blogger-image-1607043561.jpg"></a></div><br></div>

@@ -1,0 +1,8 @@
+---
+title: "White iPhone 4 Front and Back replacement"
+originalUrl: "https://www.fraservalleyiphonerepair.com/2013/04/white-iphone-4-front-and-back.html"
+pubDate: 2013-04-02
+updatedDate: 2013-04-02
+tags: ["i phone screen replacement", "Iphone 4 repair Langley"]
+---
+Here is an iPhone 4 that was made new by replacing its front and back screens.  <br/><br/><div class="separator"style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2W_bGJZx1NHL3L2mXpD1L6s_ZhLkkenTq9r6Fl2m-nIuokHxWCVpVAZXAtNXy1923Czy27sOpegV4mGR1rqlICp5YWm4F3PuZPlGXZ1gh3UcbexRHiPf51JW43DxCj4CbzE14pA/s640/blogger-image-786643439.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2W_bGJZx1NHL3L2mXpD1L6s_ZhLkkenTq9r6Fl2m-nIuokHxWCVpVAZXAtNXy1923Czy27sOpegV4mGR1rqlICp5YWm4F3PuZPlGXZ1gh3UcbexRHiPf51JW43DxCj4CbzE14pA/s640/blogger-image-786643439.jpg" /></a></div> <br/><br/><div class="separator"style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8xPI4r0jeWA6TRS-PVKJI_VTrURJeQ_JHCDD-mRMzxv2CQZGj2CSEdcre5eLS9uoe-uC2od4g-F2V0pCYpWzwI0EDq7jaHtGzKch8vFzu5H8WhZEP_ij4wm8h7ww-BXQ8BnS9TA/s640/blogger-image-420564600.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8xPI4r0jeWA6TRS-PVKJI_VTrURJeQ_JHCDD-mRMzxv2CQZGj2CSEdcre5eLS9uoe-uC2od4g-F2V0pCYpWzwI0EDq7jaHtGzKch8vFzu5H8WhZEP_ij4wm8h7ww-BXQ8BnS9TA/s640/blogger-image-420564600.jpg" /></a></div>

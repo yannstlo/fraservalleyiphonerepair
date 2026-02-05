@@ -1,0 +1,8 @@
+---
+title: "Chilliwack iPhone 4S repaired within hours."
+originalUrl: "https://www.fraservalleyiphonerepair.com/2013/03/chilliwack-iphone-4s-repaired-within.html"
+pubDate: 2013-03-06
+updatedDate: 2013-03-06
+tags: ["Chilliwack iPhone Repair", "iPhone 4S repair Abbotsford", "Tim Hortons"]
+---
+Just met with a Chilliwack customer who broke her iPhone 4S just earlier today. She was very happy that her iPhone was repaired within the same day as the broken screen glass was very sharp.  <br/><br/><div class="separator"style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8ncBGIQse2eZ6A97adb_OXPupBoz343_vjA9CrqC1iqL7wvxbGykcUVkFRGqc2ZYtt9QnzH1MUGryD3YKEQ-PGQY3w26VfvliO4lGFXGQ64GCVW13kRtBZd3sIM6hiUTZBmmqwQ/s640/blogger-image--2064024369.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8ncBGIQse2eZ6A97adb_OXPupBoz343_vjA9CrqC1iqL7wvxbGykcUVkFRGqc2ZYtt9QnzH1MUGryD3YKEQ-PGQY3w26VfvliO4lGFXGQ64GCVW13kRtBZd3sIM6hiUTZBmmqwQ/s640/blogger-image--2064024369.jpg" /></a></div> <br/><br/><div class="separator"style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0ePNE4c5hcaA3Rz1D3U3Ql2GsIrKuzN4g0KjWuFDwdw9bpQ-jL0kl96TSMqQ85xB9aVWQJjamNsWjVAzbGFT-3PkIZloBmC7RF0qLKF1_6YoKFQ484WP5hv5SpSwZPlEcuzXcCQ/s640/blogger-image-1630852341.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0ePNE4c5hcaA3Rz1D3U3Ql2GsIrKuzN4g0KjWuFDwdw9bpQ-jL0kl96TSMqQ85xB9aVWQJjamNsWjVAzbGFT-3PkIZloBmC7RF0qLKF1_6YoKFQ484WP5hv5SpSwZPlEcuzXcCQ/s640/blogger-image-1630852341.jpg" /></a></div>
