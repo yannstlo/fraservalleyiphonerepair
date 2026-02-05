@@ -2,13 +2,26 @@
 import Layout from "../layouts/Layout.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
+import fs from "node:fs/promises";
+import path from "node:path";
 
-// Curate this list manually (keeps the build simple and predictable).
-// Put files in: public/images/museum/
-const images = [
-  // Example:
-  // { src: "/images/museum/example.jpg", alt: "Shattered iPhone screen" },
-];
+const museumDir = path.join(process.cwd(), "public", "images", "museum");
+
+function titleFromFilename(filename) {
+  return filename
+    .replace(/\.[^.]+$/, "")
+    .replace(/\(\d+\)$/, "")
+    .replace(/[-_]+/g, " ")
+    .trim();
+}
+
+const files = (await fs.readdir(museumDir)).filter((f) => f.toLowerCase() !== "readme.md");
+files.sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: "base" }));
+
+const images = files.map((file) => ({
+  src: `/images/museum/${file}`,
+  alt: titleFromFilename(file),
+}));
 ---
 
 <Layout
@@ -27,8 +40,7 @@ const images = [
       <div class="mt-8 rounded-2xl border border-white/10 bg-white/5 p-6 text-zinc-300">
         No museum images yet.
         <div class="mt-2 text-sm text-zinc-400">
-          Add files to <code class="rounded bg-white/10 px-1 py-0.5">public/images/museum/</code> and then
-          list them in <code class="rounded bg-white/10 px-1 py-0.5">src/pages/museum.astro</code>.
+          Add files to <code class="rounded bg-white/10 px-1 py-0.5">public/images/museum/</code>.
         </div>
       </div>
     ) : (
