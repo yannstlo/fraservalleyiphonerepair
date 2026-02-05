@@ -1,17 +1,100 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="iPhone repair in the Fraser Valley" description="Fast iPhone repair in the Fraser Valley. Most repairs in 30–45 minutes. Text (604) 809-5169.">
+  <SiteHeader />
+
+  <main>
+    <section class="mx-auto max-w-5xl px-4 py-14">
+      <div class="grid gap-10 md:grid-cols-2 md:items-center">
+        <div>
+          <h1 class="text-3xl font-semibold tracking-tight sm:text-4xl">
+            iPhone repair in the Fraser Valley
+          </h1>
+          <p class="mt-4 text-zinc-300">
+            Screen replacement, battery replacement, and more — repairs are done in front of you while you watch.
+            Most repairs are completed in <span class="font-semibold text-zinc-100">30–45 minutes</span>.
+          </p>
+
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a class="rounded-md bg-emerald-500 px-4 py-3 font-semibold text-zinc-950 hover:bg-emerald-400" href="sms:+16048095169">
+              Text for a quote
+            </a>
+            <a class="rounded-md border border-white/15 px-4 py-3 font-semibold text-white hover:bg-white/5" href="tel:+16048095169">
+              Call (604) 809-5169
+            </a>
+            <a class="rounded-md border border-white/15 px-4 py-3 font-semibold text-white hover:bg-white/5" href="/contact/">
+              Contact info
+            </a>
+          </div>
+
+          <dl class="mt-8 grid grid-cols-2 gap-4 text-sm">
+            <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+              <dt class="text-zinc-300">Hours</dt>
+              <dd class="mt-1 font-semibold">Daily 10am–10pm</dd>
+            </div>
+            <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+              <dt class="text-zinc-300">Location</dt>
+              <dd class="mt-1 font-semibold">Mission, BC</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/0 p-6">
+          <h2 class="text-lg font-semibold">Popular services</h2>
+          <ul class="mt-4 grid gap-3 text-sm text-zinc-200">
+            <li class="rounded-lg border border-white/10 bg-white/5 p-4">
+              <div class="font-semibold text-white">Screen replacement</div>
+              <div class="mt-1 text-zinc-300">Cracked glass, dead LCD, touch issues.</div>
+            </li>
+            <li class="rounded-lg border border-white/10 bg-white/5 p-4">
+              <div class="font-semibold text-white">Battery replacement</div>
+              <div class="mt-1 text-zinc-300">Fast swaps, better battery life.</div>
+            </li>
+            <li class="rounded-lg border border-white/10 bg-white/5 p-4">
+              <div class="font-semibold text-white">Charging issues</div>
+              <div class="mt-1 text-zinc-300">Port problems, cable not seating, intermittent charging.</div>
+            </li>
+            <li class="rounded-lg border border-white/10 bg-white/5 p-4">
+              <div class="font-semibold text-white">Water damage triage</div>
+              <div class="mt-1 text-zinc-300">Bring it in ASAP — we’ll advise next steps.</div>
+            </li>
+          </ul>
+          <div class="mt-5">
+            <a class="text-sm font-semibold text-emerald-400 hover:text-emerald-300" href="/services/">
+              See services & pricing →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-y border-white/10 bg-white/5">
+      <div class="mx-auto max-w-5xl px-4 py-10">
+        <h2 class="text-lg font-semibold">Areas served</h2>
+        <p class="mt-2 text-zinc-300">
+          Serving the Fraser Valley from Surrey to Chilliwack, including Mission, Abbotsford, Langley, Maple Ridge,
+          Pitt Meadows, and Aldergrove.
+        </p>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-5xl px-4 py-12">
+      <h2 class="text-lg font-semibold">Questions? Text is best.</h2>
+      <p class="mt-2 text-zinc-300">
+        Tell me your iPhone model and what happened (cracked screen, lines, no charge, etc.). I’ll reply with options
+        and a quote.
+      </p>
+      <div class="mt-5">
+        <a class="rounded-md bg-emerald-500 px-4 py-3 font-semibold text-zinc-950 hover:bg-emerald-400" href="sms:+16048095169">
+          Text (604) 809-5169
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</Layout>

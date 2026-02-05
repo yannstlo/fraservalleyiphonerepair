@@ -1,0 +1,74 @@
+---
+import "../styles/global.css";
+
+export interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+}
+
+const { title, description, canonical } = Astro.props;
+
+const siteName = "Fraser Valley iPhone Repair";
+const defaultDescription =
+  "Fast iPhone repair in the Fraser Valley. Screen replacement, battery replacement, and more — most repairs in 30–45 minutes. Text (604) 809-5169.";
+const metaDescription = description ?? defaultDescription;
+const canonicalUrl = canonical ?? "https://fraservalleyiphonerepair.com" + Astro.url.pathname;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="canonical" href={canonicalUrl} />
+    <title>{title} | {siteName}</title>
+    <meta name="description" content={metaDescription} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={`${title} | ${siteName}`} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:url" content={canonicalUrl} />
+
+    <meta name="twitter:card" content="summary" />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      name: siteName,
+      url: "https://fraservalleyiphonerepair.com/",
+      telephone: "+16048095169",
+      email: "yann@yann.ca",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "7709 Alpine Pl",
+        addressLocality: "Mission",
+        addressRegion: "BC",
+        postalCode: "V2V 4T3",
+        addressCountry: "CA"
+      },
+      openingHoursSpecification: [
+        { "@type": "OpeningHoursSpecification", dayOfWeek: "Monday", opens: "10:00", closes: "22:00" },
+        { "@type": "OpeningHoursSpecification", dayOfWeek: "Tuesday", opens: "10:00", closes: "22:00" },
+        { "@type": "OpeningHoursSpecification", dayOfWeek: "Wednesday", opens: "10:00", closes: "22:00" },
+        { "@type": "OpeningHoursSpecification", dayOfWeek: "Thursday", opens: "10:00", closes: "22:00" },
+        { "@type": "OpeningHoursSpecification", dayOfWeek: "Friday", opens: "10:00", closes: "22:00" },
+        { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "10:00", closes: "22:00" },
+        { "@type": "OpeningHoursSpecification", dayOfWeek: "Sunday", opens: "10:00", closes: "22:00" }
+      ],
+      areaServed: [
+        "Fraser Valley",
+        "Abbotsford",
+        "Aldergrove",
+        "Chilliwack",
+        "Langley",
+        "Maple Ridge",
+        "Mission",
+        "Pitt Meadows",
+        "Surrey"
+      ]
+    })} />
+  </head>
+  <body class="min-h-dvh bg-zinc-950 text-zinc-100">
+    <slot />
+  </body>
+</html>

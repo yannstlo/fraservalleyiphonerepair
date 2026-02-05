@@ -1,0 +1,74 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SiteHeader from "../../components/SiteHeader.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+
+const phoneE164 = "+16048095169";
+---
+
+<Layout title="Services" description="Screen replacement, battery replacement, and more. Text (604) 809-5169 for a quote.">
+  <SiteHeader />
+
+  <main class="mx-auto max-w-5xl px-4 py-12">
+    <h1 class="text-3xl font-semibold tracking-tight">Services</h1>
+    <p class="mt-3 text-zinc-300">
+      If you don’t see your exact model/service below, text me — I’ll confirm availability and pricing.
+    </p>
+
+    <div class="mt-8 grid gap-4">
+      <section class="rounded-2xl border border-white/10 bg-white/5 p-6">
+        <h2 class="text-lg font-semibold">Common repairs</h2>
+        <ul class="mt-3 list-disc space-y-2 pl-5 text-zinc-300">
+          <li><span class="font-semibold text-zinc-100">Front screen assembly</span> (cracked glass, dead LCD, touch issues)</li>
+          <li><span class="font-semibold text-zinc-100">Battery replacement</span></li>
+          <li><span class="font-semibold text-zinc-100">Charging issues</span> (port/cable fit/intermittent charge)</li>
+          <li><span class="font-semibold text-zinc-100">Diagnostics</span> (we’ll tell you what makes sense to fix)</li>
+        </ul>
+      </section>
+
+      <section class="rounded-2xl border border-white/10 bg-white/5 p-6">
+        <h2 class="text-lg font-semibold">Sample pricing (from your existing site)</h2>
+        <p class="mt-2 text-sm text-zinc-400">
+          These are placeholders while we convert your full “Services & Pricing” page into a cleaner format.
+        </p>
+        <div class="mt-4 grid gap-3 sm:grid-cols-2">
+          <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+            <div class="font-semibold">iPhone SE (2nd gen) screen</div>
+            <div class="mt-1 text-zinc-300">$100</div>
+          </div>
+          <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+            <div class="font-semibold">iPhone 11 screen</div>
+            <div class="mt-1 text-zinc-300">$150</div>
+          </div>
+          <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+            <div class="font-semibold">iPhone 11 Pro screen</div>
+            <div class="mt-1 text-zinc-300">$175</div>
+          </div>
+          <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+            <div class="font-semibold">iPhone 11 Pro Max screen</div>
+            <div class="mt-1 text-zinc-300">$200</div>
+          </div>
+          <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+            <div class="font-semibold">iPhone XR screen</div>
+            <div class="mt-1 text-zinc-300">$120</div>
+          </div>
+          <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+            <div class="font-semibold">iPhone X screen</div>
+            <div class="mt-1 text-zinc-300">$120</div>
+          </div>
+          <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+            <div class="font-semibold">iPhone 12 / 12 Pro screen</div>
+            <div class="mt-1 text-zinc-300">$160</div>
+          </div>
+        </div>
+        <div class="mt-5">
+          <a class="rounded-md bg-emerald-500 px-4 py-3 font-semibold text-zinc-950 hover:bg-emerald-400" href={`sms:${phoneE164}`}>
+            Text for exact pricing
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <SiteFooter />
+</Layout>

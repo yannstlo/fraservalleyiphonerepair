@@ -1,0 +1,43 @@
+---
+const nav = [
+  { href: "/services/", label: "Services" },
+  { href: "/blog/", label: "Blog" },
+  { href: "/contact/", label: "Contact" },
+];
+---
+<header class="sticky top-0 z-50 border-b border-white/10 bg-zinc-950/80 backdrop-blur">
+  <div class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3">
+    <a href="/" class="font-semibold tracking-tight">
+      Fraser Valley iPhone Repair
+    </a>
+
+    <nav class="hidden items-center gap-4 text-sm text-zinc-200 sm:flex">
+      {nav.map((item) => (
+        <a class="hover:text-white" href={item.href}>{item.label}</a>
+      ))}
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <a
+        class="rounded-md bg-emerald-500 px-3 py-2 text-sm font-semibold text-zinc-950 hover:bg-emerald-400"
+        href="sms:+16048095169"
+      >
+        Text
+      </a>
+      <a
+        class="rounded-md border border-white/15 px-3 py-2 text-sm font-semibold text-white hover:bg-white/5"
+        href="tel:+16048095169"
+      >
+        Call
+      </a>
+    </div>
+  </div>
+
+  <nav class="border-t border-white/10 px-4 py-2 text-sm text-zinc-200 sm:hidden">
+    <div class="mx-auto flex max-w-5xl gap-4">
+      {nav.map((item) => (
+        <a class="hover:text-white" href={item.href}>{item.label}</a>
+      ))}
+    </div>
+  </nav>
+</header>

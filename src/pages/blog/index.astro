@@ -1,0 +1,24 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SiteHeader from "../../components/SiteHeader.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+---
+
+<Layout title="Blog" description="Tips, repairs, and updates from Fraser Valley iPhone Repair.">
+  <SiteHeader />
+
+  <main class="mx-auto max-w-5xl px-4 py-12">
+    <h1 class="text-3xl font-semibold tracking-tight">Blog</h1>
+    <p class="mt-3 text-zinc-300">
+      Next step: we’ll sync your existing Blogger posts into this section so they render with the new design (no iframes).
+    </p>
+
+    <div class="mt-8 rounded-2xl border border-white/10 bg-white/5 p-6">
+      <div class="text-sm text-zinc-300">
+        Current site posts live at <a class="underline decoration-white/30 hover:decoration-white" href="https://www.fraservalleyiphonerepair.com/" target="_blank" rel="noreferrer">fraservalleyiphonerepair.com</a>.
+      </div>
+    </div>
+  </main>
+
+  <SiteFooter />
+</Layout>
