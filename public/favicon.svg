@@ -1,46 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="FV">
-  <!-- Periodic-table style tile -->
+  <!-- Periodic-table style tile (simplified for favicon legibility) -->
   <rect x="8" y="8" width="112" height="112" rx="18" fill="#10b981" />
   <rect x="8" y="8" width="112" height="112" rx="18" fill="none" stroke="#064e3b" stroke-width="4" opacity="0.9" />
-
-  <!-- Small top-left index number (optional) -->
-  <text
-    x="22"
-    y="36"
-    fill="#064e3b"
-    font-size="20"
-    font-weight="700"
-    font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial"
-    opacity="0.95"
-  >
-    69
-  </text>
 
   <!-- Big element symbol -->
   <text
     x="64"
-    y="82"
+    y="88"
     text-anchor="middle"
     fill="#ffffff"
-    font-size="64"
-    font-weight="800"
-    letter-spacing="-2"
+    font-size="78"
+    font-weight="900"
+    letter-spacing="-3"
     font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial"
   >
     Fv
-  </text>
-
-  <!-- Small label -->
-  <text
-    x="64"
-    y="104"
-    text-anchor="middle"
-    fill="#064e3b"
-    font-size="14"
-    font-weight="700"
-    font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial"
-    opacity="0.95"
-  >
-    Repair
   </text>
 </svg>
