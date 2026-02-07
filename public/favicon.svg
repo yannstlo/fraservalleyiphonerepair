@@ -1,6 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="FV">
   <!-- Full-bleed tile (no transparent padding). -->
-  <rect x="0" y="0" width="128" height="128" rx="20" fill="#10b981" />
+  <defs>
+    <!-- Subtle top-to-bottom gradient like classic app tiles -->
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#34d399" />
+      <stop offset="1" stop-color="#059669" />
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="128" height="128" rx="20" fill="url(#bg)" />
   <!-- Border inset so stroke isn't clipped. -->
   <rect x="2" y="2" width="124" height="124" rx="18" fill="none" stroke="#064e3b" stroke-width="4" opacity="0.9" />
 
@@ -10,7 +18,7 @@
     y="88"
     text-anchor="middle"
     fill="#052e16"
-    font-size="82"
+    font-size="76"
     font-weight="900"
     letter-spacing="-3"
     font-family="Helvetica, Arial, sans-serif"
