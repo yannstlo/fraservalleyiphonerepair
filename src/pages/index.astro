@@ -2,9 +2,54 @@
 import Layout from "../layouts/Layout.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
+
+const phoneDisplay = "(604) 809-5169";
+const phoneE164 = "+16048095169";
+
+const services = [
+  {
+    title: "Screen replacement",
+    desc: "Cracked glass, dead LCD, touch issues.",
+  },
+  {
+    title: "Battery replacement",
+    desc: "Fast swaps, better battery life.",
+  },
+  {
+    title: "Charging issues",
+    desc: "Port problems, cable not seating, intermittent charging.",
+  },
+  {
+    title: "Water damage triage",
+    desc: "Bring it in ASAP — we’ll advise next steps.",
+  },
+];
+
+const howItWorks = [
+  {
+    title: "Text your model + issue",
+    desc: "Send the iPhone model and what happened (cracked screen, lines, won’t charge, etc.).",
+  },
+  {
+    title: "Get a quote + time",
+    desc: "I’ll reply with options, pricing, and the soonest availability.",
+  },
+  {
+    title: "Repair in front of you",
+    desc: "Most repairs are completed in 30–45 minutes.",
+  },
+];
+
+// NOTE: These are intentionally conservative claims.
+// If you want stronger copy (e.g., exact warranty length, “same-day guaranteed”), tell me and I’ll update.
+const trustSignals = [
+  { title: "Clear pricing", desc: "Quote before we start. No surprises." },
+  { title: "Warranty", desc: "Ask about warranty coverage for your repair." },
+  { title: "Convenient hours", desc: "Daily 10am–10pm." },
+];
 ---
 
-<Layout title="iPhone repair in the Fraser Valley" description="Fast iPhone repair in the Fraser Valley. Most repairs in 30–45 minutes. Text (604) 809-5169.">
+<Layout title="iPhone repair in the Fraser Valley" description={`Fast iPhone repair in the Fraser Valley. Most repairs in 30–45 minutes. Text ${phoneDisplay}.`}>
   <SiteHeader />
 
   <main>
@@ -20,8 +65,8 @@ import SiteFooter from "../components/SiteFooter.astro";
           </p>
 
           <div class="mt-6 flex flex-wrap gap-3">
-            <a class="btn-primary" href="sms:+16048095169">Text for a quote</a>
-            <a class="btn-secondary" href="tel:+16048095169">Call (604) 809-5169</a>
+            <a class="btn-primary" href={`sms:${phoneE164}`}>Text for a quote</a>
+            <a class="btn-secondary" href={`tel:${phoneE164}`}>Call {phoneDisplay}</a>
             <a class="btn-secondary" href="/contact/">Contact info</a>
           </div>
 
@@ -29,7 +74,6 @@ import SiteFooter from "../components/SiteFooter.astro";
             <li class="chip">Mission, BC</li>
             <li class="chip">Most repairs 30–45 min</li>
             <li class="chip">Text-first quotes</li>
-            <li class="chip">Daily 10am–10pm</li>
           </ul>
 
           <dl class="mt-6 grid grid-cols-2 gap-4 text-sm">
@@ -42,6 +86,15 @@ import SiteFooter from "../components/SiteFooter.astro";
               <dd class="mt-1 font-semibold">Mission, BC</dd>
             </div>
           </dl>
+
+          <div class="mt-6 grid gap-3 sm:grid-cols-3">
+            {trustSignals.map((item) => (
+              <div class="rounded-lg border border-white/10 bg-white/5 p-4 text-sm">
+                <div class="font-semibold text-white">{item.title}</div>
+                <div class="mt-1 text-zinc-300">{item.desc}</div>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div class="overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/0">
@@ -57,25 +110,22 @@ import SiteFooter from "../components/SiteFooter.astro";
           <div class="p-6">
             <h2 class="text-lg font-semibold">Popular services</h2>
             <ul class="mt-4 grid gap-3 text-sm text-zinc-200">
-              <li class="rounded-lg border border-white/10 bg-white/5 p-4">
-                <div class="font-semibold text-white">Screen replacement</div>
-                <div class="mt-1 text-zinc-300">Cracked glass, dead LCD, touch issues.</div>
-              </li>
-              <li class="rounded-lg border border-white/10 bg-white/5 p-4">
-                <div class="font-semibold text-white">Battery replacement</div>
-                <div class="mt-1 text-zinc-300">Fast swaps, better battery life.</div>
-              </li>
-              <li class="rounded-lg border border-white/10 bg-white/5 p-4">
-                <div class="font-semibold text-white">Charging issues</div>
-                <div class="mt-1 text-zinc-300">Port problems, cable not seating, intermittent charging.</div>
-              </li>
-              <li class="rounded-lg border border-white/10 bg-white/5 p-4">
-                <div class="font-semibold text-white">Water damage triage</div>
-                <div class="mt-1 text-zinc-300">Bring it in ASAP — we’ll advise next steps.</div>
-              </li>
+              {services.map((service) => (
+                <li class="rounded-lg border border-white/10 bg-white/5 p-4">
+                  <div class="flex items-start justify-between gap-4">
+                    <div>
+                      <div class="font-semibold text-white">{service.title}</div>
+                      <div class="mt-1 text-zinc-300">{service.desc}</div>
+                    </div>
+                    <a class="link shrink-0 text-sm" href={`sms:${phoneE164}`}>Text for price</a>
+                  </div>
+                </li>
+              ))}
             </ul>
-            <div class="mt-5">
+            <div class="mt-5 flex flex-wrap gap-3">
               <a class="link text-sm" href="/services/">See services & pricing →</a>
+              <span class="text-sm text-zinc-400">or</span>
+              <a class="link text-sm" href={`sms:${phoneE164}`}>text {phoneDisplay} →</a>
             </div>
           </div>
         </div>
@@ -83,6 +133,24 @@ import SiteFooter from "../components/SiteFooter.astro";
     </section>
 
     <section class="border-y border-white/10 bg-white/5">
+      <div class="mx-auto max-w-5xl px-4 py-10">
+        <h2 class="text-lg font-semibold">How it works</h2>
+        <ol class="mt-4 grid gap-3 sm:grid-cols-3">
+          {howItWorks.map((step, idx) => (
+            <li class="rounded-lg border border-white/10 bg-white/5 p-4 text-sm">
+              <div class="text-zinc-400">Step {idx + 1}</div>
+              <div class="mt-1 font-semibold text-white">{step.title}</div>
+              <div class="mt-1 text-zinc-300">{step.desc}</div>
+            </li>
+          ))}
+        </ol>
+        <div class="mt-6">
+          <a class="btn-primary" href={`sms:${phoneE164}`}>Text for a quote</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
       <div class="mx-auto max-w-5xl px-4 py-10">
         <h2 class="text-lg font-semibold">Areas served</h2>
         <p class="mt-2 text-zinc-300">
@@ -99,7 +167,7 @@ import SiteFooter from "../components/SiteFooter.astro";
         and a quote.
       </p>
       <div class="mt-5">
-        <a class="btn-primary" href="sms:+16048095169">Text (604) 809-5169</a>
+        <a class="btn-primary" href={`sms:${phoneE164}`}>Text {phoneDisplay}</a>
       </div>
     </section>
   </main>
