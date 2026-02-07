@@ -1,7 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="FV">
-  <!-- Periodic-table style tile (simplified for favicon legibility) -->
-  <rect x="8" y="8" width="112" height="112" rx="18" fill="#10b981" />
-  <rect x="8" y="8" width="112" height="112" rx="18" fill="none" stroke="#064e3b" stroke-width="4" opacity="0.9" />
+  <!-- Full-bleed tile (no transparent padding). -->
+  <rect x="0" y="0" width="128" height="128" rx="20" fill="#10b981" />
+  <!-- Border inset so stroke isn't clipped. -->
+  <rect x="2" y="2" width="124" height="124" rx="18" fill="none" stroke="#064e3b" stroke-width="4" opacity="0.9" />
 
   <!-- Big element symbol -->
   <text
