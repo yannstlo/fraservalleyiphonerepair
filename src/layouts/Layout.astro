@@ -22,6 +22,10 @@ const canonicalUrl = canonical ?? "https://fraservalleyiphonerepair.com" + Astro
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Prefer SVG favicon (modern). -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
     <title>{title} | {siteName}</title>
     <meta name="description" content={metaDescription} />
 
