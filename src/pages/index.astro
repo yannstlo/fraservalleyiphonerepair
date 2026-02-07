@@ -42,9 +42,11 @@ const howItWorks = [
 
 // NOTE: These are intentionally conservative claims.
 // If you want stronger copy (e.g., exact warranty length, “same-day guaranteed”), tell me and I’ll update.
+const googleReviewsUrl = "https://share.google/PExskCNXynymAMYbX";
+
 const trustSignals = [
   { title: "Clear pricing", desc: "Quote before we start. No surprises." },
-  { title: "Warranty", desc: "Ask about warranty coverage for your repair." },
+  { title: "90-day warranty", desc: "Parts & labour included." },
   { title: "Convenient hours", desc: "Daily 10am–10pm." },
 ];
 ---
@@ -94,6 +96,10 @@ const trustSignals = [
                 <div class="mt-1 text-zinc-300">{item.desc}</div>
               </div>
             ))}
+          </div>
+
+          <div class="mt-4 text-sm text-zinc-300">
+            <a class="link" href={googleReviewsUrl} rel="noopener noreferrer" target="_blank">Read Google reviews →</a>
           </div>
         </div>
 
