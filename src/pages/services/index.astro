@@ -41,10 +41,23 @@ const phoneE164 = "+16048095169";
             <div class="mt-2 text-sm text-zinc-600 dark:text-zinc-300">Model # A2846, A2847, A2848, A2849</div>
 
             <div class="mt-4 grid gap-3 sm:grid-cols-2">
-              <div class="rounded-lg border border-zinc-200 bg-zinc-50 p-4 dark:border-white/10 dark:bg-white/5">
-                <div class="font-semibold">iPhone 15</div>
-                <div class="mt-1 text-zinc-600 dark:text-zinc-300">$150</div>
-              </div>
+              <a
+                class="group relative overflow-hidden rounded-lg border border-zinc-200 bg-zinc-50 p-4 transition hover:border-zinc-300 hover:bg-zinc-100 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
+                href={`sms:${phoneE164}`}
+                aria-label="Text for iPhone 15 pricing"
+              >
+                <div
+                  class="pointer-events-none absolute inset-0 opacity-35 transition group-hover:opacity-45 dark:opacity-30 dark:group-hover:opacity-40"
+                  style="background-image: url('/images/services/iphone-15.jpg'); background-size: cover; background-position: center top 22%;"
+                ></div>
+                <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/80 to-white/10 dark:from-zinc-950/70 dark:to-zinc-950/0"></div>
+
+                <div class="relative">
+                  <div class="font-semibold">iPhone 15</div>
+                  <div class="mt-1 text-zinc-600 dark:text-zinc-300">$150</div>
+                  <div class="mt-2 text-sm font-semibold text-emerald-600 dark:text-emerald-400">Text for quote →</div>
+                </div>
+              </a>
               <a
                 class="group relative overflow-hidden rounded-lg border border-zinc-200 bg-zinc-50 p-4 transition hover:border-zinc-300 hover:bg-zinc-100 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
                 href={`sms:${phoneE164}`}
