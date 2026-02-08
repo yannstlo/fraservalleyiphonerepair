@@ -4,6 +4,174 @@ import SiteHeader from "../../components/SiteHeader.astro";
 import SiteFooter from "../../components/SiteFooter.astro";
 
 const phoneE164 = "+16048095169";
+
+const glassCard =
+  "rounded-2xl border border-zinc-200/70 bg-white/70 p-6 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/5";
+
+const pillBase =
+  "inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-semibold";
+
+const generations = [
+  {
+    key: "16",
+    title: "iPhone 16 series",
+    subtitle: "iPhone 16, 16 Plus, 16 Pro & 16 Pro Max",
+    year: 2024,
+    models: [
+      { name: "iPhone 16", status: "quote" },
+      { name: "iPhone 16 Plus", status: "quote" },
+      { name: "iPhone 16 Pro", status: "quote" },
+      { name: "iPhone 16 Pro Max", status: "quote" },
+    ],
+  },
+  {
+    key: "15",
+    title: "iPhone 15 series",
+    subtitle: "iPhone 15, 15 Plus, 15 Pro & 15 Pro Max",
+    year: 2023,
+    note: "Model # A2846, A2847, A2848, A2849",
+    models: [
+      { name: "iPhone 15", price: 150 },
+      { name: "iPhone 15 Pro", price: 175 },
+      { name: "iPhone 15 Plus", status: "quote" },
+      { name: "iPhone 15 Pro Max", status: "quote" },
+    ],
+  },
+  {
+    key: "14",
+    title: "iPhone 14 series",
+    subtitle: "iPhone 14, 14 Plus, 14 Pro & 14 Pro Max",
+    year: 2022,
+    note: "Model # A2881, A2885, A2889, A2893",
+    models: [
+      { name: "iPhone 14", price: 150 },
+      { name: "iPhone 14 Pro", price: 175 },
+      { name: "iPhone 14 Plus", status: "quote" },
+      { name: "iPhone 14 Pro Max", status: "quote" },
+    ],
+  },
+  {
+    key: "se3",
+    title: "iPhone SE (3rd gen)",
+    subtitle: "iPhone SE (3rd generation)",
+    year: 2022,
+    note: "Model # A2595",
+    models: [{ name: "iPhone SE (3rd gen)", status: "quote" }],
+  },
+  {
+    key: "13",
+    title: "iPhone 13 series",
+    subtitle: "iPhone 13 Mini, 13, 13 Pro & 13 Pro Max",
+    year: 2021,
+    note: "Model # A2626, A2631, A2636, A2641",
+    models: [
+      { name: "iPhone 13 Mini", status: "soon" },
+      { name: "iPhone 13", status: "soon" },
+      { name: "iPhone 13 Pro", status: "soon" },
+      { name: "iPhone 13 Pro Max", status: "soon" },
+    ],
+  },
+  {
+    key: "12",
+    title: "iPhone 12 series",
+    subtitle: "iPhone 12 Mini, 12, 12 Pro & 12 Pro Max",
+    year: 2020,
+    note: "Model # A2398, A2402, A2406, A2410",
+    models: [
+      { name: "iPhone 12", price: 160 },
+      { name: "iPhone 12 Pro", price: 160 },
+      { name: "iPhone 12 Pro Max", status: "na" },
+      { name: "iPhone 12 Mini", status: "quote" },
+    ],
+  },
+  {
+    key: "se2",
+    title: "iPhone SE (2nd gen)",
+    subtitle: "iPhone SE (2nd generation)",
+    year: 2020,
+    note: "Model # A2275",
+    models: [{ name: "iPhone SE (2nd gen)", price: 100 }],
+  },
+  {
+    key: "11",
+    title: "iPhone 11 series",
+    subtitle: "iPhone 11, 11 Pro & 11 Pro Max",
+    year: 2019,
+    note: "Model # A2111, A2160, A2161",
+    models: [
+      { name: "iPhone 11", price: 150 },
+      { name: "iPhone 11 Pro", price: 175 },
+      { name: "iPhone 11 Pro Max", price: 200 },
+    ],
+  },
+  {
+    key: "xs",
+    title: "iPhone XS / XS Max",
+    year: 2018,
+    note: "Model # A1920, A2097, A1921, A2101",
+    models: [
+      { name: "iPhone XS", status: "quote" },
+      { name: "iPhone XS Max", status: "quote" },
+    ],
+  },
+  {
+    key: "xr",
+    title: "iPhone XR",
+    year: 2018,
+    note: "Model # A1984, A2105",
+    models: [{ name: "iPhone XR", price: 120 }],
+  },
+  {
+    key: "x",
+    title: "iPhone X",
+    year: 2017,
+    note: "Model # A1865, A1901",
+    models: [{ name: "iPhone X", price: 120 }],
+  },
+  {
+    key: "8",
+    title: "iPhone 8 / 8 Plus",
+    year: 2017,
+    note: "Model # A1863, A1905",
+    models: [
+      { name: "iPhone 8", status: "quote" },
+      { name: "iPhone 8 Plus", status: "quote" },
+    ],
+  },
+  {
+    key: "7",
+    title: "iPhone 7 / 7 Plus",
+    year: 2016,
+    note: "Model # A1660, A1778",
+    models: [
+      { name: "iPhone 7", status: "quote" },
+      { name: "iPhone 7 Plus", status: "quote" },
+    ],
+  },
+];
+
+function countsFor(g) {
+  let fixed = 0;
+  let quote = 0;
+  let soon = 0;
+  let na = 0;
+  for (const m of g.models) {
+    if (typeof m.price === "number") fixed++;
+    else if (m.status === "quote") quote++;
+    else if (m.status === "soon") soon++;
+    else if (m.status === "na") na++;
+  }
+  return { fixed, quote, soon, na };
+}
+
+function smsHref(message) {
+  return `sms:${phoneE164}?&body=${encodeURIComponent(message)}`;
+}
+
+function modelSearchText(g, m) {
+  const parts = [g.title, g.subtitle, `${g.year}`, g.note, m.name].filter(Boolean);
+  return parts.join(" ").toLowerCase();
+}
 ---
 
 <Layout title="Services" description="Screen replacement, battery replacement, and more. Text (604) 809-5169 for a quote.">
@@ -15,8 +183,8 @@ const phoneE164 = "+16048095169";
       If you don’t see your exact model/service below, text me — I’ll confirm availability and pricing.
     </p>
 
-    <div class="mt-8 grid gap-4">
-      <section class="rounded-2xl border border-zinc-200 bg-zinc-50 p-6 dark:border-white/10 dark:bg-white/5">
+    <div class="mt-8 grid gap-6">
+      <section class={glassCard}>
         <h2 class="text-lg font-semibold">Common repairs</h2>
         <ul class="mt-3 list-disc space-y-2 pl-5 text-zinc-600 dark:text-zinc-300">
           <li><span class="font-semibold text-zinc-900 dark:text-zinc-100">Front screen assembly</span> (cracked glass, dead LCD, touch issues)</li>
@@ -26,303 +194,159 @@ const phoneE164 = "+16048095169";
         </ul>
       </section>
 
-      <section class="rounded-2xl border border-zinc-200 bg-zinc-50 p-6 dark:border-white/10 dark:bg-white/5">
-        <h2 class="text-lg font-semibold">iPhone screen pricing (front screen assembly)</h2>
-        <p class="mt-2 text-sm text-zinc-500 dark:text-zinc-400">
-          If you don’t see your exact model, or you need battery/charging/back glass pricing, <a class="underline decoration-zinc-400/50 hover:decoration-zinc-500 dark:decoration-white/30 dark:hover:decoration-white" href={`sms:${phoneE164}`}>text me</a>.
-        </p>
-
-        <div class="mt-5 grid gap-4">
-          <div class="rounded-xl border border-zinc-200 bg-zinc-50 p-5 dark:border-white/10 dark:bg-white/5">
-            <div class="flex flex-wrap items-baseline justify-between gap-2">
-              <div class="font-semibold">iPhone 16, 16 Plus, 16 Pro & 16 Pro Max</div>
-              <div class="text-sm text-zinc-500 dark:text-zinc-400">Year: 2024</div>
-            </div>
-            <div class="mt-2 text-sm text-zinc-600 dark:text-zinc-300">Pricing: call or text for a quote</div>
-
-            <div class="mt-4 grid gap-3 sm:grid-cols-2">
-              <a
-                class="group relative overflow-hidden rounded-lg border border-zinc-200 bg-zinc-50 p-4 transition hover:border-zinc-300 hover:bg-zinc-100 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
-                href={`sms:${phoneE164}`}
-                aria-label="Text for iPhone 16 pricing"
-              >
-                <div
-                  class="pointer-events-none absolute inset-0 opacity-35 transition group-hover:opacity-45 dark:opacity-30 dark:group-hover:opacity-40"
-                  style="background-image: url('/images/services/iphone-16.jpg'); background-size: cover; background-position: center top 28%;"
-                ></div>
-                <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/80 to-white/10 dark:from-zinc-950/70 dark:to-zinc-950/0"></div>
-
-                <div class="relative">
-                  <div class="font-semibold">iPhone 16</div>
-                  <div class="mt-1 text-zinc-600 dark:text-zinc-300">Text for quote</div>
-                  <div class="mt-2 text-sm font-semibold text-emerald-600 dark:text-emerald-400">Text for quote →</div>
-                </div>
-              </a>
-
-              <a
-                class="group relative overflow-hidden rounded-lg border border-zinc-200 bg-zinc-50 p-4 transition hover:border-zinc-300 hover:bg-zinc-100 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
-                href={`tel:${phoneE164}`}
-                aria-label="Call for iPhone 16 Pro pricing"
-              >
-                <div
-                  class="pointer-events-none absolute inset-0 opacity-25 transition group-hover:opacity-35 dark:opacity-20 dark:group-hover:opacity-30"
-                  style="background-image: url('/images/services/iphone-16-pro.jpg'); background-size: cover; background-position: center top 28%;"
-                ></div>
-                <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/85 to-white/15 dark:from-zinc-950/70 dark:to-zinc-950/0"></div>
-
-                <div class="relative">
-                  <div class="font-semibold">iPhone 16 Pro</div>
-                  <div class="mt-1 text-zinc-600 dark:text-zinc-300">Call for quote</div>
-                  <div class="mt-2 text-sm font-semibold text-emerald-600 dark:text-emerald-400">Call →</div>
-                </div>
-              </a>
-            </div>
+      <section class={glassCard}>
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <h2 class="text-lg font-semibold">iPhone screen pricing</h2>
+            <p class="mt-2 text-sm text-zinc-500 dark:text-zinc-400">
+              Front screen assembly. For battery / charging / back glass pricing,
+              <a class="underline decoration-zinc-400/50 hover:decoration-zinc-500 dark:decoration-white/30 dark:hover:decoration-white" href={smsHref("Hi! Can you quote battery/charging/back glass pricing for my iPhone model?")}>text me</a>.
+            </p>
           </div>
 
-          <div class="rounded-xl border border-zinc-200 bg-zinc-50 p-5 dark:border-white/10 dark:bg-white/5">
-            <div class="flex flex-wrap items-baseline justify-between gap-2">
-              <div class="font-semibold">iPhone 15, 15 Plus, 15 Pro & 15 Pro Max</div>
-              <div class="text-sm text-zinc-500 dark:text-zinc-400">Year: 2023</div>
-            </div>
-            <div class="mt-2 text-sm text-zinc-600 dark:text-zinc-300">Model # A2846, A2847, A2848, A2849</div>
-
-            <div class="mt-4 grid gap-3 sm:grid-cols-2">
-              <a
-                class="group relative overflow-hidden rounded-lg border border-zinc-200 bg-zinc-50 p-4 transition hover:border-zinc-300 hover:bg-zinc-100 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
-                href={`sms:${phoneE164}`}
-                aria-label="Text for iPhone 15 pricing"
-              >
-                <div
-                  class="pointer-events-none absolute inset-0 opacity-35 transition group-hover:opacity-45 dark:opacity-30 dark:group-hover:opacity-40"
-                  style="background-image: url('/images/services/iphone-15.jpg'); background-size: cover; background-position: center top 4%;"
-                ></div>
-                <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/80 to-white/10 dark:from-zinc-950/70 dark:to-zinc-950/0"></div>
-
-                <div class="relative">
-                  <div class="font-semibold">iPhone 15</div>
-                  <div class="mt-1 text-zinc-600 dark:text-zinc-300">$150</div>
-                  <div class="mt-2 text-sm font-semibold text-emerald-600 dark:text-emerald-400">Text for quote →</div>
-                </div>
-              </a>
-              <a
-                class="group relative overflow-hidden rounded-lg border border-zinc-200 bg-zinc-50 p-4 transition hover:border-zinc-300 hover:bg-zinc-100 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
-                href={`sms:${phoneE164}`}
-                aria-label="Text for iPhone 15 Pro pricing"
-              >
-                <div
-                  class="pointer-events-none absolute inset-0 opacity-35 transition group-hover:opacity-45 dark:opacity-30 dark:group-hover:opacity-40"
-                  style="background-image: url('/images/services/iphone-15-pro.jpg'); background-size: cover; background-position: center top 22%;"
-                ></div>
-                <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/80 to-white/10 dark:from-zinc-950/70 dark:to-zinc-950/0"></div>
-
-                <div class="relative">
-                  <div class="font-semibold">iPhone 15 Pro</div>
-                  <div class="mt-1 text-zinc-600 dark:text-zinc-300">$175</div>
-                  <div class="mt-2 text-sm font-semibold text-emerald-600 dark:text-emerald-400">Text for quote →</div>
-                </div>
-              </a>
-            </div>
-
-            <div class="mt-3 text-sm text-zinc-500 dark:text-zinc-400">
-              For iPhone 15 Plus / 15 Pro Max pricing, call or text.
-            </div>
-          </div>
-
-          <div class="rounded-xl border border-zinc-200 bg-zinc-50 p-5 dark:border-white/10 dark:bg-white/5">
-            <div class="flex flex-wrap items-baseline justify-between gap-2">
-              <div class="font-semibold">iPhone 14, 14 Plus, 14 Pro & 14 Pro Max</div>
-              <div class="text-sm text-zinc-500 dark:text-zinc-400">Year: 2022</div>
-            </div>
-            <div class="mt-2 text-sm text-zinc-600 dark:text-zinc-300">Model # A2881, A2885, A2889, A2893</div>
-
-            <div class="mt-4 grid gap-3 sm:grid-cols-2">
-              <a
-                class="group relative overflow-hidden rounded-lg border border-zinc-200 bg-zinc-50 p-4 transition hover:border-zinc-300 hover:bg-zinc-100 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
-                href={`sms:${phoneE164}`}
-                aria-label="Text for iPhone 14 pricing"
-              >
-                <div
-                  class="pointer-events-none absolute inset-0 opacity-35 transition group-hover:opacity-45 dark:opacity-30 dark:group-hover:opacity-40"
-                  style="background-image: url('/images/services/iphone-14.jpg'); background-size: cover; background-position: center top 22%;"
-                ></div>
-                <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/80 to-white/10 dark:from-zinc-950/70 dark:to-zinc-950/0"></div>
-
-                <div class="relative">
-                  <div class="font-semibold">iPhone 14</div>
-                  <div class="mt-1 text-zinc-600 dark:text-zinc-300">$150</div>
-                  <div class="mt-2 text-sm font-semibold text-emerald-600 dark:text-emerald-400">Text for quote →</div>
-                </div>
-              </a>
-              <a
-                class="group relative overflow-hidden rounded-lg border border-zinc-200 bg-zinc-50 p-4 transition hover:border-zinc-300 hover:bg-zinc-100 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
-                href={`sms:${phoneE164}`}
-                aria-label="Text for iPhone 14 Pro pricing"
-              >
-                <div
-                  class="pointer-events-none absolute inset-0 opacity-35 transition group-hover:opacity-45 dark:opacity-30 dark:group-hover:opacity-40"
-                  style="background-image: url('/images/services/iphone-14-pro.jpg'); background-size: cover; background-position: center top 22%;"
-                ></div>
-                <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/80 to-white/10 dark:from-zinc-950/70 dark:to-zinc-950/0"></div>
-
-                <div class="relative">
-                  <div class="font-semibold">iPhone 14 Pro</div>
-                  <div class="mt-1 text-zinc-600 dark:text-zinc-300">$175</div>
-                  <div class="mt-2 text-sm font-semibold text-emerald-600 dark:text-emerald-400">Text for quote →</div>
-                </div>
-              </a>
-            </div>
-
-            <div class="mt-3 text-sm text-zinc-500 dark:text-zinc-400">
-              For iPhone 14 Plus / 14 Pro Max pricing, call or text.
-            </div>
-          </div>
-
-          <div class="rounded-xl border border-zinc-200 bg-zinc-50 p-5 dark:border-white/10 dark:bg-white/5">
-            <div class="flex flex-wrap items-baseline justify-between gap-2">
-              <div class="font-semibold">iPhone SE (3rd generation)</div>
-              <div class="text-sm text-zinc-500 dark:text-zinc-400">Year: 2022</div>
-            </div>
-            <div class="mt-2 text-sm text-zinc-600 dark:text-zinc-300">Model # A2595</div>
-
-            <div class="mt-4">
-              <a
-                class="group relative block overflow-hidden rounded-lg border border-zinc-200 bg-zinc-50 p-4 transition hover:border-zinc-300 hover:bg-zinc-100 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
-                href={`sms:${phoneE164}`}
-                aria-label="Text for iPhone SE (3rd gen) pricing"
-              >
-                <div
-                  class="pointer-events-none absolute inset-0 opacity-35 transition group-hover:opacity-45 dark:opacity-30 dark:group-hover:opacity-40"
-                  style="background-image: url('/images/services/iphone-se-3.jpg'); background-size: cover; background-position: center top 34%;"
-                ></div>
-                <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/80 to-white/10 dark:from-zinc-950/70 dark:to-zinc-950/0"></div>
-
-                <div class="relative">
-                  <div class="font-semibold">iPhone SE (3rd gen)</div>
-                  <div class="mt-1 text-zinc-600 dark:text-zinc-300">Front screen assembly</div>
-                  <div class="mt-2 text-sm font-semibold text-emerald-600 dark:text-emerald-400">Text for quote →</div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="rounded-xl border border-zinc-200 bg-zinc-50 p-5 dark:border-white/10 dark:bg-white/5">
-            <div class="flex flex-wrap items-baseline justify-between gap-2">
-              <div class="font-semibold">iPhone 13 Mini, 13, 13 Pro & 13 Pro Max</div>
-              <div class="text-sm text-zinc-500 dark:text-zinc-400">Year: 2021</div>
-            </div>
-            <div class="mt-2 text-sm text-zinc-600 dark:text-zinc-300">Model # A2626, A2631, A2636, A2641</div>
-            <div class="mt-3 text-zinc-600 dark:text-zinc-300">Front Screen Assembly: <span class="font-semibold text-zinc-900 dark:text-zinc-100">Coming soon</span></div>
-          </div>
-
-          <div class="rounded-xl border border-zinc-200 bg-zinc-50 p-5 dark:border-white/10 dark:bg-white/5">
-            <div class="flex flex-wrap items-baseline justify-between gap-2">
-              <div class="font-semibold">iPhone 12 Mini, 12, 12 Pro & 12 Pro Max</div>
-              <div class="text-sm text-zinc-500 dark:text-zinc-400">Year: 2020</div>
-            </div>
-            <div class="mt-2 text-sm text-zinc-600 dark:text-zinc-300">Model # A2398, A2402, A2406, A2410</div>
-            <div class="mt-4 grid gap-3 sm:grid-cols-3">
-              <div class="rounded-lg border border-zinc-200 bg-zinc-50 p-4 dark:border-white/10 dark:bg-white/5">
-                <div class="font-semibold">iPhone 12</div>
-                <div class="mt-1 text-zinc-600 dark:text-zinc-300">$160</div>
-              </div>
-              <div class="rounded-lg border border-zinc-200 bg-zinc-50 p-4 dark:border-white/10 dark:bg-white/5">
-                <div class="font-semibold">iPhone 12 Pro</div>
-                <div class="mt-1 text-zinc-600 dark:text-zinc-300">$160</div>
-              </div>
-              <div class="rounded-lg border border-zinc-200 bg-zinc-50 p-4 dark:border-white/10 dark:bg-white/5">
-                <div class="font-semibold">iPhone 12 Pro Max</div>
-                <div class="mt-1 text-zinc-600 dark:text-zinc-300">N/A</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="rounded-xl border border-zinc-200 bg-zinc-50 p-5 dark:border-white/10 dark:bg-white/5">
-            <div class="flex flex-wrap items-baseline justify-between gap-2">
-              <div class="font-semibold">iPhone SE (2nd generation)</div>
-              <div class="text-sm text-zinc-500 dark:text-zinc-400">Year: 2020</div>
-            </div>
-            <div class="mt-2 text-sm text-zinc-600 dark:text-zinc-300">Model # A2275</div>
-            <div class="mt-3 text-zinc-600 dark:text-zinc-300">Front Screen Assembly: <span class="font-semibold text-zinc-900 dark:text-zinc-100">$100</span></div>
-          </div>
-
-          <div class="rounded-xl border border-zinc-200 bg-zinc-50 p-5 dark:border-white/10 dark:bg-white/5">
-            <div class="flex flex-wrap items-baseline justify-between gap-2">
-              <div class="font-semibold">iPhone 11, 11 Pro & 11 Pro Max</div>
-              <div class="text-sm text-zinc-500 dark:text-zinc-400">Year: 2019</div>
-            </div>
-            <div class="mt-2 text-sm text-zinc-600 dark:text-zinc-300">Model # A2111, A2160, A2161</div>
-            <div class="mt-4 grid gap-3 sm:grid-cols-3">
-              <div class="rounded-lg border border-zinc-200 bg-zinc-50 p-4 dark:border-white/10 dark:bg-white/5">
-                <div class="font-semibold">iPhone 11</div>
-                <div class="mt-1 text-zinc-600 dark:text-zinc-300">$150</div>
-              </div>
-              <div class="rounded-lg border border-zinc-200 bg-zinc-50 p-4 dark:border-white/10 dark:bg-white/5">
-                <div class="font-semibold">iPhone 11 Pro</div>
-                <div class="mt-1 text-zinc-600 dark:text-zinc-300">$175</div>
-              </div>
-              <div class="rounded-lg border border-zinc-200 bg-zinc-50 p-4 dark:border-white/10 dark:bg-white/5">
-                <div class="font-semibold">iPhone 11 Pro Max</div>
-                <div class="mt-1 text-zinc-600 dark:text-zinc-300">$200</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="rounded-xl border border-zinc-200 bg-zinc-50 p-5 dark:border-white/10 dark:bg-white/5">
-            <div class="flex flex-wrap items-baseline justify-between gap-2">
-              <div class="font-semibold">iPhone XS & XS Max</div>
-              <div class="text-sm text-zinc-500 dark:text-zinc-400">Year: 2018</div>
-            </div>
-            <div class="mt-2 text-sm text-zinc-600 dark:text-zinc-300">Model # A1920, A2097, A1921, A2101</div>
-            <div class="mt-3 text-zinc-600 dark:text-zinc-300">Screen Replacement: <span class="font-semibold text-zinc-900 dark:text-zinc-100">Call or text for pricing</span></div>
-          </div>
-
-          <div class="rounded-xl border border-zinc-200 bg-zinc-50 p-5 dark:border-white/10 dark:bg-white/5">
-            <div class="flex flex-wrap items-baseline justify-between gap-2">
-              <div class="font-semibold">iPhone XR</div>
-              <div class="text-sm text-zinc-500 dark:text-zinc-400">Year: 2018</div>
-            </div>
-            <div class="mt-2 text-sm text-zinc-600 dark:text-zinc-300">Model # A1984, A2105</div>
-            <div class="mt-3 text-zinc-600 dark:text-zinc-300">Front Screen Assembly: <span class="font-semibold text-zinc-900 dark:text-zinc-100">$120</span></div>
-          </div>
-
-          <div class="rounded-xl border border-zinc-200 bg-zinc-50 p-5 dark:border-white/10 dark:bg-white/5">
-            <div class="flex flex-wrap items-baseline justify-between gap-2">
-              <div class="font-semibold">iPhone X</div>
-              <div class="text-sm text-zinc-500 dark:text-zinc-400">Year: 2017</div>
-            </div>
-            <div class="mt-2 text-sm text-zinc-600 dark:text-zinc-300">Model # A1865, A1901</div>
-            <div class="mt-3 text-zinc-600 dark:text-zinc-300">Front Screen Assembly: <span class="font-semibold text-zinc-900 dark:text-zinc-100">$120</span></div>
-          </div>
-
-          <div class="rounded-xl border border-zinc-200 bg-zinc-50 p-5 dark:border-white/10 dark:bg-white/5">
-            <div class="flex flex-wrap items-baseline justify-between gap-2">
-              <div class="font-semibold">iPhone 8 & 8 Plus</div>
-              <div class="text-sm text-zinc-500 dark:text-zinc-400">Year: 2017</div>
-            </div>
-            <div class="mt-2 text-sm text-zinc-600 dark:text-zinc-300">Model # A1863, A1905</div>
-            <div class="mt-3 text-zinc-600 dark:text-zinc-300">Repair: <span class="font-semibold text-zinc-900 dark:text-zinc-100">Call or text for pricing</span></div>
-          </div>
-
-          <div class="rounded-xl border border-zinc-200 bg-zinc-50 p-5 dark:border-white/10 dark:bg-white/5">
-            <div class="flex flex-wrap items-baseline justify-between gap-2">
-              <div class="font-semibold">iPhone 7 & 7 Plus</div>
-              <div class="text-sm text-zinc-500 dark:text-zinc-400">Year: 2016</div>
-            </div>
-            <div class="mt-2 text-sm text-zinc-600 dark:text-zinc-300">Model # A1660, A1778</div>
-            <div class="mt-3 text-zinc-600 dark:text-zinc-300">Repair: <span class="font-semibold text-zinc-900 dark:text-zinc-100">Call or text for pricing</span></div>
-          </div>
-
-          <div class="rounded-xl border border-zinc-200 bg-zinc-50 p-5 dark:border-white/10 dark:bg-white/5">
-            <div class="font-semibold">Older models</div>
-            <div class="mt-2 text-zinc-600 dark:text-zinc-300">Please call or text for details on older iPhone models (SE 1st gen, 6/6s, 5/5c/5s, 4/4s, 3G/3GS, etc.).</div>
+          <div class="flex gap-2">
+            <a class="btn-secondary" href={smsHref("Hi! Price for a front screen assembly on my iPhone? Model: ")}>Text</a>
+            <a class="btn-secondary" href={`tel:${phoneE164}`}>Call</a>
           </div>
         </div>
 
-        <div class="mt-6">
-          <a class="rounded-md bg-emerald-500 px-4 py-3 font-semibold text-zinc-950 hover:bg-emerald-400" href={`sms:${phoneE164}`}>
-            Text for exact pricing
-          </a>
+        <div class="mt-5">
+          <label class="text-sm font-semibold text-zinc-800 dark:text-zinc-200" for="model-search">Find your iPhone</label>
+          <input
+            id="model-search"
+            type="search"
+            placeholder="Search: 15 Pro Max, SE, XR…"
+            class="mt-2 w-full rounded-lg border border-zinc-200 bg-white/80 px-3 py-2 text-zinc-900 placeholder:text-zinc-400 shadow-sm outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/20 dark:border-white/10 dark:bg-black/20 dark:text-zinc-100 dark:placeholder:text-zinc-500"
+            autocomplete="off"
+          />
+          <p class="mt-2 text-xs text-zinc-500 dark:text-zinc-400">Tip: try “Pro”, “Plus”, or “A2595”.</p>
         </div>
+
+        <div class="mt-6 divide-y divide-zinc-200/70 overflow-hidden rounded-xl border border-zinc-200/70 bg-white/40 dark:divide-white/10 dark:border-white/10 dark:bg-white/5">
+          {generations.map((g, idx) => {
+            const c = countsFor(g);
+            const open = idx < 2;
+            const summaryRightBits = [
+              c.fixed ? `${c.fixed} priced` : null,
+              c.quote ? `${c.quote} quote` : null,
+              c.soon ? `${c.soon} soon` : null,
+              c.na ? `${c.na} n/a` : null,
+            ].filter(Boolean);
+
+            const seriesMsg = `Hi! Price for ${g.subtitle ?? g.title} front screen assembly?`;
+
+            return (
+              <details class="group" open={open}>
+                <summary class="flex cursor-pointer list-none flex-wrap items-center justify-between gap-3 px-4 py-4 hover:bg-white/60 dark:hover:bg-white/5">
+                  <div>
+                    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                      <div class="font-semibold text-zinc-900 dark:text-zinc-100">{g.title}</div>
+                      {g.year ? <div class="text-sm text-zinc-500 dark:text-zinc-400">{g.year}</div> : null}
+                    </div>
+                    {g.subtitle ? <div class="mt-1 text-sm text-zinc-600 dark:text-zinc-300">{g.subtitle}</div> : null}
+                    {g.note ? <div class="mt-1 text-xs text-zinc-500 dark:text-zinc-400">{g.note}</div> : null}
+                  </div>
+
+                  <div class="flex items-center gap-2">
+                    {summaryRightBits.length ? (
+                      <div class="hidden text-sm text-zinc-500 dark:text-zinc-400 sm:block">{summaryRightBits.join(" • ")}</div>
+                    ) : null}
+                    <a
+                      class="rounded-md bg-emerald-500 px-3 py-2 text-sm font-semibold text-zinc-950 hover:bg-emerald-400"
+                      href={smsHref(seriesMsg)}
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      Text about this
+                    </a>
+                  </div>
+                </summary>
+
+                <div class="px-4 pb-5">
+                  <div class="mt-3 grid gap-3 sm:grid-cols-2">
+                    {g.models.map((m) => {
+                      const search = modelSearchText(g, m);
+                      return (
+                        <div
+                          class="service-model-item rounded-lg border border-zinc-200/70 bg-white/70 p-4 shadow-sm dark:border-white/10 dark:bg-white/5"
+                          data-search={search}
+                        >
+                          <div class="flex items-start justify-between gap-3">
+                            <div class="font-semibold text-zinc-900 dark:text-zinc-100">{m.name}</div>
+
+                            {typeof m.price === "number" ? (
+                              <div class="text-lg font-semibold tabular-nums text-zinc-900 dark:text-zinc-100">${m.price}</div>
+                            ) : m.status === "quote" ? (
+                              <span class={`${pillBase} border-emerald-500/30 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300`}>Quote required</span>
+                            ) : m.status === "soon" ? (
+                              <span class={`${pillBase} border-zinc-300/60 bg-zinc-100 text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300`}>Coming soon</span>
+                            ) : (
+                              <span class={`${pillBase} border-zinc-300/60 bg-zinc-100 text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300`}>N/A</span>
+                            )}
+                          </div>
+
+                          {typeof m.price === "number" ? (
+                            <div class="mt-1 text-sm text-zinc-600 dark:text-zinc-300">Front screen assembly</div>
+                          ) : (
+                            <div class="mt-1 text-sm text-zinc-600 dark:text-zinc-300">Text/call with your model for exact pricing</div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  <div class="mt-4 flex flex-wrap gap-2">
+                    <a
+                      class="rounded-md bg-emerald-500 px-4 py-3 font-semibold text-zinc-950 hover:bg-emerald-400"
+                      href={smsHref(seriesMsg)}
+                    >
+                      Text for exact pricing
+                    </a>
+                    <a class="btn-secondary" href={`tel:${phoneE164}`}>Call</a>
+                  </div>
+                </div>
+              </details>
+            );
+          })}
+        </div>
+
+        <div class="mt-5 text-sm text-zinc-500 dark:text-zinc-400">
+          Don’t see your model? <a class="underline decoration-zinc-400/50 hover:decoration-zinc-500 dark:decoration-white/30 dark:hover:decoration-white" href={smsHref("Hi! What iPhone model do I have, and what would a front screen assembly cost?")}>Text me</a> and I’ll confirm.
+        </div>
+
+        <script is:inline>
+          {
+            `(() => {
+              const input = document.getElementById('model-search');
+              if (!input) return;
+              const items = Array.from(document.querySelectorAll('.service-model-item'));
+              const allDetails = Array.from(document.querySelectorAll('details.group'));
+
+              function applyFilter() {
+                const q = (input.value || '').trim().toLowerCase();
+                let anyVisible = false;
+
+                for (const el of items) {
+                  const hay = (el.getAttribute('data-search') || '');
+                  const show = !q || hay.includes(q);
+                  el.style.display = show ? '' : 'none';
+                  if (show) anyVisible = true;
+                }
+
+                // Open any section that has visible items when searching
+                if (q) {
+                  for (const d of allDetails) {
+                    const hasVisible = d.querySelector('.service-model-item:not([style*="display: none"])');
+                    if (hasVisible) d.open = true;
+                  }
+                }
+
+                input.setAttribute('aria-invalid', anyVisible ? 'false' : 'true');
+              }
+
+              input.addEventListener('input', applyFilter);
+            })();`
+          }
+        </script>
       </section>
     </div>
   </main>
