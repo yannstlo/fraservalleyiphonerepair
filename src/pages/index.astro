@@ -51,7 +51,7 @@ const trustSignals = [
 ];
 ---
 
-<Layout title="iPhone repair in the Fraser Valley" description={`Fast iPhone repair in the Fraser Valley. Most repairs in 30–45 minutes. Text ${phoneDisplay}.`}>
+<Layout title="iPhone repair in the Fraser Valley" description={`Fast iPhone repair in the Fraser Valley. Most repairs in 30–45 minutes. Text-first quotes in Mission, BC.`}>
   <SiteHeader />
 
   <main>
@@ -68,13 +68,13 @@ const trustSignals = [
 
           <div class="mt-6 flex flex-wrap gap-3">
             <a class="btn-primary" href={`sms:${phoneE164}`}>Text for a quote</a>
-            <a class="btn-secondary" href={`tel:${phoneE164}`}>Call {phoneDisplay}</a>
-            <a class="btn-secondary" href="/contact/">Contact info</a>
+            <a class="btn-secondary" href={`tel:${phoneE164}`}>Call</a>
+            <a class="btn-secondary" href="/contact/">Directions & contact</a>
           </div>
 
           <ul class="mt-6 flex flex-wrap gap-2 text-sm text-zinc-300">
-            <li class="chip">Mission, BC</li>
             <li class="chip">Most repairs 30–45 min</li>
+            <li class="chip">90-day warranty</li>
             <li class="chip">Text-first quotes</li>
           </ul>
 
@@ -98,8 +98,22 @@ const trustSignals = [
             ))}
           </div>
 
-          <div class="mt-4 text-sm text-zinc-300">
-            <a class="link" href={googleReviewsUrl} rel="noopener noreferrer" target="_blank">Read Google reviews →</a>
+          <div class="mt-4 flex flex-wrap items-center gap-3 text-sm">
+            <a
+              class="inline-flex items-center gap-2 rounded-md border border-white/10 bg-white/5 px-3 py-2 font-semibold text-zinc-100 hover:bg-white/10"
+              href={googleReviewsUrl}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <svg width="16" height="16" viewBox="0 0 256 262" aria-hidden="true" class="shrink-0">
+                <!-- Simplified multicolor Google G -->
+                <path fill="#4285F4" d="M255.9 133.5c0-11.3-1-19.6-3.2-28.2H130.6v53.4h71.7c-1.4 11.6-9.2 29.1-26.5 40.8l-.2 1.8 38.6 29.9 2.7.3c25-23.1 39-57.1 39-98.1Z"/>
+                <path fill="#34A853" d="M130.6 261.1c36.1 0 66.4-11.9 88.5-32.5l-42.1-32.6c-11.3 7.9-26.5 13.4-46.4 13.4-35.3 0-65.2-23.1-75.9-55.1l-1.7.1-40.4 31.1-.6 1.6c22 43.7 67.2 74 118 74Z"/>
+                <path fill="#FBBC05" d="M54.7 154.3c-2.8-8.4-4.4-17.4-4.4-26.7s1.6-18.3 4.2-26.7l-.1-1.8L13.6 67.5l-1.3.6C4.4 84.2 0 104 0 127.6c0 23.6 4.4 43.4 12.3 59.5l42.4-32.8Z"/>
+                <path fill="#EA4335" d="M130.6 50.6c25.1 0 42 10.8 51.6 19.9l37.7-36.8C197 12.1 166.8 0 130.6 0 79.8 0 34.6 30.3 12.3 68.1l42.3 32.8c10.8-32 40.7-50.3 76-50.3Z"/>
+              </svg>
+              <span>Google Reviews</span>
+            </a>
           </div>
         </div>
 
@@ -128,10 +142,10 @@ const trustSignals = [
                 </li>
               ))}
             </ul>
-            <div class="mt-5 flex flex-wrap gap-3">
+            <div class="mt-5 flex flex-wrap items-center gap-3">
               <a class="link text-sm" href="/services/">See services & pricing →</a>
               <span class="text-sm text-zinc-400">or</span>
-              <a class="link text-sm" href={`sms:${phoneE164}`}>text {phoneDisplay} →</a>
+              <a class="link text-sm" href={`sms:${phoneE164}`}>text for a quote →</a>
             </div>
           </div>
         </div>
@@ -173,7 +187,7 @@ const trustSignals = [
         and a quote.
       </p>
       <div class="mt-5">
-        <a class="btn-primary" href={`sms:${phoneE164}`}>Text {phoneDisplay}</a>
+        <a class="btn-primary" href={`sms:${phoneE164}`}>Text for a quote</a>
       </div>
     </section>
   </main>
