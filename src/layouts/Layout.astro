@@ -36,6 +36,20 @@ const canonicalUrl = canonical ?? "https://fraservalleyiphonerepair.com" + Astro
 
     <meta name="twitter:card" content="summary" />
 
+    <!-- Set theme early to avoid flash. -->
+    <script is:inline>
+      (() => {
+        try {
+          const stored = localStorage.getItem("theme");
+          const prefersDark = window.matchMedia?.("(prefers-color-scheme: dark)")?.matches;
+          const theme = stored || (prefersDark ? "dark" : "light");
+          document.documentElement.classList.toggle("dark", theme === "dark");
+        } catch {
+          // ignore
+        }
+      })();
+    </script>
+
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
@@ -73,8 +87,43 @@ const canonicalUrl = canonical ?? "https://fraservalleyiphonerepair.com" + Astro
       ]
     })} />
   </head>
-  <body class="min-h-dvh bg-zinc-950 pb-20 text-zinc-100 sm:pb-0">
+  <body class="min-h-dvh bg-white pb-20 text-zinc-900 sm:pb-0 dark:bg-zinc-950 dark:text-zinc-100">
     <slot />
     <MobileCtaBar />
+
+    <script is:inline>
+      (() => {
+        const btn = document.getElementById("theme-toggle");
+        if (!btn) return;
+
+        const setTheme = (theme) => {
+          document.documentElement.classList.toggle("dark", theme === "dark");
+          try {
+            localStorage.setItem("theme", theme);
+          } catch {
+            // ignore
+          }
+          btn.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+        };
+
+        const getTheme = () => {
+          try {
+            const stored = localStorage.getItem("theme");
+            if (stored === "dark" || stored === "light") return stored;
+          } catch {
+            // ignore
+          }
+          return document.documentElement.classList.contains("dark") ? "dark" : "light";
+        };
+
+        // init
+        btn.setAttribute("aria-pressed", getTheme() === "dark" ? "true" : "false");
+
+        btn.addEventListener("click", () => {
+          const next = getTheme() === "dark" ? "light" : "dark";
+          setTheme(next);
+        });
+      })();
+    </script>
   </body>
 </html>

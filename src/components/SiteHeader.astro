@@ -7,26 +7,36 @@ const nav = [
   { href: "/contact/", label: "Contact" },
 ];
 ---
-<header class="sticky top-0 z-50 border-b border-white/10 bg-zinc-950/85 backdrop-blur shadow-[0_1px_0_0_rgba(255,255,255,0.06)] supports-[backdrop-filter]:bg-zinc-950/70">
+<header class="sticky top-0 z-50 border-b border-zinc-200 bg-white/85 backdrop-blur shadow-[0_1px_0_0_rgba(0,0,0,0.04)] supports-[backdrop-filter]:bg-white/70 dark:border-white/10 dark:bg-zinc-950/85 dark:shadow-[0_1px_0_0_rgba(255,255,255,0.06)] dark:supports-[backdrop-filter]:bg-zinc-950/70">
   <div class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3">
     <a href="/" class="leading-tight">
-      <div class="text-sm font-semibold tracking-tight text-zinc-50 sm:text-base">Fraser Valley iPhone Repair</div>
-      <div class="text-xs text-zinc-400">Mission, BC • Text 10am–10pm</div>
+      <div class="text-sm font-semibold tracking-tight text-zinc-950 sm:text-base dark:text-zinc-50">Fraser Valley iPhone Repair</div>
+      <div class="text-xs text-zinc-500 dark:text-zinc-400">Mission, BC • Text 10am–10pm</div>
     </a>
 
-    <nav class="hidden items-center gap-4 text-sm text-zinc-200 sm:flex">
+    <nav class="hidden items-center gap-4 text-sm text-zinc-700 sm:flex dark:text-zinc-200">
       {nav.map((item) => (
         <a class="hover:text-white" href={item.href}>{item.label}</a>
       ))}
     </nav>
 
     <div class="flex items-center gap-2">
+      <button
+        id="theme-toggle"
+        type="button"
+        class="inline-flex items-center justify-center rounded-md border border-zinc-300 bg-transparent px-3 py-2 text-sm font-semibold text-zinc-900 hover:bg-zinc-50 dark:border-white/15 dark:text-white dark:hover:bg-white/5"
+        aria-label="Toggle theme"
+        aria-pressed="false"
+      >
+        <span class="hidden dark:inline">Light</span>
+        <span class="dark:hidden">Dark</span>
+      </button>
       <a class="btn-primary px-3 py-2 text-sm" href="sms:+16048095169">Text</a>
       <a class="btn-secondary px-3 py-2 text-sm" href="tel:+16048095169">Call</a>
     </div>
   </div>
 
-  <nav class="border-t border-white/10 px-4 py-2 text-sm text-zinc-200 sm:hidden">
+  <nav class="border-t border-zinc-200 px-4 py-2 text-sm text-zinc-700 sm:hidden dark:border-white/10 dark:text-zinc-200">
     <div class="mx-auto flex max-w-5xl gap-4">
       {nav.map((item) => (
         <a class="hover:text-white" href={item.href}>{item.label}</a>

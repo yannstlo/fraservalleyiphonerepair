@@ -8,41 +8,41 @@ const phoneE164 = "+16048095169";
 const address = "7709 Alpine Pl, Mission, BC V2V 4T3";
 ---
 
-<Layout title="Contact" description="Text or call (604) 809-5169. Located in Mission, BC (Fraser Valley).">
+<Layout title="Contact" description="Text or call (604) 809-5169. Located in Mission, BC (Fraser Valley)." >
   <SiteHeader />
 
   <main class="mx-auto max-w-5xl px-4 py-12">
     <h1 class="text-3xl font-semibold tracking-tight">Contact</h1>
 
     <div class="mt-8 grid gap-6 md:grid-cols-2">
-      <section class="rounded-2xl border border-white/10 bg-white/5 p-6">
+      <section class="rounded-2xl border border-zinc-200 bg-zinc-50 p-6 dark:border-white/10 dark:bg-white/5">
         <h2 class="text-lg font-semibold">Text is best</h2>
-        <p class="mt-2 text-zinc-300">
+        <p class="mt-2 text-zinc-600 dark:text-zinc-300">
           Include your iPhone model + the issue (cracked screen, lines, no charge, etc.). Photos help.
         </p>
         <div class="mt-5 flex flex-wrap gap-3">
           <a class="rounded-md bg-emerald-500 px-4 py-3 font-semibold text-zinc-950 hover:bg-emerald-400" href={`sms:${phoneE164}`}>
             Text {phoneDisplay}
           </a>
-          <a class="rounded-md border border-white/15 px-4 py-3 font-semibold text-white hover:bg-white/5" href={`tel:${phoneE164}`}>
+          <a class="btn-secondary" href={`tel:${phoneE164}`}>
             Call
           </a>
         </div>
-        <div class="mt-4 text-sm text-zinc-300">
+        <div class="mt-4 text-sm text-zinc-600 dark:text-zinc-300">
           Email: <a class="underline decoration-white/30 hover:decoration-white" href="mailto:yann@yann.ca">yann@yann.ca</a>
         </div>
       </section>
 
-      <section class="rounded-2xl border border-white/10 bg-white/5 p-6">
+      <section class="rounded-2xl border border-zinc-200 bg-zinc-50 p-6 dark:border-white/10 dark:bg-white/5">
         <h2 class="text-lg font-semibold">Location & hours</h2>
-        <div class="mt-3 text-zinc-300">
-          <div><span class="text-zinc-400">Address:</span> {address}</div>
-          <div class="mt-2"><span class="text-zinc-400">Hours:</span> Daily 10:00 AM – 10:00 PM</div>
+        <div class="mt-3 text-zinc-600 dark:text-zinc-300">
+          <div><span class="text-zinc-500 dark:text-zinc-400">Address:</span> {address}</div>
+          <div class="mt-2"><span class="text-zinc-500 dark:text-zinc-400">Hours:</span> Daily 10:00 AM – 10:00 PM</div>
         </div>
 
         <div class="mt-5 flex flex-wrap gap-3">
           <a
-            class="rounded-md border border-white/15 px-4 py-3 font-semibold text-white hover:bg-white/5"
+            class="btn-secondary"
             href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`}
             target="_blank"
             rel="noreferrer"
@@ -51,7 +51,7 @@ const address = "7709 Alpine Pl, Mission, BC V2V 4T3";
           </a>
         </div>
 
-        <div class="mt-5 overflow-hidden rounded-xl border border-white/10">
+        <div class="mt-5 overflow-hidden rounded-xl border border-zinc-200 dark:border-white/10">
           <iframe
             class="h-72 w-full"
             loading="lazy"
@@ -63,9 +63,9 @@ const address = "7709 Alpine Pl, Mission, BC V2V 4T3";
       </section>
     </div>
 
-    <section class="mt-10 rounded-2xl border border-white/10 bg-white/5 p-6">
+    <section class="mt-10 rounded-2xl border border-zinc-200 bg-zinc-50 p-6 dark:border-white/10 dark:bg-white/5">
       <h2 class="text-lg font-semibold">Service area</h2>
-      <p class="mt-2 text-zinc-300">
+      <p class="mt-2 text-zinc-600 dark:text-zinc-300">
         Fraser Valley from Surrey to Chilliwack (both sides of the Fraser River), including Abbotsford, Aldergrove,
         Chilliwack, Langley, Maple Ridge, Mission, and Pitt Meadows.
       </p>

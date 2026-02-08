@@ -32,12 +32,12 @@ const images = files.map((file) => ({
 
   <main class="mx-auto max-w-5xl px-4 py-12">
     <h1 class="text-3xl font-semibold tracking-tight">Archives</h1>
-    <p class="mt-3 text-zinc-300">
+    <p class="mt-3 text-zinc-600 dark:text-zinc-300">
       Some of the more spectacular iPhone disasters (and saves) over the years.
     </p>
 
     {images.length === 0 ? (
-      <div class="mt-8 rounded-2xl border border-white/10 bg-white/5 p-6 text-zinc-300">
+      <div class="mt-8 rounded-2xl border border-zinc-200 bg-zinc-50 p-6 text-zinc-600 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300">
         No museum images yet.
         <div class="mt-2 text-sm text-zinc-400">
           Add files to <code class="rounded bg-white/10 px-1 py-0.5">public/images/museum/</code>.
@@ -46,15 +46,15 @@ const images = files.map((file) => ({
     ) : (
       <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {images.map((img) => (
-          <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+          <figure class="overflow-hidden rounded-2xl border border-zinc-200 bg-white dark:border-white/10 dark:bg-white/5">
             <img src={img.src} alt={img.alt} loading="lazy" class="aspect-square w-full object-cover" />
           </figure>
         ))}
       </div>
     )}
 
-    <div class="mt-10 rounded-2xl border border-white/10 bg-white/5 p-6">
-      <div class="text-sm text-zinc-300">
+    <div class="mt-10 rounded-2xl border border-zinc-200 bg-zinc-50 p-6 dark:border-white/10 dark:bg-white/5">
+      <div class="text-sm text-zinc-600 dark:text-zinc-300">
         Have a broken phone? Text is best — include your model + what happened.
       </div>
       <div class="mt-4">

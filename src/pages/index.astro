@@ -61,7 +61,7 @@ const trustSignals = [
           <h1 class="text-3xl font-semibold tracking-tight sm:text-4xl">
             iPhone repair in the Fraser Valley
           </h1>
-          <p class="mt-4 text-zinc-300">
+          <p class="mt-4 text-zinc-600 dark:text-zinc-300">
             Screen replacement, battery replacement, and more — repairs are done in front of you while you watch.
             Most repairs are completed in <span class="font-semibold text-zinc-100">30–45 minutes</span>.
           </p>
@@ -72,35 +72,35 @@ const trustSignals = [
             <a class="btn-secondary" href="/contact/">Directions & contact</a>
           </div>
 
-          <ul class="mt-6 flex flex-wrap gap-2 text-sm text-zinc-300">
+          <ul class="mt-6 flex flex-wrap gap-2 text-sm text-zinc-600 dark:text-zinc-300">
             <li class="chip">Most repairs 30–45 min</li>
             <li class="chip">90-day warranty</li>
             <li class="chip">Text-first quotes</li>
           </ul>
 
           <dl class="mt-6 grid grid-cols-2 gap-4 text-sm">
-            <div class="rounded-lg border border-white/10 bg-white/5 p-4">
-              <dt class="text-zinc-300">Hours</dt>
+            <div class="rounded-lg border border-zinc-200 bg-zinc-50 p-4 dark:border-white/10 dark:bg-white/5">
+              <dt class="text-zinc-600 dark:text-zinc-300">Hours</dt>
               <dd class="mt-1 font-semibold">Daily 10am–10pm</dd>
             </div>
-            <div class="rounded-lg border border-white/10 bg-white/5 p-4">
-              <dt class="text-zinc-300">Location</dt>
+            <div class="rounded-lg border border-zinc-200 bg-zinc-50 p-4 dark:border-white/10 dark:bg-white/5">
+              <dt class="text-zinc-600 dark:text-zinc-300">Location</dt>
               <dd class="mt-1 font-semibold">Mission, BC</dd>
             </div>
           </dl>
 
           <div class="mt-6 grid gap-3 sm:grid-cols-3">
             {trustSignals.map((item) => (
-              <div class="rounded-lg border border-white/10 bg-white/5 p-4 text-sm">
-                <div class="font-semibold text-white">{item.title}</div>
-                <div class="mt-1 text-zinc-300">{item.desc}</div>
+              <div class="rounded-lg border border-zinc-200 bg-zinc-50 p-4 text-sm dark:border-white/10 dark:bg-white/5">
+                <div class="font-semibold text-zinc-900 dark:text-white">{item.title}</div>
+                <div class="mt-1 text-zinc-600 dark:text-zinc-300">{item.desc}</div>
               </div>
             ))}
           </div>
 
           <div class="mt-4 flex flex-wrap items-center gap-3 text-sm">
             <a
-              class="inline-flex items-center gap-2 rounded-md border border-white/10 bg-white/5 px-3 py-2 font-semibold text-zinc-100 hover:bg-white/10"
+              class="inline-flex items-center gap-2 rounded-md border border-zinc-200 bg-zinc-50 px-3 py-2 font-semibold text-zinc-900 hover:bg-zinc-100 dark:border-white/10 dark:bg-white/5 dark:text-zinc-100 dark:hover:bg-white/10"
               href={googleReviewsUrl}
               rel="noopener noreferrer"
               target="_blank"
@@ -117,25 +117,25 @@ const trustSignals = [
           </div>
         </div>
 
-        <div class="overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/0">
+        <div class="overflow-hidden rounded-2xl border border-zinc-200 bg-gradient-to-br from-zinc-50 to-white dark:border-white/10 dark:from-white/5 dark:to-white/0">
           <img
             src="/images/fvir.png"
             alt="Fraser Valley iPhone Repair"
             loading="eager"
             width="1216"
             height="864"
-            class="h-auto w-full border-b border-white/10 object-cover"
+            class="h-auto w-full border-b border-zinc-200 object-cover dark:border-white/10"
           />
 
           <div class="p-6">
             <h2 class="text-lg font-semibold">Popular services</h2>
-            <ul class="mt-4 grid gap-3 text-sm text-zinc-200">
+            <ul class="mt-4 grid gap-3 text-sm text-zinc-700 dark:text-zinc-200">
               {services.map((service) => (
-                <li class="rounded-lg border border-white/10 bg-white/5 p-4">
+                <li class="rounded-lg border border-zinc-200 bg-zinc-50 p-4 dark:border-white/10 dark:bg-white/5">
                   <div class="flex items-start justify-between gap-4">
                     <div>
-                      <div class="font-semibold text-white">{service.title}</div>
-                      <div class="mt-1 text-zinc-300">{service.desc}</div>
+                      <div class="font-semibold text-zinc-900 dark:text-white">{service.title}</div>
+                      <div class="mt-1 text-zinc-600 dark:text-zinc-300">{service.desc}</div>
                     </div>
                     <a class="link shrink-0 text-sm" href={`sms:${phoneE164}`}>Text for price</a>
                   </div>
@@ -152,15 +152,15 @@ const trustSignals = [
       </div>
     </section>
 
-    <section class="border-y border-white/10 bg-white/5">
+    <section class="border-y border-zinc-200 bg-zinc-50 dark:border-white/10 dark:bg-white/5">
       <div class="mx-auto max-w-5xl px-4 py-10">
         <h2 class="text-lg font-semibold">How it works</h2>
         <ol class="mt-4 grid gap-3 sm:grid-cols-3">
           {howItWorks.map((step, idx) => (
-            <li class="rounded-lg border border-white/10 bg-white/5 p-4 text-sm">
-              <div class="text-zinc-400">Step {idx + 1}</div>
-              <div class="mt-1 font-semibold text-white">{step.title}</div>
-              <div class="mt-1 text-zinc-300">{step.desc}</div>
+            <li class="rounded-lg border border-zinc-200 bg-white p-4 text-sm dark:border-white/10 dark:bg-white/5">
+              <div class="text-zinc-500 dark:text-zinc-400">Step {idx + 1}</div>
+              <div class="mt-1 font-semibold text-zinc-900 dark:text-white">{step.title}</div>
+              <div class="mt-1 text-zinc-600 dark:text-zinc-300">{step.desc}</div>
             </li>
           ))}
         </ol>
@@ -173,7 +173,7 @@ const trustSignals = [
     <section>
       <div class="mx-auto max-w-5xl px-4 py-10">
         <h2 class="text-lg font-semibold">Areas served</h2>
-        <p class="mt-2 text-zinc-300">
+        <p class="mt-2 text-zinc-600 dark:text-zinc-300">
           Serving the Fraser Valley from Surrey to Chilliwack, including Mission, Abbotsford, Langley, Maple Ridge,
           Pitt Meadows, and Aldergrove.
         </p>
@@ -182,7 +182,7 @@ const trustSignals = [
 
     <section class="mx-auto max-w-5xl px-4 py-12">
       <h2 class="text-lg font-semibold">Questions? Text is best.</h2>
-      <p class="mt-2 text-zinc-300">
+      <p class="mt-2 text-zinc-600 dark:text-zinc-300">
         Tell me your iPhone model and what happened (cracked screen, lines, no charge, etc.). I’ll reply with options
         and a quote.
       </p>

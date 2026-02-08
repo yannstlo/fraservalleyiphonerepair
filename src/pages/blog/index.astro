@@ -24,7 +24,7 @@ function pickThumb(post) {
 
   <main class="mx-auto max-w-5xl px-4 py-12">
     <h1 class="text-3xl font-semibold tracking-tight">Blog</h1>
-    <p class="mt-3 text-zinc-300">Tips, repairs, and updates.</p>
+    <p class="mt-3 text-zinc-600 dark:text-zinc-300">Tips, repairs, and updates.</p>
 
     <div class="mt-8 grid gap-4">
       {posts.map((post) => {
@@ -32,7 +32,7 @@ function pickThumb(post) {
         return (
           <a
             href={`/blog/${post.slug}/`}
-            class="block rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10"
+            class="block rounded-2xl border border-zinc-200 bg-zinc-50 p-5 hover:bg-zinc-100 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
           >
             <div class="flex gap-4">
               <div class="shrink-0">
@@ -41,10 +41,13 @@ function pickThumb(post) {
                     src={thumb}
                     alt=""
                     loading="lazy"
-                    class="h-16 w-16 rounded-lg border border-white/10 bg-white/5 object-cover"
+                    class="h-16 w-16 rounded-lg border border-zinc-200 bg-white object-cover dark:border-white/10 dark:bg-white/5"
                   />
                 ) : (
-                  <div class="h-16 w-16 rounded-lg border border-white/10 bg-white/5" aria-hidden="true" />
+                  <div
+                    class="h-16 w-16 rounded-lg border border-zinc-200 bg-white dark:border-white/10 dark:bg-white/5"
+                    aria-hidden="true"
+                  />
                 )}
               </div>
 
@@ -53,7 +56,7 @@ function pickThumb(post) {
                   {post.data.pubDate.toLocaleDateString("en-CA", { year: "numeric", month: "short", day: "numeric" })}
                 </div>
                 <div class="mt-1 truncate text-lg font-semibold">{post.data.title}</div>
-                {post.data.description && <div class="mt-2 line-clamp-2 text-zinc-300">{post.data.description}</div>}
+                {post.data.description && <div class="mt-2 line-clamp-2 text-zinc-600 dark:text-zinc-300">{post.data.description}</div>}
               </div>
             </div>
           </a>
@@ -61,7 +64,7 @@ function pickThumb(post) {
       })}
 
       {posts.length === 0 && (
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-6 text-zinc-300">
+        <div class="rounded-2xl border border-zinc-200 bg-zinc-50 p-6 text-zinc-600 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300">
           No posts yet.
         </div>
       )}

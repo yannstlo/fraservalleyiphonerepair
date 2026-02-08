@@ -1,8 +1,17 @@
 @import "tailwindcss";
 
-/* A tiny baseline so the minimal template doesn't look like a blank doc. */
-:root {
+/* Tailwind v4: enable class-based dark mode variants. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Baseline */
+html {
+  color-scheme: light dark;
+}
+html.dark {
   color-scheme: dark;
+}
+html:not(.dark) {
+  color-scheme: light;
 }
 
 html {
@@ -17,20 +26,25 @@ a {
 /* UI primitives */
 .btn-primary {
   @apply inline-flex items-center justify-center rounded-md bg-emerald-500 px-4 py-3 font-semibold text-zinc-950 hover:bg-emerald-400;
-  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950;
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-white;
+  @apply dark:focus-visible:ring-offset-zinc-950;
 }
 
 .btn-secondary {
-  @apply inline-flex items-center justify-center rounded-md border border-white/15 bg-transparent px-4 py-3 font-semibold text-white hover:bg-white/5;
-  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950;
+  @apply inline-flex items-center justify-center rounded-md border border-zinc-300 bg-transparent px-4 py-3 font-semibold text-zinc-900 hover:bg-zinc-50;
+  @apply dark:border-white/15 dark:text-white dark:hover:bg-white/5;
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-white;
+  @apply dark:focus-visible:ring-offset-zinc-950;
 }
 
 .link {
-  @apply font-semibold text-emerald-400 underline decoration-white/20 hover:text-emerald-300 hover:decoration-white/40;
+  @apply font-semibold text-emerald-600 underline decoration-zinc-400/40 hover:text-emerald-500 hover:decoration-zinc-500/60;
+  @apply dark:text-emerald-400 dark:decoration-white/20 dark:hover:text-emerald-300 dark:hover:decoration-white/40;
 }
 
 .chip {
-  @apply rounded-full border border-white/10 bg-white/5 px-3 py-1;
+  @apply rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1;
+  @apply dark:border-white/10 dark:bg-white/5;
 }
 
 /* Basic markdown typography (no Tailwind Typography plugin needed). */
@@ -69,11 +83,20 @@ a {
 }
 
 .markdown a {
-  color: rgb(110 231 183); /* emerald-300-ish */
+  color: rgb(5 150 105); /* emerald-600-ish */
   text-decoration: underline;
+  text-decoration-color: rgba(113, 113, 122, 0.35); /* zinc-500-ish */
+}
+
+.dark .markdown a {
+  color: rgb(110 231 183); /* emerald-300-ish */
   text-decoration-color: rgba(255, 255, 255, 0.25);
 }
 
 .markdown a:hover {
+  text-decoration-color: rgba(63, 63, 70, 0.6);
+}
+
+.dark .markdown a:hover {
   text-decoration-color: rgba(255, 255, 255, 0.6);
 }
