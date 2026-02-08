@@ -48,7 +48,6 @@ const images = files.map((file) => ({
         {images.map((img) => (
           <figure class="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
             <img src={img.src} alt={img.alt} loading="lazy" class="aspect-square w-full object-cover" />
-            {img.alt && <figcaption class="p-3 text-sm text-zinc-300">{img.alt}</figcaption>}
           </figure>
         ))}
       </div>
