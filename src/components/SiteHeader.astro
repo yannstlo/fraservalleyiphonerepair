@@ -29,15 +29,19 @@ const nav = [
       <button
         id="theme-toggle"
         type="button"
-        class="inline-flex items-center justify-center rounded-md border border-zinc-300 bg-transparent px-3 py-2 text-sm font-semibold text-zinc-900 hover:bg-zinc-50 dark:border-white/15 dark:text-white dark:hover:bg-white/5"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-md border border-zinc-300 bg-transparent text-zinc-900 hover:bg-zinc-50 dark:border-white/15 dark:text-white dark:hover:bg-white/5"
         aria-label="Toggle theme"
         aria-pressed="false"
       >
-        <span class="hidden dark:inline">Light</span>
-        <span class="dark:hidden">Dark</span>
+        <span class="sr-only">Toggle theme</span>
+        <svg class="hidden h-5 w-5 dark:inline" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M12 18a6 6 0 1 1 0-12a6 6 0 0 1 0 12Zm0-16a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1Zm0 18a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1ZM4.22 5.64a1 1 0 0 1 1.41 0l.7.7a1 1 0 0 1-1.41 1.41l-.7-.7a1 1 0 0 1 0-1.41Zm13.45 13.45a1 1 0 0 1 1.41 0l.7.7a1 1 0 1 1-1.41 1.41l-.7-.7a1 1 0 0 1 0-1.41ZM2 13a1 1 0 1 1 0-2h1a1 1 0 1 1 0 2H2Zm18 0a1 1 0 1 1 0-2h1a1 1 0 1 1 0 2h-1ZM5.64 19.78a1 1 0 0 1 0-1.41l.7-.7a1 1 0 0 1 1.41 1.41l-.7.7a1 1 0 0 1-1.41 0ZM19.78 5.64a1 1 0 0 1 0-1.41l.7-.7a1 1 0 0 1 1.41 1.41l-.7.7a1 1 0 0 1-1.41 0Z"/>
+        </svg>
+        <svg class="h-5 w-5 dark:hidden" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M21 14.2A8.1 8.1 0 0 1 9.8 3a7 7 0 1 0 11.2 11.2Z"/>
+        </svg>
       </button>
       <a class="btn-primary px-3 py-2 text-sm" href="sms:+16048095169">Text</a>
-      <a class="btn-secondary px-3 py-2 text-sm" href="tel:+16048095169">Call</a>
     </div>
   </div>
 
