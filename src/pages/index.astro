@@ -2,9 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
-
-const phoneDisplay = "(604) 809-5169";
-const phoneE164 = "+16048095169";
+import { facebookUrl, googleReviewsUrl, messengerUrl } from "../lib/site";
 
 const services = [
   {
@@ -27,32 +25,29 @@ const services = [
 
 const howItWorks = [
   {
-    title: "Text your model + issue",
-    desc: "Send the iPhone model and what happened (cracked screen, lines, won’t charge, etc.).",
+    title: "Message your model + issue",
+    desc: "Send the iPhone model, what happened, and a photo if useful.",
   },
   {
-    title: "Get a quote + time",
-    desc: "I’ll reply with options, pricing, and the soonest availability.",
+    title: "Get a quote + appointment",
+    desc: "I’ll reply with options, pricing, and a confirmed time.",
   },
   {
-    title: "Repair in front of you",
-    desc: "Most repairs are completed in 30–45 minutes.",
+    title: "Receive private directions",
+    desc: "The exact Mission address is sent after your appointment is confirmed.",
   },
 ];
 
 // NOTE: These are intentionally conservative claims.
 // If you want stronger copy (e.g., exact warranty length, “same-day guaranteed”), tell me and I’ll update.
-const googleReviewsUrl = "https://share.google/PExskCNXynymAMYbX";
-const facebookUrl = "https://www.facebook.com/FraserValleyiPhoneRepair/";
-
 const trustSignals = [
   { title: "Clear pricing", desc: "Quote before we start. No surprises." },
   { title: "90-day warranty", desc: "Parts & labour included." },
-  { title: "Convenient hours", desc: "Daily 10am–10pm." },
+  { title: "Appointment only", desc: "Choose a confirmed repair time." },
 ];
 ---
 
-<Layout title="iPhone repair in the Fraser Valley" description={`Fast iPhone repair in the Fraser Valley. Most repairs in 30–45 minutes. Text-first quotes in Mission, BC.`}>
+<Layout title="iPhone repair in the Fraser Valley" description="Fast iPhone repair in the Fraser Valley. Most repairs in 30–45 minutes. Appointment-only service in Mission, BC.">
   <SiteHeader />
 
   <main>
@@ -68,14 +63,14 @@ const trustSignals = [
           </p>
 
           <div class="mt-6 flex flex-wrap items-center gap-4">
-            <a class="btn-primary" href={`sms:${phoneE164}`}>Text for a quote</a>
-            <a class="link text-sm" href="/contact/">Directions & contact →</a>
+            <a class="btn-primary" href={messengerUrl} target="_blank" rel="noreferrer">Message for a quote</a>
+            <a class="link text-sm" href="/contact.html">Booking & contact →</a>
           </div>
 
           <dl class="mt-6 grid grid-cols-2 gap-4 text-sm">
             <div class="rounded-lg border border-zinc-200 bg-zinc-50 p-4 dark:border-white/10 dark:bg-white/5">
-              <dt class="text-zinc-600 dark:text-zinc-300">Hours</dt>
-              <dd class="mt-1 font-semibold">Daily 10am–10pm</dd>
+              <dt class="text-zinc-600 dark:text-zinc-300">Visits</dt>
+              <dd class="mt-1 font-semibold">By appointment</dd>
             </div>
             <div class="rounded-lg border border-zinc-200 bg-zinc-50 p-4 dark:border-white/10 dark:bg-white/5">
               <dt class="text-zinc-600 dark:text-zinc-300">Location</dt>
@@ -131,15 +126,15 @@ const trustSignals = [
                       <div class="font-semibold text-zinc-900 dark:text-white">{service.title}</div>
                       <div class="mt-1 text-zinc-600 dark:text-zinc-300">{service.desc}</div>
                     </div>
-                    <span class="shrink-0 text-sm font-semibold text-emerald-600 dark:text-emerald-400">Text for price</span>
+                    <span class="shrink-0 text-sm font-semibold text-emerald-600 dark:text-emerald-400">Ask for price</span>
                   </div>
                 </li>
               ))}
             </ul>
             <div class="mt-5 flex flex-wrap items-center gap-3">
-              <a class="link text-sm" href="/services/">See services & pricing →</a>
+              <a class="link text-sm" href="/services.html">See services & pricing →</a>
               <span class="text-sm text-zinc-400">or</span>
-              <a class="link text-sm" href={`sms:${phoneE164}`}>text for a quote →</a>
+              <a class="link text-sm" href={messengerUrl} target="_blank" rel="noreferrer">message for a quote →</a>
             </div>
           </div>
         </div>
@@ -159,7 +154,7 @@ const trustSignals = [
           ))}
         </ol>
         <div class="mt-6">
-          <a class="btn-primary" href={`sms:${phoneE164}`}>Text for a quote</a>
+          <a class="btn-primary" href={messengerUrl} target="_blank" rel="noreferrer">Message for a quote</a>
         </div>
       </div>
     </section>
@@ -175,13 +170,13 @@ const trustSignals = [
     </section>
 
     <section class="mx-auto max-w-5xl px-4 py-12">
-      <h2 class="text-lg font-semibold">Questions? Text is best.</h2>
+      <h2 class="text-lg font-semibold">Questions? Send a message.</h2>
       <p class="mt-2 text-zinc-600 dark:text-zinc-300">
         Tell me your iPhone model and what happened (cracked screen, lines, no charge, etc.). I’ll reply with options
         and a quote.
       </p>
       <div class="mt-5">
-        <a class="btn-primary" href={`sms:${phoneE164}`}>Text for a quote</a>
+        <a class="btn-primary" href={messengerUrl} target="_blank" rel="noreferrer">Message for a quote</a>
       </div>
     </section>
   </main>

@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import SiteHeader from "../../components/SiteHeader.astro";
 import SiteFooter from "../../components/SiteFooter.astro";
 import { getCollection } from "astro:content";
+import { postUrl } from "../../lib/post-url";
 
 const posts = (await getCollection("blog", ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
@@ -31,7 +32,7 @@ function pickThumb(post) {
         const thumb = pickThumb(post);
         return (
           <a
-            href={`/blog/${post.slug}/`}
+            href={postUrl(post)}
             class="block rounded-2xl border border-zinc-200 bg-zinc-50 p-5 hover:bg-zinc-100 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
           >
             <div class="flex gap-4">

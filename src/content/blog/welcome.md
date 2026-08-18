@@ -10,6 +10,6 @@ This is where we’ll post:
 
 - repair tips (what to try before you bring it in)
 - common issues (charging ports, batteries, screens)
-- occasional updates (hours, service area, etc.)
+- occasional updates (availability, service area, etc.)
 
-If you need a quote, **text is best** — include your iPhone model and what happened.
+If you need a quote, **send a message** with your iPhone model and what happened.
