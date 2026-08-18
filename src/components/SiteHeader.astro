@@ -1,10 +1,12 @@
 ---
+import { messengerUrl } from "../lib/site";
+
 const nav = [
-  { href: "/services/", label: "Services" },
-  { href: "/identify/", label: "Identify" },
-  { href: "/blog/", label: "Blog" },
-  { href: "/museum/", label: "Archives" },
-  { href: "/contact/", label: "Contact" },
+  { href: "/services.html", label: "Services" },
+  { href: "/identify.html", label: "Identify" },
+  { href: "/blog.html", label: "Blog" },
+  { href: "/museum.html", label: "Archives" },
+  { href: "/contact.html", label: "Contact" },
 ];
 ---
 <header class="sticky top-0 z-50 border-b border-zinc-200 bg-white/85 backdrop-blur shadow-[0_1px_0_0_rgba(0,0,0,0.04)] supports-[backdrop-filter]:bg-white/70 dark:border-white/10 dark:bg-zinc-950/85 dark:shadow-[0_1px_0_0_rgba(255,255,255,0.06)] dark:supports-[backdrop-filter]:bg-zinc-950/70">
@@ -15,7 +17,7 @@ const nav = [
       </span>
       <span>
         <div class="text-sm font-semibold tracking-tight text-zinc-950 sm:text-base dark:text-zinc-50">Fraser Valley iPhone Repair</div>
-        <div class="text-xs text-zinc-500 dark:text-zinc-400">Mission, BC • Text 10am–10pm</div>
+        <div class="text-xs text-zinc-500 dark:text-zinc-400">Mission, BC • Appointment only</div>
       </span>
     </a>
 
@@ -41,7 +43,7 @@ const nav = [
           <path fill="currentColor" d="M21 14.2A8.1 8.1 0 0 1 9.8 3a7 7 0 1 0 11.2 11.2Z"/>
         </svg>
       </button>
-      <a class="btn-primary px-3 py-2 text-sm" href="sms:+16048095169">Text</a>
+      <a class="btn-primary px-3 py-2 text-sm" href={messengerUrl} target="_blank" rel="noreferrer">Message</a>
     </div>
   </div>
 

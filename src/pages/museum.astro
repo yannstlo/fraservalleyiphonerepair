@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
+import { messengerUrl } from "../lib/site";
 import fs from "node:fs/promises";
 import path from "node:path";
 
@@ -55,11 +56,11 @@ const images = files.map((file) => ({
 
     <div class="mt-10 rounded-2xl border border-zinc-200 bg-zinc-50 p-6 dark:border-white/10 dark:bg-white/5">
       <div class="text-sm text-zinc-600 dark:text-zinc-300">
-        Have a broken phone? Text is best — include your model + what happened.
+        Have a broken phone? Message your model and what happened.
       </div>
       <div class="mt-4">
-        <a class="rounded-md bg-emerald-500 px-4 py-3 font-semibold text-zinc-950 hover:bg-emerald-400" href="sms:+16048095169">
-          Text (604) 809-5169
+        <a class="rounded-md bg-emerald-500 px-4 py-3 font-semibold text-zinc-950 hover:bg-emerald-400" href={messengerUrl} target="_blank" rel="noreferrer">
+          Message on Messenger
         </a>
       </div>
     </div>

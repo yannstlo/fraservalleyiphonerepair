@@ -1,10 +1,10 @@
 ---
-const phoneE164 = "+16048095169";
+import { messengerUrl } from "../lib/site";
 ---
 
 <div class="fixed inset-x-0 bottom-0 z-50 border-t border-zinc-200 bg-white/90 backdrop-blur sm:hidden dark:border-white/10 dark:bg-zinc-950/90">
   <div class="mx-auto flex max-w-5xl gap-3 px-4 py-3">
-    <a class="btn-primary flex-1" href={`sms:${phoneE164}`}>Text</a>
-    <a class="btn-secondary flex-1" href={`tel:${phoneE164}`}>Call</a>
+    <a class="btn-primary flex-1" href={messengerUrl} target="_blank" rel="noreferrer">Message on Messenger</a>
+    <a class="btn-secondary flex-1" href="/services.html">Services</a>
   </div>
 </div>
