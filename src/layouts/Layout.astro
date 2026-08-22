@@ -6,15 +6,17 @@ export interface Props {
   title: string;
   description?: string;
   canonical?: string;
+  image?: string;
 }
 
-const { title, description, canonical } = Astro.props;
+const { title, description, canonical, image = "/og.png" } = Astro.props;
 
 const siteName = "Fraser Valley iPhone Repair";
 const defaultDescription =
-  "Fast iPhone repair in the Fraser Valley. Screen replacement, battery replacement, and more — most repairs in 30–45 minutes. Text (604) 809-5169.";
+  "iPhone screen repair, battery replacement, charging diagnostics, and local repair information across the Fraser Valley.";
 const metaDescription = description ?? defaultDescription;
 const canonicalUrl = canonical ?? "https://fraservalleyiphonerepair.com" + Astro.url.pathname;
+const absoluteImage = new URL(image, "https://fraservalleyiphonerepair.com").toString();
 ---
 <!doctype html>
 <html lang="en">
@@ -22,8 +24,6 @@ const canonicalUrl = canonical ?? "https://fraservalleyiphonerepair.com" + Astro
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="canonical" href={canonicalUrl} />
-
-    <!-- Prefer SVG favicon (modern). -->
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
     <title>{title} | {siteName}</title>
@@ -33,36 +33,21 @@ const canonicalUrl = canonical ?? "https://fraservalleyiphonerepair.com" + Astro
     <meta property="og:title" content={`${title} | ${siteName}`} />
     <meta property="og:description" content={metaDescription} />
     <meta property="og:url" content={canonicalUrl} />
-
-    <meta name="twitter:card" content="summary" />
-
-    <!-- Set theme early to avoid flash. -->
-    <script is:inline>
-      (() => {
-        try {
-          const stored = localStorage.getItem("theme");
-          const prefersDark = window.matchMedia?.("(prefers-color-scheme: dark)")?.matches;
-          const theme = stored || (prefersDark ? "dark" : "light");
-          document.documentElement.classList.toggle("dark", theme === "dark");
-        } catch {
-          // ignore
-        }
-      })();
-    </script>
+    <meta property="og:image" content={absoluteImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={`${title} | ${siteName}`} />
+    <meta name="twitter:description" content={metaDescription} />
+    <meta name="twitter:image" content={absoluteImage} />
 
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       name: siteName,
       url: "https://fraservalleyiphonerepair.com/",
-      telephone: "+16048095169",
-      email: "yann@yann.ca",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "7709 Alpine Pl",
         addressLocality: "Mission",
         addressRegion: "BC",
-        postalCode: "V2V 4T3",
         addressCountry: "CA"
       },
       openingHoursSpecification: [
@@ -87,43 +72,8 @@ const canonicalUrl = canonical ?? "https://fraservalleyiphonerepair.com" + Astro
       ]
     })} />
   </head>
-  <body class="min-h-dvh bg-white pb-20 text-zinc-900 sm:pb-0 dark:bg-zinc-950 dark:text-zinc-100">
+  <body>
     <slot />
     <MobileCtaBar />
-
-    <script is:inline>
-      (() => {
-        const btn = document.getElementById("theme-toggle");
-        if (!btn) return;
-
-        const setTheme = (theme) => {
-          document.documentElement.classList.toggle("dark", theme === "dark");
-          try {
-            localStorage.setItem("theme", theme);
-          } catch {
-            // ignore
-          }
-          btn.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
-        };
-
-        const getTheme = () => {
-          try {
-            const stored = localStorage.getItem("theme");
-            if (stored === "dark" || stored === "light") return stored;
-          } catch {
-            // ignore
-          }
-          return document.documentElement.classList.contains("dark") ? "dark" : "light";
-        };
-
-        // init
-        btn.setAttribute("aria-pressed", getTheme() === "dark" ? "true" : "false");
-
-        btn.addEventListener("click", () => {
-          const next = getTheme() === "dark" ? "light" : "dark";
-          setTheme(next);
-        });
-      })();
-    </script>
   </body>
 </html>

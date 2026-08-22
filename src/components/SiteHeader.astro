@@ -4,52 +4,45 @@ const nav = [
   { href: "/identify/", label: "Identify" },
   { href: "/blog/", label: "Blog" },
   { href: "/museum/", label: "Archives" },
-  { href: "/contact/", label: "Contact" },
+];
+
+const channels = [
+  {
+    label: "iMessage",
+    href: "imessage://yann@yann.ca",
+    className: "icon-imessage",
+    svg: `<path fill="currentColor" d="M12 2C6.5 2 2 5.8 2 10.5c0 2.7 1.5 5.1 3.8 6.6L5 22l4.6-2.6c.8.2 1.6.3 2.4.3 5.5 0 10-3.8 10-8.6S17.5 2 12 2Z"/>`,
+  },
+  {
+    label: "WhatsApp",
+    href: "https://api.whatsapp.com/message/AOVXDEJODDRAJ1?autoload=1&app_absent=0",
+    className: "icon-whatsapp",
+    svg: `<path fill="currentColor" d="M12.1 2a9.8 9.8 0 0 0-8.5 14.7L2.5 22l5.4-1.4A9.9 9.9 0 1 0 12.1 2Zm5.8 14.1c-.2.6-1.3 1.1-1.8 1.2-.5.1-1.1.2-3.7-.8-3.1-1.2-5.1-4.4-5.2-4.6-.2-.2-1.3-1.7-1.3-3.2 0-1.5.8-2.3 1.1-2.6.2-.3.6-.4.9-.4h.6c.2 0 .5 0 .7.5.2.6.8 2 .9 2.2.1.2.1.4 0 .6-.1.2-.2.4-.4.6-.2.2-.4.4-.5.6-.2.2-.4.4-.2.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.5 1.5.3.1.6.1.8-.1.2-.3.9-1.1 1.2-1.5.2-.3.5-.3.8-.2.3.1 2 .9 2.3 1.1.3.2.5.3.6.4.1.2.1 1-.1 1.6Z"/>`,
+  },
+  {
+    label: "Messenger",
+    href: "https://m.me/FraserValleyiPhoneRepair",
+    className: "icon-messenger",
+    svg: `<path fill="currentColor" d="M12 2C6.5 2 2.2 6 2.2 11.4c0 2.9 1.2 5.4 3.3 7.1V22l3-1.6c1 .3 2.1.5 3.3.5 5.5 0 9.8-4 9.8-9.4C21.8 6 17.5 2 12 2Zm1 12.6-2.5-2.7-4.8 2.7 5.3-5.7 2.5 2.7 4.8-2.7-5.3 5.7Z"/>`,
+  },
 ];
 ---
-<header class="sticky top-0 z-50 border-b border-zinc-200 bg-white/85 backdrop-blur shadow-[0_1px_0_0_rgba(0,0,0,0.04)] supports-[backdrop-filter]:bg-white/70 dark:border-white/10 dark:bg-zinc-950/85 dark:shadow-[0_1px_0_0_rgba(255,255,255,0.06)] dark:supports-[backdrop-filter]:bg-zinc-950/70">
-  <div class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3">
-    <a href="/" class="flex items-center gap-3 leading-tight">
-      <span class="relative grid h-9 w-9 place-items-center overflow-hidden rounded-xl border border-zinc-200 bg-white shadow-sm dark:border-white/10 dark:bg-zinc-950/40">
-        <img src="/favicon.svg" alt="FV" class="h-full w-full" loading="eager" decoding="async" />
-      </span>
-      <span>
-        <div class="text-sm font-semibold tracking-tight text-zinc-950 sm:text-base dark:text-zinc-50">Fraser Valley iPhone Repair</div>
-        <div class="text-xs text-zinc-500 dark:text-zinc-400">Mission, BC • Text 10am–10pm</div>
-      </span>
-    </a>
+<header class="site-header">
+  <a class="wordmark" href="/" aria-label="Fraser Valley iPhone Repair home">
+    <span class="wordmark-mark" aria-hidden="true">FV</span>
+    <span>Fraser Valley<br />iPhone Repair</span>
+  </a>
 
-    <nav class="hidden items-center gap-4 text-sm text-zinc-700 sm:flex dark:text-zinc-200">
-      {nav.map((item) => (
-        <a class="hover:text-white" href={item.href}>{item.label}</a>
-      ))}
+  <div class="header-actions">
+    <nav aria-label="Primary navigation">
+      {nav.map((item) => <a href={item.href}>{item.label}</a>)}
     </nav>
-
-    <div class="flex items-center gap-2">
-      <button
-        id="theme-toggle"
-        type="button"
-        class="inline-flex h-10 w-10 items-center justify-center rounded-md border border-zinc-300 bg-transparent text-zinc-900 hover:bg-zinc-50 dark:border-white/15 dark:text-white dark:hover:bg-white/5"
-        aria-label="Toggle theme"
-        aria-pressed="false"
-      >
-        <span class="sr-only">Toggle theme</span>
-        <svg class="hidden h-5 w-5 dark:inline" viewBox="0 0 24 24" aria-hidden="true">
-          <path fill="currentColor" d="M12 18a6 6 0 1 1 0-12a6 6 0 0 1 0 12Zm0-16a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1Zm0 18a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1ZM4.22 5.64a1 1 0 0 1 1.41 0l.7.7a1 1 0 0 1-1.41 1.41l-.7-.7a1 1 0 0 1 0-1.41Zm13.45 13.45a1 1 0 0 1 1.41 0l.7.7a1 1 0 1 1-1.41 1.41l-.7-.7a1 1 0 0 1 0-1.41ZM2 13a1 1 0 1 1 0-2h1a1 1 0 1 1 0 2H2Zm18 0a1 1 0 1 1 0-2h1a1 1 0 1 1 0 2h-1ZM5.64 19.78a1 1 0 0 1 0-1.41l.7-.7a1 1 0 0 1 1.41 1.41l-.7.7a1 1 0 0 1-1.41 0ZM19.78 5.64a1 1 0 0 1 0-1.41l.7-.7a1 1 0 0 1 1.41 1.41l-.7.7a1 1 0 0 1-1.41 0Z"/>
-        </svg>
-        <svg class="h-5 w-5 dark:hidden" viewBox="0 0 24 24" aria-hidden="true">
-          <path fill="currentColor" d="M21 14.2A8.1 8.1 0 0 1 9.8 3a7 7 0 1 0 11.2 11.2Z"/>
-        </svg>
-      </button>
-      <a class="btn-primary px-3 py-2 text-sm" href="sms:+16048095169">Text</a>
+    <div class="header-contact" aria-label="Contact options">
+      {channels.map((item) => (
+        <a class={`header-contact-icon ${item.className}`} href={item.href} aria-label={`Contact by ${item.label}`} title={item.label}>
+          <svg viewBox="0 0 24 24" aria-hidden="true" set:html={item.svg} />
+        </a>
+      ))}
     </div>
   </div>
-
-  <nav class="border-t border-zinc-200 px-4 py-2 text-sm text-zinc-700 sm:hidden dark:border-white/10 dark:text-zinc-200">
-    <div class="mx-auto flex max-w-5xl gap-4">
-      {nav.map((item) => (
-        <a class="hover:text-white" href={item.href}>{item.label}</a>
-      ))}
-    </div>
-  </nav>
 </header>

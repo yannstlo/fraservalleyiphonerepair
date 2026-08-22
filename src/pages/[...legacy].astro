@@ -1,0 +1,81 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => !data.draft && Boolean(data.originalUrl));
+
+  const postPaths = posts.map((post) => {
+    const originalPath = new URL(post.data.originalUrl).pathname.replace(/^\/|\/$/g, "");
+    return {
+      params: { legacy: originalPath },
+      props: { kind: "post", post },
+    };
+  });
+
+  return [
+    ...postPaths,
+    { params: { legacy: "p/services.html" }, props: { kind: "services" } },
+    { params: { legacy: "p/contact-info.html" }, props: { kind: "contact" } },
+  ];
+}
+
+const { kind, post } = Astro.props;
+const legacyPath = Array.isArray(Astro.params.legacy)
+  ? Astro.params.legacy.join("/")
+  : Astro.params.legacy;
+const title =
+  kind === "post"
+    ? post.data.title
+    : kind === "services"
+      ? "iPhone Repair Services and Pricing"
+      : "Service Area Info";
+const description =
+  kind === "post"
+    ? post.data.description
+    : kind === "services"
+      ? "iPhone screen repair pricing, battery replacement notes, charging diagnostics, and current service information for Fraser Valley iPhone Repair."
+      : "Mission-based iPhone repair information for customers across the Fraser Valley.";
+
+const Content = kind === "post" ? (await post.render()).Content : null;
+---
+
+<Layout title={title} description={description} canonical={`https://fraservalleyiphonerepair.com/${legacyPath}`}>
+  <SiteHeader />
+
+  {kind === "post" ? (
+    <main class="section">
+      <article class="markdown" style="max-width: 780px;">
+        <p class="eyebrow">Blogger archive</p>
+        <h1>{title}</h1>
+        <Content />
+      </article>
+    </main>
+  ) : kind === "services" ? (
+    <main>
+      <section class="section services">
+        <div class="section-intro">
+          <p class="eyebrow">Legacy services page</p>
+          <h1>iPhone repair services and pricing.</h1>
+          <p>Common repairs include cracked screens, weak batteries, charging problems, and model-specific diagnostics. This old Blogger URL is preserved on the current site.</p>
+          <p><a class="link" href="/services/">View current services and pricing</a></p>
+        </div>
+      </section>
+    </main>
+  ) : (
+    <main>
+      <section class="section area">
+        <div class="visit-copy">
+          <p class="eyebrow">Legacy service area page</p>
+          <h1>Mission-based. Fraser Valley-wide.</h1>
+          <p>This old Blogger URL is preserved on the current site. Fraser Valley iPhone Repair serves customers from Surrey to Chilliwack, on both sides of the Fraser River.</p>
+          <p><a class="link" href="/contact/">View current contact options</a></p>
+        </div>
+      </section>
+    </main>
+  )}
+
+  <SiteFooter />
+</Layout>

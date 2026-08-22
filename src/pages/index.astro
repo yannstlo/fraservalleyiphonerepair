@@ -3,187 +3,101 @@ import Layout from "../layouts/Layout.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 
-const phoneDisplay = "(604) 809-5169";
-const phoneE164 = "+16048095169";
+const reviewUrl = "https://share.google/PExskCNXynymAMYbX";
 
 const services = [
-  {
-    title: "Screen replacement",
-    desc: "Cracked glass, dead LCD, touch issues.",
-  },
-  {
-    title: "Battery replacement",
-    desc: "Fast swaps, better battery life.",
-  },
-  {
-    title: "Charging issues",
-    desc: "Port problems, cable not seating, intermittent charging.",
-  },
-  {
-    title: "Water damage triage",
-    desc: "Bring it in ASAP — we’ll advise next steps.",
-  },
+  ["Screen replacement", "Cracked glass, dead LCDs, touch issues, and front screen assemblies."],
+  ["Battery replacement", "A straightforward fix when your phone is not holding a useful charge."],
+  ["Charging issues", "Port problems, poor cable fit, and intermittent charging."],
+  ["Diagnostics", "Tell me what happened and your iPhone model for clear next steps."],
 ];
 
-const howItWorks = [
-  {
-    title: "Text your model + issue",
-    desc: "Send the iPhone model and what happened (cracked screen, lines, won’t charge, etc.).",
-  },
-  {
-    title: "Get a quote + time",
-    desc: "I’ll reply with options, pricing, and the soonest availability.",
-  },
-  {
-    title: "Repair in front of you",
-    desc: "Most repairs are completed in 30–45 minutes.",
-  },
+const pricing = [
+  ["iPhone 15", "$150"], ["iPhone 15 Pro", "$175"],
+  ["iPhone 14", "$150"], ["iPhone 14 Pro", "$175"],
+  ["iPhone 12 / 12 Pro", "$160"], ["iPhone SE (2nd generation)", "$100"],
+  ["iPhone 11", "$150"], ["iPhone 11 Pro", "$175"], ["iPhone 11 Pro Max", "$200"],
+  ["iPhone XR / iPhone X", "$120"],
 ];
 
-// NOTE: These are intentionally conservative claims.
-// If you want stronger copy (e.g., exact warranty length, “same-day guaranteed”), tell me and I’ll update.
-const googleReviewsUrl = "https://share.google/PExskCNXynymAMYbX";
-const facebookUrl = "https://www.facebook.com/FraserValleyiPhoneRepair/";
+const communities = ["Surrey", "Langley", "Pitt Meadows", "Maple Ridge", "Aldergrove", "Abbotsford", "Mission", "Chilliwack"];
 
-const trustSignals = [
-  { title: "Clear pricing", desc: "Quote before we start. No surprises." },
-  { title: "90-day warranty", desc: "Parts & labour included." },
-  { title: "Convenient hours", desc: "Daily 10am–10pm." },
+const contactChannels = [
+  { label: "iMessage", href: "imessage://yann@yann.ca", status: "Opens Messages", className: "icon-imessage" },
+  { label: "WhatsApp", href: "https://api.whatsapp.com/message/AOVXDEJODDRAJ1?autoload=1&app_absent=0", status: "Opens WhatsApp Business", className: "icon-whatsapp" },
+  { label: "Messenger", href: "https://m.me/FraserValleyiPhoneRepair", status: "Opens Facebook Messenger", className: "icon-messenger" },
 ];
 ---
 
-<Layout title="iPhone repair in the Fraser Valley" description={`Fast iPhone repair in the Fraser Valley. Most repairs in 30–45 minutes. Text-first quotes in Mission, BC.`}>
+<Layout title="Mission, BC" description="iPhone screen repair, battery replacement, charging diagnostics, and local repair information across the Fraser Valley.">
   <SiteHeader />
 
   <main>
-    <section class="mx-auto max-w-5xl px-4 py-14">
-      <div class="grid gap-10">
-        <div>
-          <h1 class="text-3xl font-semibold tracking-tight sm:text-4xl">
-            iPhone repair in the Fraser Valley
-          </h1>
-          <p class="mt-4 text-zinc-600 dark:text-zinc-300">
-            Screen replacement, battery replacement, and more — repairs are done in front of you while you watch.
-            Most repairs are completed in <span class="font-semibold text-zinc-100">30–45 minutes</span>.
-          </p>
-
-          <div class="mt-6 flex flex-wrap items-center gap-4">
-            <a class="btn-primary" href={`sms:${phoneE164}`}>Text for a quote</a>
-            <a class="link text-sm" href="/contact/">Directions & contact →</a>
-          </div>
-
-          <dl class="mt-6 grid grid-cols-2 gap-4 text-sm">
-            <div class="rounded-lg border border-zinc-200 bg-zinc-50 p-4 dark:border-white/10 dark:bg-white/5">
-              <dt class="text-zinc-600 dark:text-zinc-300">Hours</dt>
-              <dd class="mt-1 font-semibold">Daily 10am–10pm</dd>
-            </div>
-            <div class="rounded-lg border border-zinc-200 bg-zinc-50 p-4 dark:border-white/10 dark:bg-white/5">
-              <dt class="text-zinc-600 dark:text-zinc-300">Location</dt>
-              <dd class="mt-1 font-semibold">Mission, BC</dd>
-            </div>
-          </dl>
-
-          <div class="mt-6 grid gap-3 sm:grid-cols-3">
-            {trustSignals.map((item) => (
-              <div class="rounded-lg border border-zinc-200 bg-zinc-50 p-4 text-sm dark:border-white/10 dark:bg-white/5">
-                <div class="font-semibold text-zinc-900 dark:text-white">{item.title}</div>
-                <div class="mt-1 text-zinc-600 dark:text-zinc-300">{item.desc}</div>
-              </div>
-            ))}
-          </div>
-
-          <div class="mt-4 flex flex-wrap items-center gap-4 text-sm text-zinc-500 dark:text-zinc-400">
-            <a class="inline-flex items-center gap-2 hover:text-zinc-900 dark:hover:text-zinc-100" href={googleReviewsUrl} rel="noopener noreferrer" target="_blank">
-              <svg width="16" height="16" viewBox="0 0 256 262" aria-hidden="true" class="shrink-0">
-                <path fill="#4285F4" d="M255.9 133.5c0-11.3-1-19.6-3.2-28.2H130.6v53.4h71.7c-1.4 11.6-9.2 29.1-26.5 40.8l-.2 1.8 38.6 29.9 2.7.3c25-23.1 39-57.1 39-98.1Z"/>
-                <path fill="#34A853" d="M130.6 261.1c36.1 0 66.4-11.9 88.5-32.5l-42.1-32.6c-11.3 7.9-26.5 13.4-46.4 13.4-35.3 0-65.2-23.1-75.9-55.1l-1.7.1-40.4 31.1-.6 1.6c22 43.7 67.2 74 118 74Z"/>
-                <path fill="#FBBC05" d="M54.7 154.3c-2.8-8.4-4.4-17.4-4.4-26.7s1.6-18.3 4.2-26.7l-.1-1.8L13.6 67.5l-1.3.6C4.4 84.2 0 104 0 127.6c0 23.6 4.4 43.4 12.3 59.5l42.4-32.8Z"/>
-                <path fill="#EA4335" d="M130.6 50.6c25.1 0 42 10.8 51.6 19.9l37.7-36.8C197 12.1 166.8 0 130.6 0 79.8 0 34.6 30.3 12.3 68.1l42.3 32.8c10.8-32 40.7-50.3 76-50.3Z"/>
-              </svg>
-              <span class="underline decoration-zinc-400/40 hover:decoration-zinc-500 dark:decoration-white/20 dark:hover:decoration-white">Google Reviews</span>
-            </a>
-            <a class="inline-flex items-center gap-2 hover:text-zinc-900 dark:hover:text-zinc-100" href={facebookUrl} rel="noopener noreferrer" target="_blank">
-              <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" class="shrink-0">
-                <path fill="#1877F2" d="M24 12.1C24 5.4 18.6 0 12 0S0 5.4 0 12.1C0 18.1 4.4 23 10.1 24v-8.4H7.1v-3.5h3V9.4c0-3 1.8-4.7 4.6-4.7c1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9v2.3h3.4l-.5 3.5h-2.9V24C19.6 23 24 18.1 24 12.1Z"/>
-              </svg>
-              <span class="underline decoration-zinc-400/40 hover:decoration-zinc-500 dark:decoration-white/20 dark:hover:decoration-white">Facebook</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="overflow-hidden rounded-2xl border border-zinc-200 bg-gradient-to-br from-zinc-50 to-white dark:border-white/10 dark:from-white/5 dark:to-white/0">
-          <img
-            src="/images/fvir.png"
-            alt="Fraser Valley iPhone Repair"
-            loading="eager"
-            width="1216"
-            height="864"
-            class="h-auto w-full border-b border-zinc-200 object-cover dark:border-white/10"
-          />
-
-          <div class="p-6">
-            <h2 class="text-lg font-semibold">Popular services</h2>
-            <ul class="mt-4 grid gap-3 text-sm text-zinc-700 dark:text-zinc-200">
-              {services.map((service) => (
-                <li class="rounded-lg border border-zinc-200 bg-zinc-50 p-4 dark:border-white/10 dark:bg-white/5">
-                  <div class="flex items-start justify-between gap-4">
-                    <div>
-                      <div class="font-semibold text-zinc-900 dark:text-white">{service.title}</div>
-                      <div class="mt-1 text-zinc-600 dark:text-zinc-300">{service.desc}</div>
-                    </div>
-                    <span class="shrink-0 text-sm font-semibold text-emerald-600 dark:text-emerald-400">Text for price</span>
-                  </div>
-                </li>
-              ))}
-            </ul>
-            <div class="mt-5 flex flex-wrap items-center gap-3">
-              <a class="link text-sm" href="/services/">See services & pricing →</a>
-              <span class="text-sm text-zinc-400">or</span>
-              <a class="link text-sm" href={`sms:${phoneE164}`}>text for a quote →</a>
-            </div>
-          </div>
-        </div>
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">Mission, BC / Fraser Valley</p>
+        <h1>iPhone repair, handled clearly.</h1>
+        <p class="hero-text">Screen assemblies, batteries, charging issues, and diagnostics for customers across the Fraser Valley. Most common repairs are completed in front of you in 30-45 minutes.</p>
+        <div class="hero-details"><span>Open daily 10am-10pm</span><span>While you watch</span><span>Current prices below</span></div>
+      </div>
+      <div class="hero-visual">
+        <img src="/images/hero-clean.png" alt="Cracked iPhone and replacement screen on a clean repair work surface" />
       </div>
     </section>
 
-    <section class="border-y border-zinc-200 bg-zinc-50 dark:border-white/10 dark:bg-white/5">
-      <div class="mx-auto max-w-5xl px-4 py-10">
-        <h2 class="text-lg font-semibold">How it works</h2>
-        <ol class="mt-4 grid gap-3 sm:grid-cols-3">
-          {howItWorks.map((step, idx) => (
-            <li class="rounded-lg border border-zinc-200 bg-white p-4 text-sm dark:border-white/10 dark:bg-white/5">
-              <div class="text-zinc-500 dark:text-zinc-400">Step {idx + 1}</div>
-              <div class="mt-1 font-semibold text-zinc-900 dark:text-white">{step.title}</div>
-              <div class="mt-1 text-zinc-600 dark:text-zinc-300">{step.desc}</div>
-            </li>
-          ))}
-        </ol>
-        <div class="mt-6">
-          <a class="btn-primary" href={`sms:${phoneE164}`}>Text for a quote</a>
-        </div>
+    <section class="proof-strip" aria-label="Repair highlights">
+      <div><strong>30-45 min</strong><span>Typical repair time</span></div>
+      <div><strong>While you watch</strong><span>Your phone stays in view</span></div>
+      <div><strong>Current pricing</strong><span>Common screen repairs listed below</span></div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="contact-copy">
+        <p class="eyebrow">Start a repair</p>
+        <h2 id="contact-heading">Send the model and what happened.</h2>
+        <p>Use the channel that is easiest for you. iMessage, WhatsApp Business, and Messenger are available now.</p>
+      </div>
+      <div class="contact-actions">
+        {contactChannels.map((item) => (
+          <a class={`contact-button ${item.className}`} href={item.href} aria-label={`Contact Fraser Valley iPhone Repair by ${item.label}`}>
+            <span>{item.label}</span>
+            <small>{item.status}</small>
+          </a>
+        ))}
       </div>
     </section>
 
-    <section>
-      <div class="mx-auto max-w-5xl px-4 py-10">
-        <h2 class="text-lg font-semibold">Areas served</h2>
-        <p class="mt-2 text-zinc-600 dark:text-zinc-300">
-          Serving the Fraser Valley from Surrey to Chilliwack, including Mission, Abbotsford, Langley, Maple Ridge,
-          Pitt Meadows, and Aldergrove.
-        </p>
+    <section class="section services" id="services">
+      <div class="section-intro"><p class="eyebrow">Repair services</p><h2>Practical repairs, explained clearly.</h2><p>Common repairs include cracked screens, weak batteries, charging problems, and model-specific diagnostics.</p></div>
+      <div class="service-grid">
+        {services.map(([title, description], index) => <article class="service-card"><span>0{index + 1}</span><h3>{title}</h3><p>{description}</p></article>)}
       </div>
     </section>
 
-    <section class="mx-auto max-w-5xl px-4 py-12">
-      <h2 class="text-lg font-semibold">Questions? Text is best.</h2>
-      <p class="mt-2 text-zinc-600 dark:text-zinc-300">
-        Tell me your iPhone model and what happened (cracked screen, lines, no charge, etc.). I’ll reply with options
-        and a quote.
-      </p>
-      <div class="mt-5">
-        <a class="btn-primary" href={`sms:${phoneE164}`}>Text for a quote</a>
+    <section class="section pricing" id="pricing">
+      <div class="section-intro"><p class="eyebrow">Front screen assemblies</p><h2>Current screen pricing.</h2><p>Listed prices apply to front screen assemblies and include installation. Availability for battery, charging, back-glass, and other repairs depends on the exact model and part supply.</p></div>
+      <div class="price-list" role="table" aria-label="iPhone screen repair prices">
+        <div class="price-head" role="row"><span role="columnheader">iPhone model</span><span role="columnheader">Screen repair</span></div>
+        {pricing.map(([model, price]) => <div class="price-row" role="row"><span role="cell">{model}</span><strong role="cell">{price}</strong></div>)}
+        <div class="price-footer">iPhone 16, 15 Plus / Pro Max, 14 Plus / Pro Max, 13 series, and older models are handled by current part availability.</div>
       </div>
     </section>
+
+    <section class="text-flow">
+      <div><p class="eyebrow">How it works</p><h2>Three steps. No appointment maze.</h2></div>
+      <ol>
+        <li><strong>01</strong><div><h3>Identify the model and issue</h3><p>Cracked screen, lines on display, no charge, or a weak battery.</p></div></li>
+        <li><strong>02</strong><div><h3>Confirm availability and timing</h3><p>Parts and repair timing depend on the exact model and damage.</p></div></li>
+        <li><strong>03</strong><div><h3>Bring it by for repair</h3><p>Most repairs are completed in front of you while you watch.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="section area" id="area">
+      <div class="visit-copy"><p class="eyebrow">Service area</p><h2>Mission-based. Fraser Valley-wide.</h2><p>Serving customers from Surrey to Chilliwack, on both sides of the Fraser River.</p></div>
+      <ul>{communities.map((community) => <li>{community}</li>)}</ul>
+    </section>
+
+    <section class="review-section"><p class="eyebrow">Past customer?</p><div class="review-stars" aria-label="Five star review">*****</div><h2>Review us on Google.</h2><p>Reviews make it easier for local customers to find a repair option they can trust.</p><a class="review-link" href={reviewUrl} target="_blank" rel="noreferrer">Review us on Google</a></section>
   </main>
 
   <SiteFooter />

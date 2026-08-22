@@ -3,10 +3,28 @@ import Layout from "../layouts/Layout.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 
-const phoneDisplay = "(604) 809-5169";
-const phoneE164 = "+16048095169";
-
 const appleIdentifyUrl = "https://support.apple.com/en-ca/108044";
+
+const contactOptions = [
+  {
+    label: "iMessage",
+    href: "imessage://yann@yann.ca",
+    status: "Opens Messages",
+    className: "icon-imessage",
+  },
+  {
+    label: "WhatsApp",
+    href: "https://api.whatsapp.com/message/AOVXDEJODDRAJ1?autoload=1&app_absent=0",
+    status: "WhatsApp Business",
+    className: "icon-whatsapp",
+  },
+  {
+    label: "Messenger",
+    href: "https://m.me/FraserValleyiPhoneRepair",
+    status: "Facebook page inbox",
+    className: "icon-messenger",
+  },
+];
 ---
 
 <Layout
@@ -15,57 +33,51 @@ const appleIdentifyUrl = "https://support.apple.com/en-ca/108044";
 >
   <SiteHeader />
 
-  <main class="mx-auto max-w-5xl px-4 py-12">
-    <h1 class="text-3xl font-semibold tracking-tight">Identify your iPhone model</h1>
-    <p class="mt-3 text-zinc-600 dark:text-zinc-300">
-      The fastest way for me to quote you is if you text your <span class="font-semibold text-zinc-900 dark:text-zinc-100">model number</span>
-      (it looks like <span class="font-semibold text-zinc-900 dark:text-zinc-100">A####</span>).
-    </p>
+  <main>
+    <section class="section text-flow">
+      <div class="section-intro">
+        <p class="eyebrow">Identify your iPhone</p>
+        <h1>Find the model number before repair.</h1>
+        <p>
+          The fastest way to get accurate options is to send the model number, usually shown as
+          <strong> A####</strong>, along with what happened to the phone.
+        </p>
+      </div>
 
-    <section class="mt-8 rounded-2xl border border-zinc-200 bg-zinc-50 p-6 dark:border-white/10 dark:bg-white/5">
-      <h2 class="text-lg font-semibold">How to find your model number (A####)</h2>
-      <ol class="mt-3 list-decimal space-y-2 pl-5 text-zinc-600 dark:text-zinc-300">
-        <li>Open <span class="font-semibold text-zinc-900 dark:text-zinc-100">Settings</span></li>
-        <li>Tap <span class="font-semibold text-zinc-900 dark:text-zinc-100">General</span> → <span class="font-semibold text-zinc-900 dark:text-zinc-100">About</span></li>
-        <li>Tap <span class="font-semibold text-zinc-900 dark:text-zinc-100">Model Number</span></li>
+      <h2>How to find your model number</h2>
+      <ol>
+        <li>Open <strong>Settings</strong>.</li>
+        <li>Tap <strong>General</strong>, then <strong>About</strong>.</li>
+        <li>Tap <strong>Model Number</strong> until it shows an <strong>A####</strong> number.</li>
       </ol>
-      <p class="mt-4 text-sm text-zinc-500 dark:text-zinc-400">
-        Tip: If you see something like <span class="font-semibold text-zinc-700 dark:text-zinc-200">MQ…</span>, tapping it usually switches to
-        the <span class="font-semibold text-zinc-700 dark:text-zinc-200">A####</span> number.
+      <p>
+        If you see something like <strong>MQ...</strong>, tapping it usually switches to the hardware model number.
       </p>
 
-      <div class="mt-5 flex flex-wrap gap-3">
-        <a class="btn-primary" href={`sms:${phoneE164}`}>
-          Text {phoneDisplay}
-        </a>
-        <a class="btn-secondary" href={`tel:${phoneE164}`}>
-          Call
-        </a>
+      <div class="contact-actions compact-actions">
+        {contactOptions.map((option) => (
+          <a class={`contact-button ${option.className}`} href={option.href} aria-label={`Contact by ${option.label}`}>
+            <span>{option.label}</span>
+            <small>{option.status}</small>
+          </a>
+        ))}
       </div>
     </section>
 
-    <section class="mt-8 rounded-2xl border border-zinc-200 bg-zinc-50 p-6 dark:border-white/10 dark:bg-white/5">
-      <h2 class="text-lg font-semibold">Not sure which iPhone you have?</h2>
-      <p class="mt-2 text-zinc-600 dark:text-zinc-300">
-        Apple maintains an up-to-date list of iPhone model numbers by region (Canada vs U.S. variants, etc.).
-      </p>
-      <div class="mt-5 flex flex-wrap gap-3">
-        <a
-          class="btn-secondary"
-          href={appleIdentifyUrl}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Identify your iPhone model (Apple Support)
-        </a>
-        <a class="btn-primary" href={`sms:${phoneE164}`}>
-          Text me your A-number
-        </a>
+    <section class="section text-flow section-alt">
+      <div class="section-intro">
+        <p class="eyebrow">Apple reference</p>
+        <h2>Not sure which iPhone you have?</h2>
+        <p>
+          Apple keeps a current list of iPhone model numbers by region. Use it when the model number is unclear or
+          the phone is too damaged to navigate normally.
+        </p>
+        <p>
+          <a class="link" href={appleIdentifyUrl} target="_blank" rel="noreferrer">
+            Identify your iPhone model on Apple Support
+          </a>
+        </p>
       </div>
-      <p class="mt-4 text-sm text-zinc-500 dark:text-zinc-400">
-        Once you have the <span class="font-semibold text-zinc-700 dark:text-zinc-200">A####</span> model number, text it to {phoneDisplay}
-        along with the problem (screen/battery/charging) and I’ll reply with options and pricing.
-      </p>
     </section>
   </main>
 

@@ -3,352 +3,49 @@ import Layout from "../../layouts/Layout.astro";
 import SiteHeader from "../../components/SiteHeader.astro";
 import SiteFooter from "../../components/SiteFooter.astro";
 
-const phoneE164 = "+16048095169";
-
-const glassCard =
-  "rounded-2xl border border-zinc-200/70 bg-white/70 p-6 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/5";
-
-const pillBase =
-  "inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-semibold";
-
-const generations = [
-  {
-    key: "16",
-    title: "iPhone 16 series",
-    subtitle: "iPhone 16, 16 Plus, 16 Pro & 16 Pro Max",
-    year: 2024,
-    models: [
-      { name: "iPhone 16", status: "quote" },
-      { name: "iPhone 16 Plus", status: "quote" },
-      { name: "iPhone 16 Pro", status: "quote" },
-      { name: "iPhone 16 Pro Max", status: "quote" },
-    ],
-  },
-  {
-    key: "15",
-    title: "iPhone 15 series",
-    subtitle: "iPhone 15, 15 Plus, 15 Pro & 15 Pro Max",
-    year: 2023,
-    note: "Model # A2846, A2847, A2848, A2849",
-    models: [
-      { name: "iPhone 15", price: 150 },
-      { name: "iPhone 15 Pro", price: 175 },
-      { name: "iPhone 15 Plus", status: "quote" },
-      { name: "iPhone 15 Pro Max", status: "quote" },
-    ],
-  },
-  {
-    key: "14",
-    title: "iPhone 14 series",
-    subtitle: "iPhone 14, 14 Plus, 14 Pro & 14 Pro Max",
-    year: 2022,
-    note: "Model # A2881, A2885, A2889, A2893",
-    models: [
-      { name: "iPhone 14", price: 150 },
-      { name: "iPhone 14 Pro", price: 175 },
-      { name: "iPhone 14 Plus", status: "quote" },
-      { name: "iPhone 14 Pro Max", status: "quote" },
-    ],
-  },
-  {
-    key: "se3",
-    title: "iPhone SE (3rd gen)",
-    subtitle: "iPhone SE (3rd generation)",
-    year: 2022,
-    note: "Model # A2595",
-    models: [{ name: "iPhone SE (3rd gen)", status: "quote" }],
-  },
-  {
-    key: "13",
-    title: "iPhone 13 series",
-    subtitle: "iPhone 13 Mini, 13, 13 Pro & 13 Pro Max",
-    year: 2021,
-    note: "Model # A2626, A2631, A2636, A2641",
-    models: [
-      { name: "iPhone 13 Mini", status: "soon" },
-      { name: "iPhone 13", status: "soon" },
-      { name: "iPhone 13 Pro", status: "soon" },
-      { name: "iPhone 13 Pro Max", status: "soon" },
-    ],
-  },
-  {
-    key: "12",
-    title: "iPhone 12 series",
-    subtitle: "iPhone 12 Mini, 12, 12 Pro & 12 Pro Max",
-    year: 2020,
-    note: "Model # A2398, A2402, A2406, A2410",
-    models: [
-      { name: "iPhone 12", price: 160 },
-      { name: "iPhone 12 Pro", price: 160 },
-      { name: "iPhone 12 Pro Max", status: "na" },
-      { name: "iPhone 12 Mini", status: "quote" },
-    ],
-  },
-  {
-    key: "se2",
-    title: "iPhone SE (2nd gen)",
-    subtitle: "iPhone SE (2nd generation)",
-    year: 2020,
-    note: "Model # A2275",
-    models: [{ name: "iPhone SE (2nd gen)", price: 100 }],
-  },
-  {
-    key: "11",
-    title: "iPhone 11 series",
-    subtitle: "iPhone 11, 11 Pro & 11 Pro Max",
-    year: 2019,
-    note: "Model # A2111, A2160, A2161",
-    models: [
-      { name: "iPhone 11", price: 150 },
-      { name: "iPhone 11 Pro", price: 175 },
-      { name: "iPhone 11 Pro Max", price: 200 },
-    ],
-  },
-  {
-    key: "xs",
-    title: "iPhone XS / XS Max",
-    year: 2018,
-    note: "Model # A1920, A2097, A1921, A2101",
-    models: [
-      { name: "iPhone XS", status: "quote" },
-      { name: "iPhone XS Max", status: "quote" },
-    ],
-  },
-  {
-    key: "xr",
-    title: "iPhone XR",
-    year: 2018,
-    note: "Model # A1984, A2105",
-    models: [{ name: "iPhone XR", price: 120 }],
-  },
-  {
-    key: "x",
-    title: "iPhone X",
-    year: 2017,
-    note: "Model # A1865, A1901",
-    models: [{ name: "iPhone X", price: 120 }],
-  },
-  {
-    key: "8",
-    title: "iPhone 8 / 8 Plus",
-    year: 2017,
-    note: "Model # A1863, A1905",
-    models: [
-      { name: "iPhone 8", status: "quote" },
-      { name: "iPhone 8 Plus", status: "quote" },
-    ],
-  },
-  {
-    key: "7",
-    title: "iPhone 7 / 7 Plus",
-    year: 2016,
-    note: "Model # A1660, A1778",
-    models: [
-      { name: "iPhone 7", status: "quote" },
-      { name: "iPhone 7 Plus", status: "quote" },
-    ],
-  },
+const pricing = [
+  ["iPhone 15", "$150"], ["iPhone 15 Pro", "$175"],
+  ["iPhone 14", "$150"], ["iPhone 14 Pro", "$175"],
+  ["iPhone 12 / 12 Pro", "$160"], ["iPhone SE (2nd generation)", "$100"],
+  ["iPhone 11", "$150"], ["iPhone 11 Pro", "$175"], ["iPhone 11 Pro Max", "$200"],
+  ["iPhone XR / iPhone X", "$120"],
 ];
 
-function countsFor(g) {
-  let fixed = 0;
-  let quote = 0;
-  let soon = 0;
-  let na = 0;
-  for (const m of g.models) {
-    if (typeof m.price === "number") fixed++;
-    else if (m.status === "quote") quote++;
-    else if (m.status === "soon") soon++;
-    else if (m.status === "na") na++;
-  }
-  return { fixed, quote, soon, na };
-}
-
-function smsHref(message) {
-  return `sms:${phoneE164}?&body=${encodeURIComponent(message)}`;
-}
-
-function modelSearchText(g, m) {
-  const parts = [g.title, g.subtitle, `${g.year}`, g.note, m.name].filter(Boolean);
-  return parts.join(" ").toLowerCase();
-}
+const services = [
+  ["Screen replacement", "Cracked glass, dead displays, touch problems, black spots, colored lines, and LCD damage."],
+  ["Battery replacement", "Model-specific replacement for weak battery life, sudden shutdowns, and poor charge retention."],
+  ["Charging diagnostics", "Checks for cable fit, debris, port wear, battery condition, and board-level charging behavior."],
+  ["Device diagnostics", "Useful for no power, liquid exposure, restart loops, intermittent faults, and unclear damage."],
+];
 ---
 
-<Layout title="Services" description="Screen replacement, battery replacement, and more. Text (604) 809-5169 for a quote.">
+<Layout title="Services and Pricing" description="iPhone screen repair pricing, battery replacement notes, charging diagnostics, and current service information for Fraser Valley iPhone Repair.">
   <SiteHeader />
 
-  <main class="mx-auto max-w-5xl px-4 py-12">
-    <h1 class="text-3xl font-semibold tracking-tight">Services</h1>
-    <p class="mt-3 text-zinc-600 dark:text-zinc-300">
-      If you don’t see your exact model/service below, text me — I’ll confirm availability and pricing.
-    </p>
+  <main>
+    <section class="section services">
+      <div class="section-intro">
+        <p class="eyebrow">Repair services</p>
+        <h1>iPhone repair services and pricing.</h1>
+        <p>Common repairs include cracked screens, weak batteries, charging problems, and model-specific diagnostics. Send your model and what happened through iMessage, WhatsApp Business, or Messenger for current availability.</p>
+      </div>
+      <div class="service-grid">
+        {services.map(([title, description], index) => <article class="service-card"><span>0{index + 1}</span><h3>{title}</h3><p>{description}</p></article>)}
+      </div>
+    </section>
 
-    <div class="mt-8 grid gap-6">
-      <section class={glassCard}>
-        <h2 class="text-lg font-semibold">Common repairs</h2>
-        <ul class="mt-3 list-disc space-y-2 pl-5 text-zinc-600 dark:text-zinc-300">
-          <li><span class="font-semibold text-zinc-900 dark:text-zinc-100">Front screen assembly</span> (cracked glass, dead LCD, touch issues)</li>
-          <li><span class="font-semibold text-zinc-900 dark:text-zinc-100">Battery replacement</span></li>
-          <li><span class="font-semibold text-zinc-900 dark:text-zinc-100">Charging issues</span> (port/cable fit/intermittent charge)</li>
-          <li><span class="font-semibold text-zinc-900 dark:text-zinc-100">Diagnostics</span> (we’ll tell you what makes sense to fix)</li>
-        </ul>
-      </section>
-
-      <section class={glassCard}>
-        <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <h2 class="text-lg font-semibold">iPhone screen pricing</h2>
-            <p class="mt-2 text-sm text-zinc-500 dark:text-zinc-400">
-              Front screen assembly. For battery / charging / back glass pricing,
-              <a class="underline decoration-zinc-400/50 hover:decoration-zinc-500 dark:decoration-white/30 dark:hover:decoration-white" href={smsHref("Hi! Can you quote battery/charging/back glass pricing for my iPhone model?")}>text me</a>.
-            </p>
-          </div>
-
-          <div class="flex gap-2">
-            <a class="btn-secondary" href={smsHref("Hi! Price for a front screen assembly on my iPhone? Model: ")}>Text</a>
-            <a class="btn-secondary" href={`tel:${phoneE164}`}>Call</a>
-          </div>
-        </div>
-
-        <div class="mt-5">
-          <label class="text-sm font-semibold text-zinc-800 dark:text-zinc-200" for="model-search">Find your iPhone</label>
-          <input
-            id="model-search"
-            type="search"
-            placeholder="Search: 15 Pro Max, SE, XR…"
-            class="mt-2 w-full rounded-lg border border-zinc-200 bg-white/80 px-3 py-2 text-zinc-900 placeholder:text-zinc-400 shadow-sm outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/20 dark:border-white/10 dark:bg-black/20 dark:text-zinc-100 dark:placeholder:text-zinc-500"
-            autocomplete="off"
-          />
-          <p class="mt-2 text-xs text-zinc-500 dark:text-zinc-400">Tip: try “Pro”, “Plus”, or “A2595”.</p>
-        </div>
-
-        <div class="mt-6 divide-y divide-zinc-200/70 overflow-hidden rounded-xl border border-zinc-200/70 bg-white/40 dark:divide-white/10 dark:border-white/10 dark:bg-white/5">
-          {generations.map((g, idx) => {
-            const c = countsFor(g);
-            const open = idx < 2;
-            const summaryRightBits = [
-              c.fixed ? `${c.fixed} priced` : null,
-              c.quote ? `${c.quote} quote` : null,
-              c.soon ? `${c.soon} soon` : null,
-              c.na ? `${c.na} n/a` : null,
-            ].filter(Boolean);
-
-            const seriesMsg = `Hi! Price for ${g.subtitle ?? g.title} front screen assembly?`;
-
-            return (
-              <details class="group" open={open}>
-                <summary class="flex cursor-pointer list-none flex-wrap items-center justify-between gap-3 px-4 py-4 hover:bg-white/60 dark:hover:bg-white/5">
-                  <div>
-                    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                      <div class="font-semibold text-zinc-900 dark:text-zinc-100">{g.title}</div>
-                      {g.year ? <div class="text-sm text-zinc-500 dark:text-zinc-400">{g.year}</div> : null}
-                    </div>
-                    {g.subtitle ? <div class="mt-1 text-sm text-zinc-600 dark:text-zinc-300">{g.subtitle}</div> : null}
-                    {g.note ? <div class="mt-1 text-xs text-zinc-500 dark:text-zinc-400">{g.note}</div> : null}
-                  </div>
-
-                  <div class="flex items-center gap-2">
-                    {summaryRightBits.length ? (
-                      <div class="hidden text-sm text-zinc-500 dark:text-zinc-400 sm:block">{summaryRightBits.join(" • ")}</div>
-                    ) : null}
-                    <a
-                      class="rounded-md bg-emerald-500 px-3 py-2 text-sm font-semibold text-zinc-950 hover:bg-emerald-400"
-                      href={smsHref(seriesMsg)}
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      Text about this
-                    </a>
-                  </div>
-                </summary>
-
-                <div class="px-4 pb-5">
-                  <div class="mt-3 grid gap-3 sm:grid-cols-2">
-                    {g.models.map((m) => {
-                      const search = modelSearchText(g, m);
-                      return (
-                        <div
-                          class="service-model-item rounded-lg border border-zinc-200/70 bg-white/70 p-4 shadow-sm dark:border-white/10 dark:bg-white/5"
-                          data-search={search}
-                        >
-                          <div class="flex items-start justify-between gap-3">
-                            <div class="font-semibold text-zinc-900 dark:text-zinc-100">{m.name}</div>
-
-                            {typeof m.price === "number" ? (
-                              <div class="text-lg font-semibold tabular-nums text-zinc-900 dark:text-zinc-100">${m.price}</div>
-                            ) : m.status === "quote" ? (
-                              <span class={`${pillBase} border-emerald-500/30 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300`}>Quote required</span>
-                            ) : m.status === "soon" ? (
-                              <span class={`${pillBase} border-zinc-300/60 bg-zinc-100 text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300`}>Coming soon</span>
-                            ) : (
-                              <span class={`${pillBase} border-zinc-300/60 bg-zinc-100 text-zinc-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300`}>N/A</span>
-                            )}
-                          </div>
-
-                          {typeof m.price === "number" ? (
-                            <div class="mt-1 text-sm text-zinc-600 dark:text-zinc-300">Front screen assembly</div>
-                          ) : (
-                            <div class="mt-1 text-sm text-zinc-600 dark:text-zinc-300">Text/call with your model for exact pricing</div>
-                          )}
-                        </div>
-                      );
-                    })}
-                  </div>
-
-                  <div class="mt-4 flex flex-wrap gap-2">
-                    <a
-                      class="rounded-md bg-emerald-500 px-4 py-3 font-semibold text-zinc-950 hover:bg-emerald-400"
-                      href={smsHref(seriesMsg)}
-                    >
-                      Text for exact pricing
-                    </a>
-                    <a class="btn-secondary" href={`tel:${phoneE164}`}>Call</a>
-                  </div>
-                </div>
-              </details>
-            );
-          })}
-        </div>
-
-        <div class="mt-5 text-sm text-zinc-500 dark:text-zinc-400">
-          Don’t see your model? <a class="underline decoration-zinc-400/50 hover:decoration-zinc-500 dark:decoration-white/30 dark:hover:decoration-white" href={smsHref("Hi! What iPhone model do I have, and what would a front screen assembly cost?")}>Text me</a> and I’ll confirm.
-        </div>
-
-        <script is:inline>
-          {
-            `(() => {
-              const input = document.getElementById('model-search');
-              if (!input) return;
-              const items = Array.from(document.querySelectorAll('.service-model-item'));
-              const allDetails = Array.from(document.querySelectorAll('details.group'));
-
-              function applyFilter() {
-                const q = (input.value || '').trim().toLowerCase();
-                let anyVisible = false;
-
-                for (const el of items) {
-                  const hay = (el.getAttribute('data-search') || '');
-                  const show = !q || hay.includes(q);
-                  el.style.display = show ? '' : 'none';
-                  if (show) anyVisible = true;
-                }
-
-                // Open any section that has visible items when searching
-                if (q) {
-                  for (const d of allDetails) {
-                    const hasVisible = d.querySelector('.service-model-item:not([style*="display: none"])');
-                    if (hasVisible) d.open = true;
-                  }
-                }
-
-                input.setAttribute('aria-invalid', anyVisible ? 'false' : 'true');
-              }
-
-              input.addEventListener('input', applyFilter);
-            })();`
-          }
-        </script>
-      </section>
-    </div>
+    <section class="section pricing">
+      <div class="section-intro">
+        <p class="eyebrow">Front screen assemblies</p>
+        <h2>Common screen pricing.</h2>
+        <p>Listed prices include installation. Battery, charging, back-glass, older model, and less common repairs depend on exact model and part supply.</p>
+      </div>
+      <div class="price-list" role="table" aria-label="Common iPhone screen repair prices">
+        <div class="price-head" role="row"><span role="columnheader">iPhone model</span><span role="columnheader">Screen repair</span></div>
+        {pricing.map(([model, price]) => <div class="price-row" role="row"><span role="cell">{model}</span><strong role="cell">{price}</strong></div>)}
+        <div class="price-footer">iPhone 16, 15 Plus / Pro Max, 14 Plus / Pro Max, 13 series, and older models are handled by current part availability.</div>
+      </div>
+    </section>
   </main>
 
   <SiteFooter />

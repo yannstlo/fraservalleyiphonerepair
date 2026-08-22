@@ -1,10 +1,5 @@
----
-const phoneE164 = "+16048095169";
----
-
-<div class="fixed inset-x-0 bottom-0 z-50 border-t border-zinc-200 bg-white/90 backdrop-blur sm:hidden dark:border-white/10 dark:bg-zinc-950/90">
-  <div class="mx-auto flex max-w-5xl gap-3 px-4 py-3">
-    <a class="btn-primary flex-1" href={`sms:${phoneE164}`}>Text</a>
-    <a class="btn-secondary flex-1" href={`tel:${phoneE164}`}>Call</a>
-  </div>
+<div class="mobile-contact-bar" aria-label="Contact options">
+  <a class="icon-imessage" href="imessage://yann@yann.ca" aria-label="Contact by iMessage">iMessage</a>
+  <a class="icon-whatsapp" href="https://api.whatsapp.com/message/AOVXDEJODDRAJ1?autoload=1&app_absent=0" aria-label="Contact by WhatsApp">WhatsApp</a>
+  <a class="icon-messenger" href="https://m.me/FraserValleyiPhoneRepair" aria-label="Contact by Messenger">Messenger</a>
 </div>
