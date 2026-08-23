@@ -25,6 +25,31 @@ const contactOptions = [
     className: "icon-messenger",
   },
 ];
+
+const steps = [
+  {
+    number: "01",
+    title: "Open Settings",
+    body: "On the iPhone, open Settings. If the screen is too damaged, send a photo of the back or the SIM tray area instead.",
+  },
+  {
+    number: "02",
+    title: "Go to General, then About",
+    body: "The About screen shows the device name, software version, serial number, and model information.",
+  },
+  {
+    number: "03",
+    title: "Tap Model Number",
+    body: "Tap the part-number style code until it switches to an A-number, such as A2482 or A2649.",
+  },
+];
+
+const checklist = [
+  "The A-number if you can find it",
+  "What happened: cracked screen, battery, charging, liquid, no power",
+  "A clear photo if the damage is visible",
+  "Whether Face ID, touch, or charging still works",
+];
 ---
 
 <Layout
@@ -34,25 +59,49 @@ const contactOptions = [
   <SiteHeader />
 
   <main>
-    <section class="section text-flow">
-      <div class="section-intro">
+    <section class="identify-hero">
+      <div class="identify-hero-copy">
         <p class="eyebrow">Identify your iPhone</p>
-        <h1>Find the model number before repair.</h1>
+        <h1>Find the exact model before repair.</h1>
         <p>
-          The fastest way to get accurate options is to send the model number, usually shown as
-          <strong> A####</strong>, along with what happened to the phone.
+          The model number is the fastest way to confirm parts, pricing, and repair timing. It usually looks like
+          <strong> A####</strong>.
         </p>
       </div>
 
-      <h2>How to find your model number</h2>
-      <ol>
-        <li>Open <strong>Settings</strong>.</li>
-        <li>Tap <strong>General</strong>, then <strong>About</strong>.</li>
-        <li>Tap <strong>Model Number</strong> until it shows an <strong>A####</strong> number.</li>
-      </ol>
-      <p>
-        If you see something like <strong>MQ...</strong>, tapping it usually switches to the hardware model number.
-      </p>
+      <aside class="identify-note" aria-label="What to send">
+        <span>Send this</span>
+        <strong>A#### model number</strong>
+        <p>Plus the issue and a photo if it helps.</p>
+      </aside>
+    </section>
+
+    <section class="section identify-steps">
+      <div class="section-intro">
+        <p class="eyebrow">Settings path</p>
+        <h2>How to find the A-number.</h2>
+        <p>If you first see something like <strong>MQ...</strong>, tap it once. It usually switches to the hardware model number.</p>
+      </div>
+
+      <div class="identify-step-grid">
+        {steps.map((step) => (
+          <article class="identify-step-card">
+            <span>{step.number}</span>
+            <h3>{step.title}</h3>
+            <p>{step.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section identify-send section-alt">
+      <div class="identify-send-copy">
+        <p class="eyebrow">Message checklist</p>
+        <h2>Send enough detail for a useful reply.</h2>
+        <ul>
+          {checklist.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
 
       <div class="contact-actions compact-actions">
         {contactOptions.map((option) => (
@@ -64,19 +113,14 @@ const contactOptions = [
       </div>
     </section>
 
-    <section class="section text-flow section-alt">
+    <section class="section identify-reference">
       <div class="section-intro">
         <p class="eyebrow">Apple reference</p>
-        <h2>Not sure which iPhone you have?</h2>
-        <p>
-          Apple keeps a current list of iPhone model numbers by region. Use it when the model number is unclear or
-          the phone is too damaged to navigate normally.
-        </p>
-        <p>
-          <a class="link" href={appleIdentifyUrl} target="_blank" rel="noreferrer">
-            Identify your iPhone model on Apple Support
-          </a>
-        </p>
+        <h2>Still not sure?</h2>
+        <p>Apple keeps a current list of iPhone model numbers by region.</p>
+        <a class="link" href={appleIdentifyUrl} target="_blank" rel="noreferrer">
+          Open Apple Support model list
+        </a>
       </div>
     </section>
   </main>
