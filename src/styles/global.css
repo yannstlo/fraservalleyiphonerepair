@@ -723,14 +723,28 @@ h3 {
 }
 
 .mobile-contact-bar a {
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
   min-height: 42px;
   background: var(--white);
   border: 1px solid var(--line-soft);
   border-radius: 999px;
   font-size: 12px;
   font-weight: 800;
+}
+
+.mobile-contact-bar svg {
+  flex: 0 0 auto;
+  width: 17px;
+  height: 17px;
+}
+
+.mobile-contact-bar span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 footer {
