@@ -61,6 +61,24 @@ h3 {
   backdrop-filter: blur(18px);
 }
 
+.availability-banner {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px max(5vw, 28px);
+  color: #5c2f0b;
+  background: #fff4df;
+  border-bottom: 1px solid #f1d6aa;
+  font-size: 13px;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.availability-banner strong {
+  color: #38200a;
+  font-weight: 800;
+}
+
 .site-header {
   display: flex;
   align-items: center;
@@ -1097,6 +1115,13 @@ footer a:hover {
 }
 
 @media (max-width: 560px) {
+  .availability-banner {
+    display: grid;
+    gap: 2px;
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
   .site-header {
     gap: 10px;
     min-height: 58px;
