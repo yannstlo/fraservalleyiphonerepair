@@ -759,25 +759,205 @@ footer a:hover {
   color: var(--accent);
 }
 
+.blog-article {
+  padding: 46px max(5vw, 28px) 96px;
+  background: var(--paper);
+}
+
+.blog-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  max-width: 920px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.blog-back,
+.blog-nav-links a {
+  color: var(--ink);
+}
+
+.blog-nav-links {
+  display: flex;
+  gap: 10px;
+}
+
+.blog-nav-links a,
+.blog-nav-links span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 13px;
+  background: var(--white);
+  border: 1px solid var(--line-soft);
+  border-radius: 999px;
+}
+
+.blog-nav-links span {
+  color: #b4b4ba;
+}
+
+.blog-hero {
+  max-width: 920px;
+  margin: 54px auto 0;
+  padding-bottom: 44px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.blog-hero h1 {
+  max-width: 840px;
+  margin-bottom: 18px;
+  font-size: clamp(44px, 5.6vw, 82px);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.blog-date {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.blog-hero p:not(.eyebrow) {
+  max-width: 700px;
+  margin-top: 20px;
+  color: var(--soft-ink);
+  font-size: 19px;
+  line-height: 1.58;
+}
+
+.blog-body {
+  max-width: 760px;
+  margin: 52px auto 0;
+}
+
+.blog-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
+  gap: 28px;
+  align-items: center;
+  max-width: 920px;
+  margin: 72px auto 0;
+  padding: 32px;
+  background: var(--white);
+  border: 1px solid var(--line-soft);
+  border-radius: 22px;
+}
+
+.blog-cta h2 {
+  margin-bottom: 12px;
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.06;
+}
+
+.blog-cta p:not(.eyebrow) {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.blog-cta-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.blog-cta-actions a {
+  display: grid;
+  place-items: center;
+  min-height: 46px;
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.blog-related {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 920px;
+  margin: 28px auto 0;
+  padding-top: 28px;
+  border-top: 1px solid var(--line-soft);
+}
+
+.blog-related a {
+  display: grid;
+  gap: 8px;
+  min-height: 116px;
+  padding: 20px;
+  background: var(--white);
+  border: 1px solid var(--line-soft);
+  border-radius: 18px;
+}
+
+.blog-related span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.blog-related strong {
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.35;
+}
+
 .markdown {
+  color: var(--soft-ink);
+  font-size: 18px;
   line-height: 1.75;
 }
 
 .markdown h2,
 .markdown h3 {
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
-  font-weight: 600;
+  margin-top: 2.4rem;
+  margin-bottom: 0.9rem;
+  color: var(--ink);
+  font-weight: 700;
+  line-height: 1.12;
+}
+
+.markdown h2 {
+  font-size: 30px;
+}
+
+.markdown h3 {
+  font-size: 24px;
 }
 
 .markdown p {
-  margin: 1rem 0;
+  margin: 1.1rem 0;
 }
 
 .markdown ul {
   margin: 1rem 0;
-  padding-left: 1.25rem;
-  list-style: disc;
+  padding: 0;
+  list-style: none;
+}
+
+.markdown li {
+  position: relative;
+  margin: 0.6rem 0;
+  padding-left: 20px;
+}
+
+.markdown li::before {
+  content: "";
+  position: absolute;
+  top: 0.8em;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  background: var(--accent);
+  border-radius: 50%;
 }
 
 .markdown img {
@@ -788,6 +968,7 @@ footer a:hover {
 .markdown a {
   color: #1267b1;
   text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 @media (min-width: 640px) {
@@ -815,7 +996,8 @@ footer a:hover {
   .pricing,
   .text-flow,
   .area,
-  .identify-send {
+  .identify-send,
+  .blog-cta {
     grid-template-columns: 1fr;
   }
 
@@ -833,6 +1015,8 @@ footer a:hover {
   .contact-actions,
   .service-grid,
   .identify-step-grid,
+  .blog-cta-actions,
+  .blog-related,
   .museum-grid {
     grid-template-columns: 1fr;
   }
@@ -900,6 +1084,10 @@ footer a:hover {
 
   .identify-hero h1 {
     font-size: 44px;
+  }
+
+  .blog-hero h1 {
+    font-size: 40px;
   }
 
   .hero-text {

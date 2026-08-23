@@ -23,72 +23,88 @@ const { Content } = await post.render();
 
 const title = post.data.title;
 const description = post.data.description;
+
+const contactOptions = [
+  {
+    label: "iMessage",
+    href: "imessage://yann@yann.ca",
+    className: "icon-imessage",
+  },
+  {
+    label: "WhatsApp",
+    href: "https://api.whatsapp.com/message/AOVXDEJODDRAJ1?autoload=1&app_absent=0",
+    className: "icon-whatsapp",
+  },
+  {
+    label: "Messenger",
+    href: "https://m.me/FraserValleyiPhoneRepair",
+    className: "icon-messenger",
+  },
+];
 ---
 
 <Layout title={title} description={description}>
   <SiteHeader />
 
-  <main id="top" class="mx-auto max-w-3xl scroll-mt-16 px-4 py-12">
-    <div class="flex flex-wrap items-center justify-between gap-3">
-      <a class="text-sm font-semibold text-emerald-600 hover:text-emerald-500 dark:text-emerald-400 dark:hover:text-emerald-300" href="/blog/">← Back to Blog</a>
+  <main id="top" class="blog-article">
+    <div class="blog-nav">
+      <a class="blog-back" href="/blog/">Back to Blog</a>
 
-      <div class="flex items-center gap-2 text-sm">
+      <div class="blog-nav-links">
         {next ? (
-          <a
-            class="rounded-md border border-zinc-300 px-3 py-2 font-semibold text-zinc-900 hover:bg-zinc-50 dark:border-white/15 dark:text-white dark:hover:bg-white/5"
-            href={`/blog/${next.slug}/#top`}
-          >
-            ← Newer
-          </a>
+          <a href={`/blog/${next.slug}/#top`}>Newer</a>
         ) : (
-          <span class="rounded-md border border-zinc-200 px-3 py-2 text-zinc-500 dark:border-white/10">← Newer</span>
+          <span>Newer</span>
         )}
         {prev ? (
-          <a
-            class="rounded-md border border-zinc-300 px-3 py-2 font-semibold text-zinc-900 hover:bg-zinc-50 dark:border-white/15 dark:text-white dark:hover:bg-white/5"
-            href={`/blog/${prev.slug}/#top`}
-          >
-            Older →
-          </a>
+          <a href={`/blog/${prev.slug}/#top`}>Older</a>
         ) : (
-          <span class="rounded-md border border-zinc-200 px-3 py-2 text-zinc-500 dark:border-white/10">Older →</span>
+          <span>Older</span>
         )}
       </div>
     </div>
 
-    <header class="mt-6">
-      <h1 class="text-3xl font-semibold tracking-tight">{title}</h1>
-      <div class="mt-2 text-sm text-zinc-500 dark:text-zinc-400">
+    <header class="blog-hero">
+      <p class="eyebrow">Repair notes</p>
+      <h1>{title}</h1>
+      <div class="blog-date">
         {post.data.pubDate.toLocaleDateString("en-CA", { year: "numeric", month: "long", day: "numeric" })}
       </div>
-      {description && <p class="mt-4 text-zinc-600 dark:text-zinc-300">{description}</p>}
+      {description && <p>{description}</p>}
     </header>
 
-    <article class="markdown mt-10 text-zinc-800 dark:text-zinc-200">
+    <article class="markdown blog-body">
       <Content />
     </article>
 
-    <nav class="mt-12 grid gap-3 border-t border-zinc-200 pt-6 sm:grid-cols-2 dark:border-white/10" aria-label="Post navigation">
+    <section class="blog-cta">
+      <div>
+        <p class="eyebrow">Need a repair?</p>
+        <h2>Send the model and what happened.</h2>
+        <p>Include the iPhone model, the issue, and a photo if it helps.</p>
+      </div>
+      <div class="blog-cta-actions">
+        {contactOptions.map((option) => (
+          <a class={option.className} href={option.href} aria-label={`Contact by ${option.label}`}>{option.label}</a>
+        ))}
+      </div>
+    </section>
+
+    <nav class="blog-related" aria-label="Post navigation">
       <div>
         {prev && (
-          <a
-            class="block rounded-xl border border-zinc-200 bg-zinc-50 p-4 hover:bg-zinc-100 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
-            href={`/blog/${prev.slug}/`}
-          >
-            <div class="text-xs font-semibold text-zinc-500 dark:text-zinc-400">Previous</div>
-            <div class="mt-1 font-semibold">{prev.title}</div>
+          <a href={`/blog/${prev.slug}/`}>
+            <span>Previous</span>
+            <strong>{prev.title}</strong>
           </a>
         )}
       </div>
 
-      <div class="sm:text-right">
+      <div>
         {next && (
-          <a
-            class="block rounded-xl border border-zinc-200 bg-zinc-50 p-4 hover:bg-zinc-100 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
-            href={`/blog/${next.slug}/`}
-          >
-            <div class="text-xs font-semibold text-zinc-500 dark:text-zinc-400">Next</div>
-            <div class="mt-1 font-semibold">{next.title}</div>
+          <a href={`/blog/${next.slug}/`}>
+            <span>Next</span>
+            <strong>{next.title}</strong>
           </a>
         )}
       </div>
