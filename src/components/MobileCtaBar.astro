@@ -24,7 +24,9 @@ const channels = [
 <div class="mobile-contact-bar" aria-label="Contact options">
   {channels.map((item) => (
     <a class={item.className} href={item.href} aria-label={`Contact by ${item.label}`}>
-      <svg viewBox="0 0 24 24" aria-hidden="true" set:html={item.svg} />
+      <span class="mobile-contact-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" set:html={item.svg} />
+      </span>
       <span>{item.label}</span>
     </a>
   ))}

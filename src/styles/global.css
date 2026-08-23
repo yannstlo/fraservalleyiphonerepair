@@ -733,8 +733,9 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
-  min-height: 42px;
+  gap: 6px;
+  min-height: 46px;
+  padding: 6px 8px;
   background: var(--white);
   border: 1px solid var(--line-soft);
   border-radius: 999px;
@@ -742,16 +743,30 @@ h3 {
   font-weight: 800;
 }
 
-.mobile-contact-bar svg {
+.mobile-contact-icon {
+  display: grid;
   flex: 0 0 auto;
-  width: 17px;
-  height: 17px;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  background: currentColor;
+  border-radius: 999px;
+}
+
+.mobile-contact-bar svg {
+  width: 15px;
+  height: 15px;
+  color: var(--white);
 }
 
 .mobile-contact-bar span {
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.mobile-contact-bar .mobile-contact-icon {
+  overflow: visible;
 }
 
 footer {
