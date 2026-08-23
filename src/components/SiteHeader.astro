@@ -27,22 +27,28 @@ const channels = [
   },
 ];
 ---
-<header class="site-header">
-  <a class="wordmark" href="/" aria-label="Fraser Valley iPhone Repair home">
-    <span class="wordmark-mark" aria-hidden="true">FV</span>
-    <span>Fraser Valley<br />iPhone Repair</span>
-  </a>
+<div class="header-shell">
+  <header class="site-header">
+    <a class="wordmark" href="/" aria-label="Fraser Valley iPhone Repair home">
+      <span class="wordmark-mark" aria-hidden="true">FV</span>
+      <span>Fraser Valley<br />iPhone Repair</span>
+    </a>
 
-  <div class="header-actions">
-    <nav aria-label="Primary navigation">
-      {nav.map((item) => <a href={item.href}>{item.label}</a>)}
-    </nav>
-    <div class="header-contact" aria-label="Contact options">
-      {channels.map((item) => (
-        <a class={`header-contact-icon ${item.className}`} href={item.href} aria-label={`Contact by ${item.label}`} title={item.label}>
-          <svg viewBox="0 0 24 24" aria-hidden="true" set:html={item.svg} />
-        </a>
-      ))}
+    <div class="header-actions">
+      <nav aria-label="Primary navigation">
+        {nav.map((item) => <a href={item.href}>{item.label}</a>)}
+      </nav>
+      <div class="header-contact" aria-label="Contact options">
+        {channels.map((item) => (
+          <a class={`header-contact-icon ${item.className}`} href={item.href} aria-label={`Contact by ${item.label}`} title={item.label}>
+            <svg viewBox="0 0 24 24" aria-hidden="true" set:html={item.svg} />
+          </a>
+        ))}
+      </div>
     </div>
-  </div>
-</header>
+  </header>
+
+  <nav class="mobile-nav" aria-label="Primary navigation">
+    {nav.map((item) => <a href={item.href}>{item.label}</a>)}
+  </nav>
+</div>

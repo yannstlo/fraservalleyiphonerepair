@@ -52,19 +52,22 @@ h3 {
   letter-spacing: 0;
 }
 
-.site-header {
+.header-shell {
   position: sticky;
   top: 0;
   z-index: 10;
+  background: rgba(251, 251, 253, 0.88);
+  border-bottom: 1px solid var(--line-soft);
+  backdrop-filter: blur(18px);
+}
+
+.site-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-height: 64px;
   padding: 12px max(5vw, 28px);
   color: var(--ink);
-  background: rgba(251, 251, 253, 0.88);
-  border-bottom: 1px solid var(--line-soft);
-  backdrop-filter: blur(18px);
 }
 
 .wordmark {
@@ -105,6 +108,10 @@ h3 {
 
 .site-header nav a:hover {
   color: var(--accent);
+}
+
+.mobile-nav {
+  display: none;
 }
 
 .header-contact {
@@ -998,6 +1005,29 @@ footer a:hover {
 @media (max-width: 900px) {
   .site-header nav {
     display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 0 16px 10px;
+    scrollbar-width: none;
+  }
+
+  .mobile-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mobile-nav a {
+    flex: 0 0 auto;
+    padding: 8px 13px;
+    color: var(--soft-ink);
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid var(--line-soft);
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 800;
   }
 
   .header-actions {
