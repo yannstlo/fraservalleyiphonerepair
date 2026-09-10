@@ -13,11 +13,19 @@ const services = [
 ];
 
 const pricing = [
-  ["iPhone 15", "$150"], ["iPhone 15 Pro", "$175"],
-  ["iPhone 14", "$150"], ["iPhone 14 Pro", "$175"],
+  ["iPhone 15", "$150"],
+  ["iPhone 15 Plus", "$219", "Premium Soft OLED display replacement"],
+  ["iPhone 15 Pro", "$219", "Premium Soft OLED 120 Hz display replacement"],
+  ["iPhone 15 Pro Max", "$229", "Premium Soft OLED 120 Hz display replacement"],
+  ["iPhone 14", "$150"],
+  ["iPhone 14 Plus", "$199", "Premium Soft OLED display replacement"],
+  ["iPhone 14 Pro", "$199", "Premium Soft OLED 120 Hz display replacement"],
+  ["iPhone 14 Pro Max", "$219", "Premium Soft OLED 120 Hz display replacement"],
   ["iPhone 13 Pro", "$199", "Premium Soft OLED 120 Hz display replacement"],
   ["iPhone 13 Pro Max", "$199", "Premium Soft OLED 120 Hz display replacement"],
-  ["iPhone 12 / 12 Pro", "$160"], ["iPhone SE (2nd generation)", "$100"],
+  ["iPhone 12 Pro Max", "$199", "Premium Soft OLED display replacement"],
+  ["iPhone 12 / 12 Pro", "$160"],
+  ["iPhone SE (2nd generation)", "$100"],
   ["iPhone 11", "$150"], ["iPhone 11 Pro", "$175"], ["iPhone 11 Pro Max", "$200"],
   ["iPhone XR / iPhone X", "$120"],
 ];
@@ -80,7 +88,15 @@ const contactChannels = [
       <div class="section-intro"><p class="eyebrow">Front screen assemblies</p><h2>Current screen pricing.</h2><p>Listed prices apply to front screen assemblies and include installation. Availability for battery, charging, back-glass, and other repairs depends on the exact model and part supply.</p></div>
       <div class="price-list" role="table" aria-label="iPhone screen repair prices">
         <div class="price-head" role="row"><span role="columnheader">iPhone model</span><span role="columnheader">Screen repair</span></div>
-        {pricing.map(([model, price, description]) => <div class="price-row" role="row"><span role="cell">{model}{description && <small>{description}</small>}</span><strong role="cell">{price}</strong></div>)}
+        {pricing.map(([model, price, description]) => (
+          <div class="price-row" role="row">
+            <span role="cell" style="min-width:0; padding-right:12px;">
+              <span style="display:block; font-weight:500;">{model}</span>
+              {description && <small style="display:block; margin-top:4px; color:var(--muted); line-height:1.35;">{description}</small>}
+            </span>
+            <strong role="cell">{price}</strong>
+          </div>
+        ))}
       </div>
     </section>
 
