@@ -39,6 +39,14 @@ const absoluteImage = new URL(image, "https://fraservalleyiphonerepair.com").toS
     <meta name="twitter:description" content={metaDescription} />
     <meta name="twitter:image" content={absoluteImage} />
 
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2RHK2LGMGT"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2RHK2LGMGT');
+    </script>
+
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
