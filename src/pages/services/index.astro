@@ -45,7 +45,6 @@ const services = [
       <div class="price-list" role="table" aria-label="Common iPhone screen repair prices">
         <div class="price-head" role="row"><span role="columnheader">iPhone model</span><span role="columnheader">Screen repair</span></div>
         {pricing.map(([model, price, description]) => <div class="price-row" role="row"><span role="cell">{model}{description && <small>{description}</small>}</span><strong role="cell">{price}</strong></div>)}
-        <div class="price-footer">iPhone 16, 15 Plus / Pro Max, 14 Plus / Pro Max, and older models are handled by current part availability.</div>
       </div>
     </section>
   </main>
