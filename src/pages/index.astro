@@ -15,6 +15,7 @@ const services = [
 const pricing = [
   ["iPhone 15", "$150"], ["iPhone 15 Pro", "$175"],
   ["iPhone 14", "$150"], ["iPhone 14 Pro", "$175"],
+  ["iPhone 13 Pro Max", "$199", "Premium Soft OLED 120 Hz display replacement"],
   ["iPhone 12 / 12 Pro", "$160"], ["iPhone SE (2nd generation)", "$100"],
   ["iPhone 11", "$150"], ["iPhone 11 Pro", "$175"], ["iPhone 11 Pro Max", "$200"],
   ["iPhone XR / iPhone X", "$120"],
@@ -78,8 +79,8 @@ const contactChannels = [
       <div class="section-intro"><p class="eyebrow">Front screen assemblies</p><h2>Current screen pricing.</h2><p>Listed prices apply to front screen assemblies and include installation. Availability for battery, charging, back-glass, and other repairs depends on the exact model and part supply.</p></div>
       <div class="price-list" role="table" aria-label="iPhone screen repair prices">
         <div class="price-head" role="row"><span role="columnheader">iPhone model</span><span role="columnheader">Screen repair</span></div>
-        {pricing.map(([model, price]) => <div class="price-row" role="row"><span role="cell">{model}</span><strong role="cell">{price}</strong></div>)}
-        <div class="price-footer">iPhone 16, 15 Plus / Pro Max, 14 Plus / Pro Max, 13 series, and older models are handled by current part availability.</div>
+        {pricing.map(([model, price, description]) => <div class="price-row" role="row"><span role="cell">{model}{description && <small>{description}</small>}</span><strong role="cell">{price}</strong></div>)}
+        <div class="price-footer">iPhone 16, 15 Plus / Pro Max, 14 Plus / Pro Max, and older models are handled by current part availability.</div>
       </div>
     </section>
 
